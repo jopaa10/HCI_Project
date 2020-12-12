@@ -16,6 +16,7 @@ import Banner from '../banner/index'
 import PhotoInfo from '../carousel - homepage/index'
 import CreateAwesomePhotos from "../create - awesomePhotos"
 import ImageSlider from '../slider - homepage/index'
+import InfoForUsers from "../infoForUsers - homepage"
 
 const Layout = () => {
 
@@ -44,6 +45,7 @@ const Layout = () => {
         <PhotoInfo />
         <CreateAwesomePhotos />
         <ImageSlider />
+        <InfoForUsers />
       </main>
     </>
   )
