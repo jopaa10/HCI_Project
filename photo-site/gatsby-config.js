@@ -37,8 +37,16 @@ module.exports = {
         fonts: [
           `josefin sans`,
         ],
-        display: 'swap'
-      ,}
+        display: 'swap',}
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images`,
+      },
+    },
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
   ],
 }
