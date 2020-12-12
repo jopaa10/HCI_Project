@@ -14,6 +14,7 @@ import "../layout.css"
 //pages
 import Banner from '../banner/index'
 import PhotoInfo from '../carousel - homepage/index'
+import CreateAwesomePhotos from "../create - awesomePhotos"
 
 const Layout = () => {
 
@@ -33,13 +34,14 @@ const Layout = () => {
     <>
       <Header />
       <main>
-      <Banner
-            color={'white'} 
-            title={'"Photography is the story I fail to put into words"'}
-            author={'Denise Sparks'}
-            bgImage={data.bgImage.childImageSharp.fluid}
-          />
-      <PhotoInfo />
+        <Banner
+              color={'white'} 
+              title={'"Photography is the story I fail to put into words"'}
+              author={'Denise Sparks'}
+              bgImage={data.bgImage.childImageSharp.fluid}
+        />
+        <PhotoInfo />
+        <CreateAwesomePhotos />
       </main>
     </>
   )
