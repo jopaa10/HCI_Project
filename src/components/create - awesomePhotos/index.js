@@ -47,8 +47,8 @@ const CreateAwesomePhotos = () =>{
                             <Card style={{ width: '14rem', boxShadow: '0 0 45px rgba(0,0,0,.1)' }}>
                             <Card.Body>
                                 <FontAwesomeIcon style={{width: '45px', height: '45px'}} icon={faCamera}/>
-                                <Card.Title>Camera</Card.Title>
-                                <Card.Text>
+                                <Card.Title style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>Camera</Card.Title>
+                                <Card.Text style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
                                 </Card.Text>
@@ -60,8 +60,8 @@ const CreateAwesomePhotos = () =>{
                             <Card style={{ width: '14rem', boxShadow: '0 0 45px rgba(0,0,0,.1)' }}>
                             <Card.Body>
                                 <FontAwesomeIcon style={{width: '45px', height: '45px'}} icon={faEye}/>
-                                <Card.Title>Eye for details</Card.Title>
-                                <Card.Text>
+                                <Card.Title style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>Eye for details</Card.Title>
+                                <Card.Text style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>
                                 Some quick example text to build on the card title and make up the bulk of
                                 the card's content.
                                 </Card.Text>
@@ -73,8 +73,8 @@ const CreateAwesomePhotos = () =>{
                             <Card style={{ width: '14rem', boxShadow: '0 0 45px rgba(0,0,0,.1)' }}>
                                 <Card.Body>
                                     <FontAwesomeIcon style={{width: '45px', height: '45px'}} icon={faHourglassHalf}/>
-                                    <Card.Title>Time for practice</Card.Title>
-                                    <Card.Text>
+                                    <Card.Title style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>Time for practice</Card.Title>
+                                    <Card.Text style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>
                                     Some quick example text to build on the card title and make up the bulk of
                                     the card's content.
                                     </Card.Text>
