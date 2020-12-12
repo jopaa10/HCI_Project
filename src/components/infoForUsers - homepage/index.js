@@ -25,7 +25,7 @@ const InfoForUsers = () => {
 
             starRating: file(relativePath: {eq: "profileImg1.png"}){
                 childImageSharp{
-                    fluid(maxWidth: 350, maxHeight: 420, quality: 100){
+                    fluid(maxWidth: 330, maxHeight: 380, quality: 100){
                         ...GatsbyImageSharpFluid
                     }
                 }
