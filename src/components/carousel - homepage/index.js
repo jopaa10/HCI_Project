@@ -15,7 +15,11 @@ import {faImage, faMagic} from '@fortawesome/free-solid-svg-icons'
 //carousel template
 import Template from './carouselTemplate'
 
+//title
 import Title from '../title/index'
+
+//animation
+import Slide from 'react-reveal'
 
 const Photoinfo = () => {
 
@@ -74,9 +78,14 @@ const Photoinfo = () => {
     return(
 
         <Container className="banner" style={{backgroundColor: 'white', paddingBottom: '150px'}}>
-            <Title
-                title={`Welcome to "Photography" page`}
-            />
+            
+            <Slide left>
+                <Title
+                    title={`Welcome to "Photography" page`}
+                />
+            </Slide>
+
+            <Slide right>
             <Row>
             
                 <Col xs={12} sm={6}>
@@ -125,6 +134,7 @@ const Photoinfo = () => {
                 </Col>
 
             </Row>
+            </Slide>
         </Container>
 
     )

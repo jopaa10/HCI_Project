@@ -17,6 +17,7 @@ import PhotoInfo from '../carousel - homepage/index'
 import CreateAwesomePhotos from "../create - awesomePhotos"
 import ImageSlider from '../slider - homepage/index'
 import InfoForUsers from "../infoForUsers - homepage"
+import FaQ from '../faQ/index'
 
 const Layout = () => {
 
@@ -46,6 +47,7 @@ const Layout = () => {
         <CreateAwesomePhotos />
         <ImageSlider />
         <InfoForUsers />
+        <FaQ />
       </main>
     </>
   )

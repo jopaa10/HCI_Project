@@ -2,14 +2,16 @@ import React from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 
 //react bootstrap
-
 import {Col, Row, Container} from 'react-bootstrap'
 
 //gatsby image
-
 import Img from 'gatsby-image'
 
+//react card carousel
 import ReactCardCarousel from 'react-card-carousel'
+
+//animation
+import Slide from 'react-reveal'
 
 const ImageSlider = (props) => {
 
@@ -80,37 +82,38 @@ const ImageSlider = (props) => {
         
         <section className="banner" style={{backgroundColor: '#ededed'}}>
             <Container fluid>
-
+            
+            <Slide left>
                 <Row>
                     <Col xs={12} style={{textAlign: "center"}}>
                         <h3 style={{fontFamily: "josefin sans", fontWeight: "700", fontSize: "3.5em", lineHeight: "1.5", paddingBottom: '50px'}}> Photography - Art of seeing </h3>
                     </Col>
                 </Row>
+            </Slide>
 
-                <Row >
-
-                <Col xs={12} sm={12} md={12} style={{display: 'flex', justifyContent: 'center'}}>
-
-                    <Row className="container_style" style={ CONTAINER_STYLE }> 
-                    <ReactCardCarousel  autoplay={ true } autoplay_speed={ 2500 }>
-                        <Row >
-                            <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage1.childImageSharp.fluid} alt="" />
-                        </Row> 
-                        <Row >
-                            <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage2.childImageSharp.fluid} alt="" />
-                        </Row> 
-                        <Row >
-                            <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage4.childImageSharp.fluid} alt="" />
-                        </Row> 
-                        <Row >
-                            <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage4.childImageSharp.fluid} alt="" />
-                        </Row> 
-                    </ReactCardCarousel>
-                    </Row>
-                </Col>
-
+            <Slide right>
+                <Row>
+                    <Col xs={12} sm={12} md={12} style={{display: 'flex', justifyContent: 'center'}}>
+                        <Row className="container_style" style={ CONTAINER_STYLE }> 
+                            <ReactCardCarousel  autoplay={ true } autoplay_speed={ 2500 }>
+                                <Row >
+                                    <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage1.childImageSharp.fluid} alt="" />
+                                </Row> 
+                                <Row >
+                                    <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage2.childImageSharp.fluid} alt="" />
+                                </Row> 
+                                <Row >
+                                    <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage4.childImageSharp.fluid} alt="" />
+                                </Row> 
+                                <Row >
+                                    <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage4.childImageSharp.fluid} alt="" />
+                                </Row> 
+                            </ReactCardCarousel>
+                        </Row>
+                    </Col>
                 </Row>
-
+            </Slide>
+            
             </Container>
         
         </section>
