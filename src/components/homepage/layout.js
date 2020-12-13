@@ -18,6 +18,7 @@ import CreateAwesomePhotos from "../create - awesomePhotos"
 import ImageSlider from '../slider - homepage/index'
 import InfoForUsers from "../infoForUsers - homepage"
 import FaQ from '../faQ/index'
+import Footer from "../footer"
 
 const Layout = () => {
 
@@ -49,6 +50,7 @@ const Layout = () => {
         <InfoForUsers />
         <FaQ />
       </main>
+      <Footer />
     </>
   )
 }
