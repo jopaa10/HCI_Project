@@ -160,7 +160,7 @@ const navbarStyle = {
                             <Nav.Link className={showColorNavbar} > <Link to='/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>Home</Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/news/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>News</Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/tips/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>Tips</Link></Nav.Link>
-                            <Nav.Link className={showColorNavbar} > <Link to='/timeline/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>History </Link></Nav.Link>
+                            <Nav.Link className={showColorNavbar} > <Link to='/history/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>History </Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/alltimephotos/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>All time photos</Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} className="nav-linkLogin nav-link"  style={{backgroundColor: loginBg, borderRadius: '20px', width: 'fit-content'}} ref={target}> <Link to='/signup/' activeStyle={{color: 'grey'}} style={{color: loginColor}}>LogIn</Link></Nav.Link>
                         </Nav>
