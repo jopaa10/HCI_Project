@@ -1034,6 +1034,9 @@ a:hover{
   .vertical-timeline-element{
     width: fit-content;
   }
+  .camObscura{
+    justify-content: flex-end!important;
+  }
 }
 
 /*** popover page cameraTimeline ***/
