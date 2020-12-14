@@ -12,9 +12,6 @@ import Img from 'gatsby-image'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
 
-const navbarStyle = {
-    backgroundColor: 'black',
-}
 
  function NavbarMenu() {
 
@@ -39,15 +36,15 @@ const navbarStyle = {
     
     `)
 
-    const [showNavbar, setShowNavbar] = useState(navbarStyle.backgroundColor)
+    const [showNavbar, setShowNavbar] = useState("black")
     const [showColorNavbar, setColorNavbar] = useState("white")
+    const [loginBg, setLoginBg] = useState("white")
+    const [loginColor, setLoginColor] = useState("black")
     const [changeColorLogo, setColorLogo] = useState(data.logo1.childImageSharp.fixed)
     const [navbarClassname, setNavbarStyle] = useState("navbar")
-    const [linkColor, setLinkColor] = useState("white");
-    const [loginColor, setLoginColor] = useState("black");
-    const [loginBg, setLoginBg] = useState("white");
+    const [linkColor, setLinkColor] = useState("white")
     const [togglerColor, setTogglerColor] = useState("white")
-    const [loginUserBg, setUserBg] = useState("white");
+    const [loginUserBg, setUserBg] = useState("white")
 
     const changeNavbarStyle = () => {
 

@@ -22,7 +22,7 @@ const CreateAwesomePhotos = () =>{
     
             bgImage: file(relativePath: {eq: "wallpaperKids.jpg"}){
                 childImageSharp{
-                    fluid(maxWidth: 4000, quality: 100){
+                    fluid(maxWidth: 2000, quality: 100){
                         ...GatsbyImageSharpFluid
                     }
                 }
@@ -38,14 +38,12 @@ const CreateAwesomePhotos = () =>{
                 
                 <Container>
 
-                    <Fade direction="right">
                         <Row>
                             <Col xs={12} style={{textAlign: 'center'}}>
                                 <h3 style={{fontFamily: "josefin sans", fontSize: "2.5em", lineHeight: "1.5", color: 'white'}}>Create Awesome Pro Photos</h3>
                             </Col>
                         </Row>
-                    </Fade>
-                    <Fade direction="left">
+                    
                         <Row style={{textAlign: '-webkit-center'}}>
                             <Col md={12} lg={4} style={{paddingBottom: '10px'}}>
                                 <Card style={{ width: '14rem', boxShadow: '0 0 45px rgba(0,0,0,.1)' }}>
@@ -87,7 +85,7 @@ const CreateAwesomePhotos = () =>{
                                     </Card>
                                 </Col>
                             </Row>
-                        </Fade>
+                     
 
                     </Container>  
 

@@ -79,12 +79,11 @@ const Photoinfo = () => {
 
         <Container className="banner" style={{backgroundColor: 'white', paddingBottom: '150px'}}>
             
-            <Fade direction="left">
+       
                 <Title
                     title={`Welcome to "Photography" page`}
                 />
-            </Fade>
-            <Fade direction="right">
+            
                 <Row>
                 
                     <Col xs={12} sm={6}>
@@ -133,7 +132,7 @@ const Photoinfo = () => {
                     </Col>
 
                 </Row>
-            </Fade>
+
         </Container>
 
     )
