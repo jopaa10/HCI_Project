@@ -35,19 +35,20 @@ const Layout = () => {
   
   return (
     <>
-      <Header />
+      
       <main>
-        <Banner
-              color={'white'} 
-              title={'"Photography is the story I fail to put into words"'}
-              author={'Denise Sparks'}
-              bgImage={data.bgImage.childImageSharp.fluid}
-        />
-        <PhotoInfo />
-        <CreateAwesomePhotos />
-        <ImageSlider />
-        <InfoForUsers />
-        <FaQ />
+          <Header />
+          <Banner
+                color={'white'} 
+                title={'"Photography is the story I fail to put into words"'}
+                author={'Denise Sparks'}
+                bgImage={data.bgImage.childImageSharp.fluid}
+          />
+          <PhotoInfo />
+          <CreateAwesomePhotos />
+          <ImageSlider />
+          <InfoForUsers />
+          <FaQ />
       </main>
     </>
   )
