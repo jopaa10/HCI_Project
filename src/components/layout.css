@@ -1120,7 +1120,8 @@ a:hover{
 }*/
 
 .nav-linkLogin{
-  color: white!important;
+  color: black;
+  background-color: white;
 }
 
 @media(max-width: 800px)

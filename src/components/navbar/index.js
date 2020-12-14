@@ -160,7 +160,7 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
                             <Nav.Link className={showColorNavbar} > <Link to='/tips/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>Tips</Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/history/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>History </Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/alltimephotos/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>All time photos</Link></Nav.Link>
-                            <Nav.Link className="nav-link nav-linkLogin"  style={{backgroundColor: loginBg, width: 'fit-content', background: 'white'}} ref={target}> <Link to='/login/' activeStyle={{color: 'grey'}} style={{color: loginColor}}>LogIn</Link></Nav.Link>
+                            <Nav.Link className="nav-linkLogin"  style={{backgroundColor: loginBg, width: 'fit-content', background: 'white'}} ref={target}> <Link to='/login/' activeStyle={{color: 'grey'}} style={{color: loginColor}}>LogIn</Link></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
  
