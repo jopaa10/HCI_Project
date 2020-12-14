@@ -1,9 +1,14 @@
 import React, {useState, useEffect} from 'react'
 import {graphql, useStaticQuery, Link} from 'gatsby'
 
+//react bootstrap
 import {Row, Col, Container, Card, Media} from 'react-bootstrap'
 
 import Img from 'gatsby-image'
+
+//fontawesome 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faSearch} from '@fortawesome/free-solid-svg-icons'
 
 const NewsForm = () => {
 
@@ -73,12 +78,14 @@ const NewsForm = () => {
                     <Col xs={12} sm={12} style={{textAlign: 'center'}}><h4 style={{fontFamily: 'Josefin Sans', fontWeight: '700', fontSize: '55px', lineHeight: '48px'}}>Latest News</h4></Col>
                 </Row>
 
-                <Row>   
-                    <input type="search" placeholder="Search" onChange={e => setSearch(e.target.value)}/>
+                <Row className="searchBarMobile" style={{paddingTop: '50px'}}> 
+                  <Col md={12} xs={12} sm={12}>  
+                    <input style={{borderRadius: '10px', paddingLeft: '10px', border: '2px solid black'}} type="search" placeholder="Search" onChange={e => setSearch(e.target.value)}/>
+                  </Col>
                 </Row>
 
                 
-                <Row style={{paddingTop: '50px'}}>
+                <Row style={{paddingTop: '20px'}}>
 
                 <Col md={12} xs={12} sm={12} lg={8} className="latestNewsMob">
                     {latestPost.map(post => ( 
