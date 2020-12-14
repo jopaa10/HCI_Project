@@ -11,7 +11,7 @@ import Img from 'gatsby-image'
 import ReactCardCarousel from 'react-card-carousel'
 
 //animation
-import Fade from 'react-reveal'
+import { Fade } from "react-awesome-reveal"
 
 const ImageSlider = (props) => {
 
@@ -83,13 +83,14 @@ const ImageSlider = (props) => {
         <section className="banner" style={{backgroundColor: '#ededed'}}>
             <Container fluid>
             
-            <Fade left>
+            <Fade direction="left">
                 <Row>
                     <Col xs={12} style={{textAlign: "center"}}>
                         <h3 style={{fontFamily: "josefin sans", fontWeight: "700", fontSize: "3.5em", lineHeight: "1.5", paddingBottom: '50px'}}> Photography - Art of seeing </h3>
                     </Col>
                 </Row>
-           
+            </Fade>
+            <Fade direction="right">
                 <Row>
                     <Col xs={12} sm={12} md={12} style={{display: 'flex', justifyContent: 'center'}}>
                         <Row className="container_style" style={ CONTAINER_STYLE }> 

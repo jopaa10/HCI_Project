@@ -19,7 +19,7 @@ import Template from './carouselTemplate'
 import Title from '../title/index'
 
 //animation
-import Fade from 'react-reveal'
+import { Fade } from "react-awesome-reveal"
 
 const Photoinfo = () => {
 
@@ -79,11 +79,12 @@ const Photoinfo = () => {
 
         <Container className="banner" style={{backgroundColor: 'white', paddingBottom: '150px'}}>
             
-            <Fade left>
+            <Fade direction="left">
                 <Title
                     title={`Welcome to "Photography" page`}
                 />
-
+            </Fade>
+            <Fade direction="right">
                 <Row>
                 
                     <Col xs={12} sm={6}>
