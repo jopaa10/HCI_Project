@@ -51,9 +51,9 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
         if(window.scrollY > 50)
         {
             setShowNavbar('white')
-            setColorNavbar('navLinkColor')
             setLoginColor('white')
             setLoginBg('black')
+            setColorNavbar('black')
             setColorLogo(data.file.childImageSharp.fixed)
             setNavbarStyle('navbarOnScroll')
             setLinkColor('black')
@@ -109,6 +109,7 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
         }
 
         else if(window.scrollY > 50){
+            
             setLoginBg('black')
             setLoginColor('white')
         }
@@ -159,7 +160,7 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
                             <Nav.Link className={showColorNavbar} > <Link to='/tips/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>Tips</Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/history/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>History </Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/alltimephotos/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>All time photos</Link></Nav.Link>
-                            <Nav.Link className={showColorNavbar} className="nav-link nav-linkLogin"  style={{backgroundColor: loginBg, width: 'fit-content', background: 'white'}} ref={target}> <Link to='/login/' activeStyle={{color: 'grey'}} style={{color: loginColor}}>LogIn</Link></Nav.Link>
+                            <Nav.Link className="nav-link nav-linkLogin"  style={{backgroundColor: loginBg, width: 'fit-content', background: 'white'}} ref={target}> <Link to='/login/' activeStyle={{color: 'grey'}} style={{color: loginColor}}>LogIn</Link></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
  
