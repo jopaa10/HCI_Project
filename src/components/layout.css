@@ -596,6 +596,11 @@ pre tt:after {
 }
 
 /*** header ***/
+
+.nav-link.nav-linkLogin{
+  border-radius: 20px;
+}
+
 .nav-link:active{
   color: grey!important;
 }
@@ -1113,10 +1118,6 @@ a:hover{
   }
   
 }*/
-
-.nav-linkLogin{
-  border-radius: 20px!important;
-}
 
 @media(max-width: 800px)
 {
