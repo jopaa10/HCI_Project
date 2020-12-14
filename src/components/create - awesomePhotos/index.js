@@ -13,7 +13,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCamera, faEye, faHourglassHalf} from '@fortawesome/free-solid-svg-icons'
 
 //animation
-import Fade from 'react-reveal'
+import { Fade } from "react-awesome-reveal"
 
 const CreateAwesomePhotos = () =>{
 
@@ -38,13 +38,14 @@ const CreateAwesomePhotos = () =>{
                 
                 <Container>
 
-                    <Fade right>
+                    <Fade direction="right">
                         <Row>
                             <Col xs={12} style={{textAlign: 'center'}}>
                                 <h3 style={{fontFamily: "josefin sans", fontSize: "2.5em", lineHeight: "1.5", color: 'white'}}>Create Awesome Pro Photos</h3>
                             </Col>
                         </Row>
-                    
+                    </Fade>
+                    <Fade direction="left">
                         <Row style={{textAlign: '-webkit-center'}}>
                             <Col md={12} lg={4} style={{paddingBottom: '10px'}}>
                                 <Card style={{ width: '14rem', boxShadow: '0 0 45px rgba(0,0,0,.1)' }}>
