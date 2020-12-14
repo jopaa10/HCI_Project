@@ -1119,6 +1119,10 @@ a:hover{
   
 }*/
 
+.nav-linkLogin{
+  color: white!important;
+}
+
 @media(max-width: 800px)
 {
   .nav-linkLogin{
