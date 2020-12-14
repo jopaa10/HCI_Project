@@ -9,7 +9,7 @@ import {Container, Row, Col} from 'react-bootstrap'
 import Img from "gatsby-image"
 
 //animation
-import Slide from 'react-reveal'
+import Fade from 'react-reveal'
 
 const InfoForUsers = () => {
 
@@ -42,7 +42,7 @@ const InfoForUsers = () => {
         <section className="banner" style={{backgroundColor: "white", paddingTop: '0'}}> 
 
             <Container>
-                <Slide right>
+                <Fade right>
                     <Row>
                         <Col xs={12} sm={12} md={6} lg={6} style={{textAlign: "center"}}>
                             <h3 style={{fontFamily: "josefin sans", fontSize: "3.5em", lineHeight: "1.5"}}> Make Your Photogallery </h3>
@@ -52,9 +52,7 @@ const InfoForUsers = () => {
                             <Img fluid={data.imageGallery.childImageSharp.fluid} className="pageInfoImg" alt="exampleOfGallery" />
                         </Col>
                     </Row>
-                </Slide>
-
-                <Slide left>
+                
                     <Row style={{paddingTop: '100px'}}>
                         <Col xs={12} sm={12} md={6} lg={6} style={{textAlign: "center"}} className="ratingImgAbove">
                             <Img fluid={data.starRating.childImageSharp.fluid} className="pageInfoImg" style={{ boxShadow: "1px 10px 10px -3px rgba(0,0,0,0.29)"}} alt="profilePic" />
@@ -67,9 +65,7 @@ const InfoForUsers = () => {
                             <Img fluid={data.starRating.childImageSharp.fluid} className="pageInfoImg" style={{ boxShadow: "1px 10px 10px -3px rgba(0,0,0,0.29)"}} alt="profilePic" />
                         </Col>
                     </Row>
-                </Slide>
-
-                <Slide right>
+               
                     <Row style={{paddingTop: '100px'}}>
                         <Col xs={12} sm={12} md={6} lg={6} style={{textAlign: "center"}}>
                             <h3 style={{fontFamily: "josefin sans", fontSize: "3.5em", lineHeight: "1.5"}}> Lorem ipsum </h3>
@@ -79,7 +75,7 @@ const InfoForUsers = () => {
                             <Img fluid={data.imageGallery.childImageSharp.fluid} className="pageInfoImg" alt="exampleOfGallery" />
                         </Col>
                     </Row>
-                </Slide>
+                </Fade>
 
             </Container>
         </section>
