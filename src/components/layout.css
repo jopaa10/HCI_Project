@@ -1111,6 +1111,10 @@ a:hover{
   
 }*/
 
+.nav-linkLogin{
+  border-radius: 20px!important;
+}
+
 @media(max-width: 800px)
 {
   .nav-linkLogin{

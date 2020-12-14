@@ -162,7 +162,7 @@ const navbarStyle = {
                             <Nav.Link className={showColorNavbar} > <Link to='/tips/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>Tips</Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/timeline/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>History </Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/alltimephotos/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>All time photos</Link></Nav.Link>
-                            <Nav.Link className={showColorNavbar} className="nav-linkLogin nav-link"  style={{backgroundColor: loginBg, borderRadius: '20px!important', width: 'fit-content'}} ref={target}> <Link to='/' activeStyle={{color: 'grey'}} style={{color: loginColor}}>LogIn</Link></Nav.Link>
+                            <Nav.Link className={showColorNavbar} className="nav-linkLogin nav-link"  style={{backgroundColor: loginBg, width: 'fit-content'}} ref={target}> <Link to='/login/' activeStyle={{color: 'grey'}} style={{color: loginColor}}>LogIn</Link></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
  
