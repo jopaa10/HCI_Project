@@ -38,14 +38,13 @@ const FaQ = () => {
                 <Row className="questions">
 
                     <Col sm={8} xs={8}>
-                        <Fade direction="left">
+                       
                             <Row>
                                 <Col xs={12} sm={8} style={{paddingTop: '20px', textAlign: 'center'}}>
                                     <h3 style={{fontFamily: "josefin sans", fontSize: "2em", lineHeight: "1.5"}}>FAQ</h3>
                                 </Col> 
                             </Row>
-                        </Fade>
-                        <Fade direction="right">
+                        
                             <Row>
                                 <Col sm={8} xs={12} style={{alignItems: 'center'}}>
                                     <Row>
@@ -67,7 +66,7 @@ const FaQ = () => {
                                     </Row>
                                 </Col>
                             </Row>
-                        </Fade>
+                       
                     </Col>
                 </Row>
             
