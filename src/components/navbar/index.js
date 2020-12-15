@@ -1,20 +1,20 @@
 //navbar components
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import {Link, useStaticQuery, graphql} from 'gatsby'
-
+ 
 //bootstrap
 import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap'
-
+ 
 //gatsby image
 import Img from 'gatsby-image'
-
+ 
 //fontawesome
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
-
-
+ 
+ 
  function NavbarMenu() {
-
+ 
     const data = useStaticQuery(graphql`
         query{
             file(relativePath: {eq: "logoT-shirt.png"}){
@@ -24,7 +24,7 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
                     }
                 }
             }
-
+ 
            logo1: file(relativePath: {eq: "logoT-shirtWhite.png"}){
                 childImageSharp{
                     fixed{
@@ -35,24 +35,32 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
         }
     
     `)
-
+ 
     const [showNavbar, setShowNavbar] = useState("black")
     const [showColorNavbar, setColorNavbar] = useState("white")
-    const [loginBg, setLoginBg] = useState("loginButton")
-    const [loginColor, setLoginColor] = useState("loginButtonColor")
+    const [loginBg, setLoginBg] = useState("white")
+    const [loginColor, setLoginColor] = useState("black")
     const [changeColorLogo, setColorLogo] = useState(data.logo1.childImageSharp.fixed)
     const [navbarClassname, setNavbarStyle] = useState("navbar")
     const [linkColor, setLinkColor] = useState("white")
     const [togglerColor, setTogglerColor] = useState("white")
     const [loginUserBg, setUserBg] = useState("white")
-
+ 
+    const [changeSpanIcon, setSpanIcon] = useState(faBars)
+    const [togglerOpen, setTogglerOpen] = useState('navbar-togglerClose')
+    const [didMount, setDidMount] = useState(false)
+ 
+    useEffect(() => {
+        setDidMount(true);
+    },[])
+ 
     const changeNavbarStyle = () => {
-
+ 
         if(window.scrollY > 50)
         {
             setShowNavbar('white')
-            setLoginColor('loginButtonAfterScrollColor')
-            setLoginBg('loginButtonAfterScroll')
+            setLoginColor('white')
+            setLoginBg('black')
             setColorNavbar('black')
             setColorLogo(data.file.childImageSharp.fixed)
             setNavbarStyle('navbarOnScroll')
@@ -64,8 +72,8 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
         {
             setShowNavbar('black')
             setColorNavbar('white')
-            setLoginColor('loginButtonColor')
-            setLoginBg('loginButton')
+            setLoginColor('black')
+            setLoginBg('white')
             setColorLogo(data.logo1.childImageSharp.fixed)
             setNavbarStyle('navbar')
             setLinkColor('white')
@@ -73,23 +81,68 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
             setUserBg('white')
         }
     }
-
-
-    const [changeSpanIcon, setSpanIcon] = useState(faBars)
-    const [togglerOpen, setTogglerOpen] = useState('navbar-togglerClose')
-
+ 
+    const target = useRef(null)
+ 
+    const [loginHover, setLoginHover] = useState(false)
+ 
+    const enter = () => {
+ 
+        setLoginHover(true)
+ 
+        if(window.scrollY > 50)
+        {  
+            setLoginBg('white')
+            setLoginColor('black')
+        }
+ 
+        else if(window.scrollY <= 50){
+         
+            setLoginBg('black')
+            setLoginColor('white')
+        }
+        
+    }
+ 
+    const leave = () => {
+ 
+        setLoginHover(false)
+       
+ 
+        if(window.scrollY <= 50)
+        {
+            setLoginBg('white')
+            setLoginColor('black')
+            
+        }
+ 
+        else if(window.scrollY > 50){
+            
+            setLoginBg('black')
+            setLoginColor('white')
+        }
+   
+    }
+ 
     const changeIcon = () => {
-
+ 
         setSpanIcon(changeSpanIcon === faBars ? faTimes : faBars)
         setTogglerOpen(togglerOpen === 'navbar-togglerClose' ? 'navbar-togglerOpen' : 'navbar-togglerClose')
     }
-
+ 
     useEffect(() => {
-
+        if (!didMount)
+            return
         document.addEventListener('scroll', changeNavbarStyle)
-
-    },)
-
+ 
+        target.current.addEventListener('mouseenter', enter)
+        target.current.addEventListener('mouseleave', leave)
+ 
+    },[target, didMount])
+ 
+    if (!didMount)
+        return null;
+ 
     return(
         <Navbar fixed="top" expand="lg" className={navbarClassname} style={{backgroundColor: showNavbar}}>
              <Container>
@@ -108,7 +161,7 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
                             <FontAwesomeIcon icon={changeSpanIcon} className={togglerOpen} style={{color: togglerColor}} />
                     </Navbar.Toggle>
                     
-
+ 
                     <Navbar.Collapse id="basic-navbar-nav" style={{justifyContent: 'flex-end', fontFamily: 'josefin sans'}}>
                         <Nav>
                             <Nav.Link className={showColorNavbar} > <Link to='/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>Home</Link></Nav.Link>
@@ -116,7 +169,7 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
                             <Nav.Link className={showColorNavbar} > <Link to='/tips/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>Tips</Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/history/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>History </Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/alltimephotos/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>All time photos</Link></Nav.Link>
-                            <Nav.Link className={loginBg} id="nav-linkLogin"  style={{width: 'fit-content'}}> <Link className={loginColor}  to='/login/' activeStyle={{color: 'grey'}}>LogIn</Link></Nav.Link>
+                            <Nav.Link className="nav-link nav-linkLogin"  style={{backgroundColor: loginBg, width: 'fit-content', background: 'white', borderRadius: '5px'}} ref={target}> <Link to='/login/' activeStyle={{color: 'grey'}} style={{color: loginColor}}>LogIn</Link></Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
  
@@ -125,5 +178,5 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
         </Navbar> 
     )
 }
-
+ 
 export default NavbarMenu

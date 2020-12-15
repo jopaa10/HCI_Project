@@ -596,43 +596,6 @@ pre tt:after {
 }
 
 /*** header ***/
-
-.loginButton{
-  background-color: white!important;
-  border-radius: 20px!important;
-}
-
-.loginButtonColor{
-  color: black!important;
-}
-
-.loginButtonAfterScroll{
-  background-color: black!important;
-  border-radius: 20px!important;
-}
-
-.loginButtonAfterScrollColor{
-  color: white!important;
-}
-
-.loginButton:hover{
-  background-color: black!important;
-  border-radius: 20px!important;
-}
-
-.loginButtonColor:hover{
-  color: white!important;
-}
-
-.loginButtonAfterScroll:hover{
-  background-color: white!important;
-  border-radius: 20px!important;
-}
-
-.loginButtonAfterScrollColor:hover{
-  color: black!important;
-}
-
 .nav-link:active{
   color: grey!important;
 }
