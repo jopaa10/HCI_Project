@@ -47,5 +47,13 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/src/newsItems/`,
+      },
+    },
+    `gatsby-transformer-remark`,
   ],
 }

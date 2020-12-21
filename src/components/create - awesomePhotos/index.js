@@ -13,7 +13,7 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCamera, faEye, faHourglassHalf} from '@fortawesome/free-solid-svg-icons'
 
 //animation
-import Slide from 'react-reveal'
+import { Fade } from "react-awesome-reveal"
 
 const CreateAwesomePhotos = () =>{
 
@@ -22,7 +22,7 @@ const CreateAwesomePhotos = () =>{
     
             bgImage: file(relativePath: {eq: "wallpaperKids.jpg"}){
                 childImageSharp{
-                    fluid(maxWidth: 4000, quality: 100){
+                    fluid(maxWidth: 2000, quality: 100){
                         ...GatsbyImageSharpFluid
                     }
                 }
@@ -38,15 +38,12 @@ const CreateAwesomePhotos = () =>{
                 
                 <Container>
 
-                    <Slide left>
                         <Row>
                             <Col xs={12} style={{textAlign: 'center'}}>
                                 <h3 style={{fontFamily: "josefin sans", fontSize: "2.5em", lineHeight: "1.5", color: 'white'}}>Create Awesome Pro Photos</h3>
                             </Col>
                         </Row>
-                    </Slide>
-
-                    <Slide right>
+                    
                         <Row style={{textAlign: '-webkit-center'}}>
                             <Col md={12} lg={4} style={{paddingBottom: '10px'}}>
                                 <Card style={{ width: '14rem', boxShadow: '0 0 45px rgba(0,0,0,.1)' }}>
@@ -88,7 +85,7 @@ const CreateAwesomePhotos = () =>{
                                     </Card>
                                 </Col>
                             </Row>
-                        </Slide>
+                     
 
                     </Container>  
 

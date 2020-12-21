@@ -11,7 +11,7 @@ import ShowText from './templateQuestions'
 import BackgroundImage from 'gatsby-background-image'
 
 //animation
-import Slide from 'react-reveal'
+import { Fade } from "react-awesome-reveal"
 
 const FaQ = () => {
 
@@ -38,15 +38,13 @@ const FaQ = () => {
                 <Row className="questions">
 
                     <Col sm={8} xs={8}>
-                        <Slide left>
+                       
                             <Row>
                                 <Col xs={12} sm={8} style={{paddingTop: '20px', textAlign: 'center'}}>
                                     <h3 style={{fontFamily: "josefin sans", fontSize: "2em", lineHeight: "1.5"}}>FAQ</h3>
                                 </Col> 
                             </Row>
-                        </Slide>
-
-                        <Slide right>
+                        
                             <Row>
                                 <Col sm={8} xs={12} style={{alignItems: 'center'}}>
                                     <Row>
@@ -68,7 +66,7 @@ const FaQ = () => {
                                     </Row>
                                 </Col>
                             </Row>
-                        </Slide>
+                       
                     </Col>
                 </Row>
             

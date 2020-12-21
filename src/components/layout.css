@@ -1114,16 +1114,21 @@ a:hover{
   
 }*/
 
+#nav-linkLogin{
+  color: black;
+  background-color: white;
+}
+
 @media(max-width: 800px)
 {
-  .nav-linkLogin{
+  #nav-linkLogin{
     width: 15%!important;
     text-align: center;
     display: none;
   }
 
   .navUserLogin{
-    display: block;
+    display: block!important;
   }
 
   #basic-navbar-nav{
@@ -1141,16 +1146,16 @@ a:hover{
     margin-left: 20px;
   }
 
-  .nav-linkLogin{
+  #nav-linkLogin{
     width: 15%!important;
     text-align: center;
-    display: none;
+    display: none!important;
   }
 }
 
 @media(max-width: 480px)
 {
-  .nav-linkLogin{
+  #nav-linkLogin{
     width: 20%!important;
     text-align: center;
     display: none;
@@ -1159,7 +1164,7 @@ a:hover{
 
 @media(max-width: 350px)
 {
-  .nav-linkLogin{
+  #nav-linkLogin{
     width: 30%!important;
     text-align: center;
     display: none;
@@ -1455,6 +1460,9 @@ a:hover{
   }
   .latestNewsDekstop{
     display: none;
+  }
+  .searchBarMobile{
+    text-align: center;
   }
 }
 
