@@ -56,7 +56,7 @@ const Footer = () => {
                             </Row>
                         </Col>
                     </Row>
-                    <Row>
+                    <Row style={{marginTop: '20px'}}> 
                         <Col xs={12} style={{color: 'white', textAlign: 'center'}}>
                         © {new Date().getFullYear()}, Built with
                                 {` `}
