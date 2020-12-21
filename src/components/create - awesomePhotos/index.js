@@ -22,7 +22,7 @@ const CreateAwesomePhotos = () =>{
     
             bgImage: file(relativePath: {eq: "wallpaperKids.jpg"}){
                 childImageSharp{
-                    fluid(maxWidth: 2000, quality: 100){
+                    fluid(maxWidth: 2000, maxHeight: 3000, quality: 100){
                         ...GatsbyImageSharpFluid
                     }
                 }
