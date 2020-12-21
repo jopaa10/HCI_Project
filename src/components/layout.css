@@ -1414,6 +1414,13 @@ a:hover{
   display: none;
 }
 
+@media(max-width: 880px)
+{
+  .titleTips{
+    font-size: 2em!important;
+  }
+}
+
 @media(max-width: 767px)
 {
   .mobileViewPhoto{

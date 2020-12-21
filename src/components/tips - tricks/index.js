@@ -18,7 +18,7 @@ const TipsTricks = () => {
 
     const data = useStaticQuery(graphql`
         query{
-            ruleOfThird: file(relativePath: {eq: "rule-of-thirds.jpg"}){
+            ruleOfThird: file(relativePath: {eq: "rule-of-thirdss.jpg"}){
                 childImageSharp{
                     fluid(quality: 100){
                         ...GatsbyImageSharpFluid
