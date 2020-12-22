@@ -1118,7 +1118,7 @@ a:hover{
 
 @media(max-width: 800px)
 {
-  #nav-linkLogin{
+  .nav-linkLogin{
     width: 15%!important;
     text-align: center;
     display: none;
