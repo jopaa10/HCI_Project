@@ -1114,14 +1114,9 @@ a:hover{
   
 }*/
 
-#nav-linkLogin{
-  color: black;
-  background-color: white;
-}
-
 @media(max-width: 800px)
 {
-  #nav-linkLogin{
+  .nav-linkLogin{
     width: 15%!important;
     text-align: center;
     display: none;
