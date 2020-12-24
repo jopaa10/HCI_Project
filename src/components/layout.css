@@ -1037,7 +1037,19 @@ a:hover{
   .camObscura{
     justify-content: flex-end!important;
   }
+  .camAlign{
+    justify-content: flex-start!important;
+  }
 }
+
+@media(max-width: 950px){
+
+    .quote{
+      position: relative;
+      bottom: 35px;
+    }
+}
+
 
 /*** popover page cameraTimeline ***/
 
