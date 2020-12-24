@@ -33,7 +33,7 @@ const Timeline = () => {
                 title={`"Photographs open doors into the past, but they also allow a look into the future."`}
                 author={'Sally Mann'}
                 bgImage={data.bgImage.childImageSharp.fluid}
-                
+                className={'quote'}
             />
             <CameraHistory />
         </main>

@@ -17,8 +17,8 @@ const Banner = ((props) => {
         <BackgroundImage fluid={props.bgImage} className="bgImageRes" style={{height: "600px", paddingTop: '50px', marginTop: '90px'}}>
             <Container fluid className="banner" style={{backgroundColor: 'transparent'}}>
                 <Container>
-                    <Row>
-                        <Col sm={7} xs={7} md={6} lg={4}>
+                    <Row className={props.className}>
+                        <Col sm={5} xs={7} md={6} lg={4}>
                             <h3 className="bannerTitle" style={{color: props.color, lineHeight: '2', fontFamily: 'josefin sans'}}> {props.title} </h3>
                             <h3 className="bannerTitle" style={{color: props.color, lineHeight: '2', textAlign: 'center', fontFamily: 'josefin sans'}}>{props.author}</h3>
                         </Col>

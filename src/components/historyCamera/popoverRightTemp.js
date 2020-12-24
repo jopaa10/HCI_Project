@@ -25,7 +25,7 @@ const PopoverDisplay = (props) => {
         <Col sm={12} md={12} xs={10} onClick={showMore} ref={target} style={{display: 'flex', justifyContent: 'flex-start', marginRight: '5em'}}>
         
             <Img 
-                    style={{width: '250px', cursor: changeCursor}} 
+                    style={{width: props.width, cursor: changeCursor}} 
                     fluid={props.image} 
                     alt="nikonCamera"
                     target={target} 
