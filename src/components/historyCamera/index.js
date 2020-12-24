@@ -17,8 +17,6 @@ import PopoverRight from './popoverRightTemp'
 //title
 import Title from '../title'
 
-//animation
-import {Fade} from 'react-reveal'
 
 const CameraTimeline = () => {
 
@@ -152,7 +150,7 @@ const CameraTimeline = () => {
                             date="4th century"
                             iconStyle={{ background: '#C4C4C4', color: '#fff' }}
                         >
-                            <Fade left>
+                            
                             <Row id="typesOfCamera" className="camObscura">
                                 <PopoverLeft
                                     placement='left'
@@ -161,7 +159,6 @@ const CameraTimeline = () => {
                                     width={'150px'}
                                 />
                             </Row>
-                            </Fade>
                         </VerticalTimelineElement>
                         
                         <VerticalTimelineElement
@@ -170,7 +167,6 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#A5A5A5', color: '#fff' }}
                             
                         >
-                            <Fade right>
                             <Row id="typesOfCamera">
                                 <PopoverRight
                                     title={'Daguerreotype'}
@@ -179,7 +175,6 @@ const CameraTimeline = () => {
                                     width={'150px'}
                                 />
                             </Row>
-                            </Fade>
                         </VerticalTimelineElement>
 
                         <VerticalTimelineElement
@@ -189,7 +184,6 @@ const CameraTimeline = () => {
                             
                         >
                             
-                            <Fade left>
                             <Row id="typesOfCamera"> 
                             <PopoverLeft
                                     placement='left'
@@ -197,8 +191,7 @@ const CameraTimeline = () => {
                                     image={data.FirstFilmCam.childImageSharp.fluid}
                                     width={'150px'}
                                 />
-                            </Row>
-                            </Fade>  
+                            </Row> 
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"
@@ -206,7 +199,6 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#A5A5A5', color: '#fff' }}
                             
                         >
-                            <Fade right>
                             <Row id="typesOfCamera">
                                 <PopoverRight
                                     placement='right'
@@ -215,7 +207,6 @@ const CameraTimeline = () => {
                                     width={'150px'}
                                 />
                             </Row>
-                            </Fade>
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--education"
@@ -223,7 +214,6 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#696969', color: '#fff' }}
                             
                         >
-                            <Fade left>
                             <Row id="typesOfCamera">
                                 <PopoverLeft
                                     placement='left'
@@ -232,7 +222,6 @@ const CameraTimeline = () => {
                                     width={'150px'}
                                 />
                             </Row>
-                            </Fade>
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--education"
@@ -240,7 +229,6 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#696969', color: '#fff' }}
                             
                         >
-                            <Fade right>
                             <Row id="typesOfCamera">
                                 <PopoverRight
                                     placement='right'
@@ -249,7 +237,6 @@ const CameraTimeline = () => {
                                     width={'150px'}
                                 />
                             </Row>
-                            </Fade>
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--education"
@@ -257,7 +244,6 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#696969', color: '#fff' }}
                         
                         >
-                            <Fade left>
                             <Row id="typesOfCamera">
                                 <PopoverLeft
                                     placement='left'
@@ -266,7 +252,6 @@ const CameraTimeline = () => {
                                     width={'150px'}
                                 />
                             </Row>
-                            </Fade>
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--education"
@@ -274,7 +259,6 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#696969', color: '#fff' }}
                         
                         >
-                            <Fade right>
                             <Row id="typesOfCamera">
                                 <PopoverRight
                                     placement='right'
@@ -283,7 +267,6 @@ const CameraTimeline = () => {
                                     width={'150px'}
                                 />
                                 </Row>
-                                </Fade>
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--education"
@@ -291,7 +274,6 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#696969', color: '#fff' }}
                         
                         >
-                            <Fade left>
                            <Row id="typesOfCamera">
                             <PopoverLeft
                                 placement='left'
@@ -300,7 +282,6 @@ const CameraTimeline = () => {
                                 width={'150px'}
                             />
                             </Row>
-                            </Fade>
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--education"
@@ -308,7 +289,6 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#696969', color: '#fff' }}
                         
                         >
-                            <Fade right>
                            <Row id="typesOfCamera">
                             <PopoverRight
                                 placement='right'
@@ -317,7 +297,6 @@ const CameraTimeline = () => {
                                 width={'150px'}
                             />
                             </Row>
-                            </Fade>
                         </VerticalTimelineElement>
 
                         <VerticalTimelineElement
@@ -326,7 +305,6 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#3A3A3A', color: '#fff' }}
                         
                         >
-                            <Fade left>
                            <Row id="typesOfCamera">
                             <PopoverLeft
                                 placement='left'
@@ -335,7 +313,6 @@ const CameraTimeline = () => {
                                 width={'150px'}
                             />
                             </Row>
-                            </Fade>
                         </VerticalTimelineElement>
 
                         <VerticalTimelineElement
@@ -344,7 +321,6 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#3A3A3A', color: '#fff' }}
                         
                         >
-                            <Fade right>
                            <Row id="typesOfCamera">
                             <PopoverRight
                                 placement='right'
@@ -353,7 +329,6 @@ const CameraTimeline = () => {
                                 width={'150px'}
                             />
                             </Row>
-                            </Fade>
                         </VerticalTimelineElement>
 
                         <VerticalTimelineElement
@@ -362,7 +337,6 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#3A3A3A', color: '#fff' }}
                         
                         >
-                            <Fade left>
                            <Row id="typesOfCamera">
                             <PopoverLeft
                                 placement='left'
@@ -371,7 +345,6 @@ const CameraTimeline = () => {
                                 width={'150px'}
                             />
                             </Row>
-                            </Fade>
                         </VerticalTimelineElement>
                         
                     </VerticalTimeline>
