@@ -1509,7 +1509,8 @@ a:hover{
   height: auto;
   border: 3px solid #000000;
   border-right: none;
-  padding: 5px;
+  padding-top: 4px;
+  padding-bottom: 9px;
   border-radius: 5px 0 0 5px;
   outline: none;
   color: #000000;
@@ -1517,6 +1518,14 @@ a:hover{
 
 .searchTerm:focus{
   color: #000000;
+}
+
+@media(max-width: 479px)
+{
+  .searchTerm{
+    padding-top: 6px;
+    padding-bottom: 8px;
+  }
 }
 
 .searchButton {

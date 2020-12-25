@@ -60,14 +60,23 @@ const NewsForm = () => {
 
     const [search, setSearch] = useState("")
     const [filteredPosts, setFilteredPosts] = useState([])
+    const [filteredLatestPosts, setFilteredLastestPosts] = useState([])
    
     useEffect(() => {
         setFilteredPosts(
-          posts.filter((post) =>
-            post.frontmatter.title.toLowerCase().includes(search.toLowerCase())
-          )
+            posts.filter((post) =>
+              post.frontmatter.title.toLowerCase().includes(search.toLowerCase()) ||
+              post.excerpt.toLowerCase().includes(search.toLowerCase())
+            )
         )
-      }, [search, posts])
+        setFilteredLastestPosts(
+          latestPost.filter((latestPost) =>
+            latestPost.frontmatter.title.toLowerCase().includes(search.toLowerCase()) ||
+            latestPost.excerpt.toLowerCase().includes(search.toLowerCase())
+          )
+        )  
+
+      }, [search, posts, latestPost])
 
     return(
         <>
@@ -83,7 +92,7 @@ const NewsForm = () => {
                     <input type="search" placeholder="Search" className="searchTerm" onChange={e => setSearch(e.target.value)}/>
                     <Button type="submit" className="searchButton">
                       <FontAwesomeIcon icon={faSearch}/>
-                    </Button>
+                    </Button> 
                   </Col>
                 </Row>
 
@@ -91,7 +100,7 @@ const NewsForm = () => {
                 <Row style={{paddingTop: '20px'}}>
 
                 <Col md={12} xs={12} sm={12} lg={8} className="latestNewsMob">
-                    {latestPost.map(post => ( 
+                    {filteredLatestPosts.map(post => ( 
                         <Row style={{paddingTop: '50px', justifyContent: 'center'}}>
                             
                             <Col md={12} xs={12} sm={12}>
@@ -137,7 +146,7 @@ const NewsForm = () => {
                         </Col>
                     
                     <Col md={12} xs={12} sm={12} lg={8} className="latestNewsDekstop">
-                    {latestPost.map(post => ( 
+                    {filteredLatestPosts.map(post => ( 
                         <Row style={{paddingTop: '50px', justifyContent: 'center'}}>
                             
                             <Col md={12} xs={12} sm={12}>
