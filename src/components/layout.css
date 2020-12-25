@@ -1480,7 +1480,7 @@ a:hover{
   }
 }
 
-@media(max-width: 567px)
+@media(max-width: 570px)
 {
   .latestNews{
     width: 70%;
@@ -1488,11 +1488,11 @@ a:hover{
   }
 }
 
-@media(max-width: 567px)
+@media(max-width: 440px)
 {
   .latestNews{
-    width: 65%;
-    margin-left: 80px;
+    width: 70%;
+    margin-left: 70px;
   }
 }
 
@@ -1504,7 +1504,7 @@ a:hover{
   }
 }
 
-@media(max-width: 350px)
+@media(max-width: 370px)
 {
   .latestNews{
     width: 65%;
@@ -1512,7 +1512,7 @@ a:hover{
   }
 }
 
-@media(max-width: 400px)
+@media(max-width: 350px)
 {
   .latestNews{
     width: 65%;
@@ -1579,5 +1579,17 @@ a:hover{
   .newsBody{
     position: relative;
     right: 20px;
+  }
+}
+
+@media(max-width: 420px){
+  .newsTitle{
+    font-size: 45px!important;
+  }
+}
+
+@media(max-width: 330px){
+  .newsTitle{
+    font-size: 40px!important;
   }
 }

@@ -84,7 +84,7 @@ const NewsForm = () => {
        <section className="banner" style={{backgroundColor: 'transparent', paddingTop: '200px', height: 'auto'}}>
             <Container>
                 <Row style={{paddingTop: '30px'}}>
-                    <Col xs={12} sm={12} style={{textAlign: 'center'}}><h4 style={{fontFamily: 'Josefin Sans', fontWeight: '700', fontSize: '55px', lineHeight: '48px'}}>Latest News</h4></Col>
+                    <Col xs={12} sm={12} style={{textAlign: 'center'}}><h4 className="newsTitle" style={{fontFamily: 'Josefin Sans', fontWeight: '700', fontSize: '55px', lineHeight: '48px'}}>Latest News</h4></Col>
                 </Row>
 
                 <Row className="searchBarMobile" style={{paddingTop: '50px'}}> 
@@ -103,18 +103,22 @@ const NewsForm = () => {
                     {filteredLatestPosts.map(post => ( 
                         <Row style={{paddingTop: '50px', justifyContent: 'center'}}>
                             
-                            <Col md={12} xs={12} sm={12}>
-                                <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} className="latestNews" alt=""/>
-                            </Col>
+                          <Col md={12} xs={12} sm={12}>
+                              <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} className="latestNews" alt=""/>
+                          </Col>
                             
-                                <Col md={12} xs={12} sm={12}>
-                                <Card.Body style={{textAlign: 'center'}}>
-                                    <Card.Title><Link to={post.frontmatter.slug}><h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "1.5em", lineHeight: "1.5"}}>{post.frontmatter.title}</h4></Link></Card.Title>
-                                    <Card.Text style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}>
-                                        {post.excerpt}
-                                    </Card.Text>
-                                </Card.Body>
-                                </Col>
+                          <Col md={12} xs={12} sm={12}>
+                            <Card.Body style={{textAlign: 'center'}}>
+                                <Card.Title>
+                                  <Link to={post.frontmatter.slug}><h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "1.5em", lineHeight: "1.5"}}>
+                                    {post.frontmatter.title}</h4>
+                                  </Link>
+                                </Card.Title>
+                                <Card.Text style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}>
+                                    {post.excerpt}
+                                </Card.Text>
+                            </Card.Body>
+                          </Col>
                         </Row> 
                     ))}
                     </Col>
