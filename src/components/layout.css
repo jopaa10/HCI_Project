@@ -1473,7 +1473,31 @@ a:hover{
 {
   .latestNews{
     width: 65%;
+    margin-left: 80px;
+  }
+}
+
+@media(max-width: 400px)
+{
+  .latestNews{
+    width: 65%;
     margin-left: 70px;
+  }
+}
+
+@media(max-width: 350px)
+{
+  .latestNews{
+    width: 65%;
+    margin-left: 60px;
+  }
+}
+
+@media(max-width: 400px)
+{
+  .latestNews{
+    width: 65%;
+    margin-left: 50px;
   }
 }
 
@@ -1481,3 +1505,51 @@ a:hover{
   font-size: 0.75rem!important;
 }
 
+.searchTerm {
+  height: auto;
+  border: 3px solid #000000;
+  border-right: none;
+  padding: 5px;
+  border-radius: 5px 0 0 5px;
+  outline: none;
+  color: #000000;
+}
+
+.searchTerm:focus{
+  color: #000000;
+}
+
+.searchButton {
+  border: 1px solid #000000;
+  background: #000000!important;
+  text-align: center;
+  color: #fff;
+  border-radius: 0 5px 5px 0;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.searchButton:hover{
+  color: #fff;
+  background-color: #333333!important;
+  border-color: #333333!important;
+}
+
+@media(max-width: 385px){
+  .newsImg{
+    right: 30px;
+  }
+  .newsBody{
+    padding: 0px 20px 0px 0px!important;
+  }
+}
+
+@media(max-width: 335px){
+  .newsImg{
+    right: 35px;
+  }
+  .newsBody{
+    position: relative;
+    right: 20px;
+  }
+}
