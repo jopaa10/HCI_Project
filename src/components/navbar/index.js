@@ -154,7 +154,7 @@ import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
                     </Col>  
                     
                     <Nav.Link className={showColorNavbar} className="navUserLogin" style={{fontSize: '1.75em', paddingTop: '20px'}}> 
-                        <Link to='/signup/' style={{color: loginUserBg}}><FontAwesomeIcon icon={faUser}/></Link>
+                        <Link to='/login/' style={{color: loginUserBg}}><FontAwesomeIcon icon={faUser}/></Link>
                     </Nav.Link>  
                    
                     <Navbar.Toggle aria-controls="basic-navbar-nav" style={{backgroundColor: 'transparent', height: 'fit-content', marginTop: '20px', fontSize: '2em'}} onClick={changeIcon}>
