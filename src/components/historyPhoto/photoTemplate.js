@@ -46,7 +46,7 @@ const PhotoTemplate = (props) =>{
                                     </p>
                                 </Row>
                                 <Row style={{justifyContent: 'center'}}>
-                                    <button onClick={displayMore} style={{borderRadius: '20px', height: '50px', width: '30%', backgroundColor: props.bgColor, border: '0', color: props.textBtnColor, fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}> 
+                                    <button onClick={displayMore} style={{borderRadius: '5px', height: '50px', width: '30%', backgroundColor: props.bgColor, border: '0', color: props.textBtnColor, fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}> 
                                         {changeText} 
                                     </button>
                                 </Row>
