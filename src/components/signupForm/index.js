@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {graphql, useStaticQuery} from 'gatsby'
+import {graphql, useStaticQuery, navigate} from 'gatsby'
 
 //react bootstrap
 import {Row, Col, Container, Form, Button, InputGroup} from 'react-bootstrap'
@@ -13,9 +13,12 @@ import {faUserAlt, faLock, faEnvelope, faExclamationCircle} from '@fortawesome/f
 //import login
 import Login from '../loginForm'
 
+//firebase
+import {auth, db} from '../firebase/'
+
 const SignUp = () => {
 
- const data = useStaticQuery( graphql`
+    const data = useStaticQuery( graphql`
         query{
             bgImage: file(relativePath: {eq: "loginTemp.jpg"}) {
                         childImageSharp {
@@ -28,13 +31,118 @@ const SignUp = () => {
             `
         )
 
-        const [showLogin, setLogin] = useState(false)
+    const [showLogin, setLogin] = useState(false)
 
-        const showForm = () => {
-            setLogin(true)
-        }
+    const showForm = () => {
+        setLogin(true)
+    }
 
-        if(showLogin === true)
+    //signu up form
+
+    const [user, setUser] = useState({
+        name: "",
+        surname: "",
+        nickname: "",
+        email: "",
+        password: ""
+      })
+
+    const handleChangeName = (e) => {
+        setUser({ ...user, [e.target.name]: e.target.value })
+    }
+    const handleChangeSurname = (e) => {
+        setUser({ ...user, [e.target.name]: e.target.value })
+    }
+    const handleChangeNickname = (e) => {
+        setUser({ ...user, [e.target.name]: e.target.value })
+    }
+    const handleChangeEmail = (e) => {
+        setUser({ ...user, [e.target.name]: e.target.value })
+    }
+    const handleChangePass = (e) => {
+        setUser({ ...user, [e.target.name]: e.target.value })
+    }
+
+    const [processing, setProccesing] = useState(false)
+
+    const [borderColor, setBorderColor] = useState("none")
+    const [borderColorSurname, setBorderColorSurname] = useState("none")
+    const [borderColorEmail, setBorderColorEmail] = useState("none")
+    const [borderColorNick, setBorderColorNick] = useState("none")
+    const [borderColorPass, setBorderColorPass] = useState("none")
+
+    const [error, setError] = useState(false)
+
+    const [displayError, setDisplayError] = useState({
+        name: 'Name is not correct or written',
+        email: 'The email address is not valid/is not written',
+        password: 'The password must be 6 characters long or more.'
+    })
+
+    const handleReg = (e) => {
+    e.preventDefault()
+
+
+
+        setProccesing(true)
+
+        auth
+        .createUserWithEmailAndPassword(user.email, user.password)
+        .then((result) => {
+            result.user.updateProfile({
+            displayName: user.nickname
+            })
+            db.ref("users/")
+            .child(result.user.uid)
+            .set({
+                id: result.user.uid,
+                name: user.name,
+                surname: user.surname,
+                nickname: user.nickname,
+                email: user.email,
+                password: user.password
+            })
+
+            .finally(() => {
+                setUser({ name: user.name, surname: user.surname })
+                setError(false)
+                setLogin(false)
+                navigate('/user/')
+                setProccesing(false)
+            })
+        })
+
+        .catch((err) => {
+            console.log(err)
+            
+            if((err && user.name) === '' )
+            {
+                setError('Name is not correct or written')
+                setBorderColor('red')
+            }
+
+            else if(err.code === 'auth/invalid-email')
+            {
+                setError('The email is not correct')
+            }
+
+            else if(err.code === 'auth/weak-password')
+            {
+                setError('The password must be at least 6 characters')
+            }
+            else if(err.code === 'auth/user-not-found')
+            {
+                setError('User is not found with that email and password. Please try again!')
+            }
+
+            
+             setProccesing(false)
+            
+
+        })
+    }
+
+    if(showLogin === true)
     {
         return <Login />
     }
@@ -56,31 +164,31 @@ const SignUp = () => {
                                     </Row>
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}> 
                                         <FontAwesomeIcon icon={faUserAlt} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="name"  name="name" className={"inputFields"}  placeholder="Enter Your name" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}></Form.Control>
+                                        <Form.Control type="name"  name="name" className={"inputFields"} value={user.name} onChange={handleChangeName}  placeholder="Enter Your name" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor}}></Form.Control>
                                     </InputGroup>
-                            
+                                    {(error ==='Name is not correct or written') && (<Row style={{color: 'red'}}><Col>{error}</Col></Row>)}
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}> 
                                         <FontAwesomeIcon icon={faUserAlt} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="surname" name="surname" className="inputFields"  placeholder="Enter Your surname" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/> 
+                                        <Form.Control type="surname" name="surname" className="inputFields" value={user.surname} onChange={handleChangeSurname}  placeholder="Enter Your surname" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/> 
                                     </InputGroup>
                                    
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}> 
                                         <FontAwesomeIcon icon={faUserAlt} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="nickname" name="nickname" className="inputFields" placeholder="Enter Your nickname" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/> 
+                                        <Form.Control type="nickname" name="nickname" className="inputFields" value={user.nickname} onChange={handleChangeNickname} placeholder="Enter Your nickname" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/> 
                                     </InputGroup>
                                     
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}> 
                                         <FontAwesomeIcon icon={faEnvelope} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="email" name="email" className="inputFields" placeholder="Enter email" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/> 
+                                        <Form.Control type="email" name="email" className="inputFields" value={user.email} onChange={handleChangeEmail} placeholder="Enter email" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColorEmail}}/> 
                                     </InputGroup>
-                                   
+                                    {(error ==='The email is not correct') && (<Row style={{color: 'red'}}><Col>{displayError.email}</Col></Row>)}
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}>
                                         <FontAwesomeIcon icon={faLock} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="password" name="password" className="inputFields"  placeholder="Password" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/>
+                                        <Form.Control type="password" name="password" className="inputFields" value={user.password} onChange={handleChangePass}  placeholder="Password" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColorPass}}/>
                                     </InputGroup>
-                                   
-                                    <Button variant="primary" type="submit"  style={{marginTop: '25px', backgroundColor: 'black', borderColor: 'black'}}>
-                                       signUp
+                                    {(error === 'The password must be at least 6 characters') && (<Row style={{color: 'red'}}><Col>{error}</Col></Row>)}
+                                    <Button variant="primary" type="submit" onClick={handleReg} style={{marginTop: '25px', backgroundColor: 'black', borderColor: 'black'}}>
+                                        {processing ? 'Checking credentials...' : 'Sign Up'}
                                     </Button>
                                     <Row style={{marginTop: '30px'}}>
                                         <Col xs={12} className="signupDesc">Already have an account</Col>
