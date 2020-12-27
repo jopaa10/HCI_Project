@@ -15,8 +15,8 @@ import PopoverLeft from './popoverLeftTemp'
 import PopoverRight from './popoverRightTemp'
 
 //title
-
 import Title from '../title'
+
 
 const CameraTimeline = () => {
 
@@ -144,18 +144,19 @@ const CameraTimeline = () => {
                     title={'Fascinating History of Cameras'}
                 />
                 <Row className="banner" style={{backgroundColor: 'white', paddingTop: '0px'}}>
-                    <VerticalTimeline>
+                    <VerticalTimeline animate={false}>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"
                             date="4th century"
                             iconStyle={{ background: '#C4C4C4', color: '#fff' }}
                         >
+                            
                             <Row id="typesOfCamera" className="camObscura">
                                 <PopoverLeft
                                     placement='left'
                                     title={'Camera Obscura'}
                                     image={data.file.childImageSharp.fluid}
-                                    width={'250px'}
+                                    width={'150px'}
                                 />
                             </Row>
                         </VerticalTimelineElement>
@@ -167,14 +168,12 @@ const CameraTimeline = () => {
                             
                         >
                             <Row id="typesOfCamera">
-                            
                                 <PopoverRight
                                     title={'Daguerreotype'}
                                     placement='right'
                                     image={data.leicaCam.childImageSharp.fluid}
+                                    width={'150px'}
                                 />
-
-                            
                             </Row>
                         </VerticalTimelineElement>
 
@@ -184,16 +183,15 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#A5A5A5', color: '#fff' }}
                             
                         >
-                            <Row id="typesOfCamera">
-
-                                <PopoverLeft
+                            
+                            <Row id="typesOfCamera"> 
+                            <PopoverLeft
                                     placement='left'
                                     title={'First Film Camera'}
                                     image={data.FirstFilmCam.childImageSharp.fluid}
-                                    width={'300px'}
+                                    width={'150px'}
                                 />
-                            </Row>
-                                
+                            </Row> 
                         </VerticalTimelineElement>
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"
@@ -202,11 +200,11 @@ const CameraTimeline = () => {
                             
                         >
                             <Row id="typesOfCamera">
-
                                 <PopoverRight
                                     placement='right'
                                     title={'The “Kodak” by George Eastman'}
                                     image={data.KodakCam.childImageSharp.fluid}
+                                    width={'150px'}
                                 />
                             </Row>
                         </VerticalTimelineElement>
@@ -217,12 +215,11 @@ const CameraTimeline = () => {
                             
                         >
                             <Row id="typesOfCamera">
-
                                 <PopoverLeft
                                     placement='left'
                                     title={'First Mass-Market Camera (The Brownie)'}
                                     image={data.KodakBrownieCam.childImageSharp.fluid}
-                                    width={'200px'}
+                                    width={'150px'}
                                 />
                             </Row>
                         </VerticalTimelineElement>
@@ -233,11 +230,11 @@ const CameraTimeline = () => {
                             
                         >
                             <Row id="typesOfCamera">
-
                                 <PopoverRight
                                     placement='right'
                                     title={'First 35mm Film Camera'}
                                     image={data.LeicaCam.childImageSharp.fluid}
+                                    width={'150px'}
                                 />
                             </Row>
                         </VerticalTimelineElement>
@@ -248,7 +245,6 @@ const CameraTimeline = () => {
                         
                         >
                             <Row id="typesOfCamera">
-
                                 <PopoverLeft
                                     placement='left'
                                     title={'First Single-Lens Reflex Camera (SLR)'}
@@ -264,11 +260,11 @@ const CameraTimeline = () => {
                         
                         >
                             <Row id="typesOfCamera">
-
                                 <PopoverRight
                                     placement='right'
                                     title={'Single-lens reflex cameras (SLR)'}
                                     image={data.GamaCam.childImageSharp.fluid}
+                                    width={'150px'}
                                 />
                                 </Row>
                         </VerticalTimelineElement>
@@ -279,12 +275,11 @@ const CameraTimeline = () => {
                         
                         >
                            <Row id="typesOfCamera">
-
                             <PopoverLeft
                                 placement='left'
                                 title={'First polaroid Camera'}
                                 image={data.PolaroidCam.childImageSharp.fluid}
-                                width={'250px'}
+                                width={'150px'}
                             />
                             </Row>
                         </VerticalTimelineElement>
@@ -295,11 +290,11 @@ const CameraTimeline = () => {
                         
                         >
                            <Row id="typesOfCamera">
-
                             <PopoverRight
                                 placement='right'
                                 title={'First Digital Camera System'}
                                 image={data.KodakDigitalCam.childImageSharp.fluid}
+                                width={'150px'}
                             />
                             </Row>
                         </VerticalTimelineElement>
@@ -311,12 +306,11 @@ const CameraTimeline = () => {
                         
                         >
                            <Row id="typesOfCamera">
-
                             <PopoverLeft
                                 placement='left'
                                 title={'DSLRs and Smartphones Take Over'}
                                 image={data.GameChanger.childImageSharp.fluid}
-                                width={'250px'}
+                                width={'150px'}
                             />
                             </Row>
                         </VerticalTimelineElement>
@@ -328,11 +322,11 @@ const CameraTimeline = () => {
                         
                         >
                            <Row id="typesOfCamera">
-
                             <PopoverRight
                                 placement='right'
                                 title={'Mirrorless Cameras'}
                                 image={data.EpsonCam.childImageSharp.fluid}
+                                width={'150px'}
                             />
                             </Row>
                         </VerticalTimelineElement>
@@ -344,12 +338,11 @@ const CameraTimeline = () => {
                         
                         >
                            <Row id="typesOfCamera">
-
                             <PopoverLeft
                                 placement='left'
                                 title={'The first full-frame, consumer-priced DSLR'}
                                 image={data.CanonCam.childImageSharp.fluid}
-                                width={'250px'}
+                                width={'150px'}
                             />
                             </Row>
                         </VerticalTimelineElement>

@@ -23,7 +23,7 @@ const PopoverLeft = (props) => {
     return(
     <>
        <OverlayTrigger overlay={<Tooltip id="tooltip-disabled" ref={ref}>Click for more</Tooltip>}> 
-            <Col sm={12} md={12} xs={10} onClick={showMore} ref={ref}  style={{display: 'flex', justifyContent: 'flex-end' , marginRight: '5em'}}>
+            <Col sm={12} md={12} xs={10} onClick={showMore} ref={ref} className="camAlign"  style={{display: 'flex', justifyContent: 'flex-end' , marginRight: '5em'}}>
                 
                 {displayDetails &&
                     

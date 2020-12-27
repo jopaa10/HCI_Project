@@ -6,7 +6,7 @@
  */
 
 import React from "react"
-import {useStaticQuery, graphql} from 'gatsby'
+import {graphql} from 'gatsby'
 
 import Header from "../../components/header"
 
@@ -35,7 +35,7 @@ export default function NewsLayout({
             <section className='banner' style={{backgroundColor: 'black', paddingBottom: '0'}}>
                 <Container>
                     <Row>
-                        <Col xs={12} sm={12} md={12} style={{paddingTop: '200px'}}>
+                        <Col xs={12} sm={12} md={12} style={{paddingTop: '100px'}}>
                             <Title 
                                 title={frontmatter.title} 
                                 color={'white'}
@@ -53,8 +53,8 @@ export default function NewsLayout({
             
                 <section className="banner" style={{backgroundColor: 'white', paddingTop: '0'}}>
                     <Container>
-                        <Row className="blog-post-container">
-                            <Row className="blog-post">
+                        <Row className="blog-post-container" style={{justifyContent: 'center'}}>
+                            <Row className="blog-post" style={{maxWidth: '70%'}}>
                                 <Col xs={12} sm={12} md={12}>
                                     <h4 style={{fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}>{frontmatter.date}</h4>
                                 </Col>
