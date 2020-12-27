@@ -52,7 +52,7 @@ const SignUp = () => {
                             <Row className="mobileSignUp" style={{backgroundColor: 'rgb(196, 196, 196, 0.5)', width: '500px', justifyContent: 'center', borderRadius: '20px 20px 20px 20px', boxShadow: '0px 0px 10px 5px rgba(0,0,0,0.32)'}}>
                                 <Form className="signupForm" style={{width: '400px', paddingTop: '30px'}}>
                                     <Row>
-                                        <Col xs={12} style={{textAlign: 'center', fontFamily: 'Josefin Sans', fontWeight: '700', lineHeight: '55px', fontSize: '55px'}}>Sign Up</Col>
+                                        <Col xs={12} className="signUpTitle">Sign Up</Col>
                                     </Row>
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}> 
                                         <FontAwesomeIcon icon={faUserAlt} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
@@ -83,7 +83,7 @@ const SignUp = () => {
                                        signUp
                                     </Button>
                                     <Row style={{marginTop: '30px'}}>
-                                        <Col xs={12} style={{textAlign: 'center', fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '24px', fontSize: '24px'}}>Already have an account</Col>
+                                        <Col xs={12} className="signupDesc">Already have an account</Col>
                                     </Row>
                                     <Row style={{marginTop: '20px'}}>
                                         <Col xs={12} style={{textAlign: 'center', fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '24px', fontSize: '20px', color: 'blue', cursor: 'pointer'}} onClick={showForm}>Log in now</Col>

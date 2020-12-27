@@ -1179,6 +1179,21 @@ a:hover{
 }
 
 /*** sign up ***/
+.signUpTitle{
+  text-align: center;
+  font-family: 'Josefin Sans';
+  font-weight: 700;
+  line-height: 55px;
+  font-size: 55px;
+}
+
+.signupDesc{
+  text-align: center;
+  font-family: 'Josefin Sans';
+  font-weight: 400;
+  line-height: 24px;
+  font-Size: 24px;
+}
 
 .inputFields{
   height: 50px!important;
@@ -1243,8 +1258,50 @@ a:hover{
 
 @media(max-width: 385px)
 {
+  .signUpTitle{
+    font-size: 45px;
+  }
+
   .mobileSignUp{
     width: 320px!important;
+  }
+}
+
+@media(max-width: 350px)
+{
+  .signUpTitle{
+    font-size: 40px;
+  }
+
+  .mobileSignUp{
+    width: 300px!important;
+  }
+  .inputGroup{
+    width: 85%!important;
+    padding-left: 25px!important;
+    margin-left: 5px!important;
+   
+  }
+
+  .signupDesc{
+    font-size: 22px;
+  }
+}
+
+@media(max-width: 330px)
+{
+  .signUpTitle{
+    font-size: 40px;
+  }
+
+  .mobileSignUp{
+    width: 270px!important;
+  }
+  .inputGroup{
+    width: 85%!important;
+    padding-left: 25px!important;
+    margin-left: 5px!important;
+   
   }
 }
 
