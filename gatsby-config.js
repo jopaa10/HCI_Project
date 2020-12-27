@@ -1,3 +1,11 @@
+// Initialize dotenv
+require('dotenv').config({
+  path: `.env.${process.env.NODE_ENV}`, // or '.env'
+});
+
+// And then you can use the config in gatsby-config.js
+const config = require('gatsby-plugin-config');
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -55,5 +63,20 @@ module.exports = {
       },
     },
     `gatsby-transformer-remark`,
+    {
+      resolve: "gatsby-plugin-firebase",
+      options: {
+        credentials: {
+          apiKey: "AIzaSyDsi-1Htc4ewdgbGG8YTojOuLAksGdPb10",
+          authDomain: "photogallery-c272e.firebaseapp.com",
+          databaseURL: "https://photogallery-c272e.firebaseio.com",
+          projectId: "photogallery-c272e",
+          storageBucket: "photogallery-c272e.appspot.com",
+          messagingSenderId: "1012383819368",
+          appId: "1:1012383819368:web:64514f1b2da7dc1d923ddd",
+          measurementId: "G-DZJSC865KQ"
+        }
+      }
+    },
   ],
 }

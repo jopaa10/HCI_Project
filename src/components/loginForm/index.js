@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {graphql, useStaticQuery} from 'gatsby'
+import {graphql, useStaticQuery, navigate} from 'gatsby'
 
 //react bootstrap
 import {Row, Col, Container, Form, Button, InputGroup, Spinner} from 'react-bootstrap'
@@ -13,9 +13,12 @@ import {faUserAlt, faLock} from '@fortawesome/free-solid-svg-icons'
 //sign up form
 import SignUp from '../signupForm'
 
+//firebase
+import {auth, db} from '../firebase/'
+
 const LoginForm = () => {
 
- const data = useStaticQuery( graphql`
+    const data = useStaticQuery( graphql`
         query{
             bgImage: file(relativePath: {eq: "loginTemp.jpg"}) {
                         childImageSharp {
@@ -28,11 +31,89 @@ const LoginForm = () => {
             `
         )
         
-        const [showSignUp, setSignUp] = useState(false)
-        const showForm = () => {
-           
-            setSignUp(!showSignUp)
+    const [showSignUp, setSignUp] = useState(false)
+    const [email, setEmail] = useState("")
+    const [password, setPass] = useState("")
+    const [borderColor, setBorderColor] = useState({
+        email: '',
+        password: ''
+    })
+    const [error, setError] = useState(false)
+    const [processing, setProcessing] = useState(false)
+    const [user, setUser] = useState([])
+
+    const showForm = () => {
+        
+        setSignUp(!showSignUp)
+    }
+
+    const handleEmail = (e) => {
+        setEmail(e.target.value)
+    }
+
+    const handlePass = (e) => {
+        setPass(e.target.value)
+    }
+
+    const getUserData = (uid) => {
+        db.ref("users/" + uid).once("value", (snap) => {
+        console.log(snap.val())
+        setUser(snap.val())
+        })
+    }
+
+    const handleLogin = async(e) => {
+
+        e.preventDefault()
+        setProcessing(true)
+       
+        await auth
+        .signInWithEmailAndPassword(email, password)
+        .then(async () => {
+            console.log("success")
+            navigate('/')
+            setSignUp(false)
+            setProcessing(false)
+            setError(false)
+            setBorderColor({
+                email: 'none',
+                password: 'none'
+            })
+        })
+        .catch((err) => {
+
+            if(err.code === 'auth/invalid-email')
+            {
+                setError('The email is not correct')
+                setBorderColor({email: 'red'})
+            }
+
+            else if(err.code === 'auth/wrong-password')
+            {
+                setError('The password is not correct')
+                setBorderColor({password: 'red'})
+            }
+            else if(err.code === 'auth/user-not-found')
+            {
+                setError('User is not found with that email and password. Please try again!')
+                setBorderColor({email: 'red', password: 'red'})
+            }
+
+            setProcessing(false)
+            console.log(err)
+        })
         }
+
+
+    useEffect(() => {
+        auth.onAuthStateChanged((currentUser) => {
+        if (currentUser) {
+            getUserData(currentUser.uid)
+            }
+        })
+
+
+    }, [])
 
     if(showSignUp === true)
     {
@@ -54,15 +135,22 @@ const LoginForm = () => {
                                     </Row>
                                     <InputGroup style={{marginTop: '40px', paddingLeft: '40px', width: '90%'}}> 
                                         <FontAwesomeIcon icon={faUserAlt} style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="email" name="email" className="inputFieldsLog" placeholder="Enter email" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/> 
+                                        <Form.Control type="email" name="email" className="inputFieldsLog" value={email} onChange={handleEmail} placeholder="Enter email" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/> 
                                     </InputGroup>
+                                    {(error === 'The email is not correct') && (<Row><Col style={{color: 'red'}}>{error}</Col></Row>)}
                                     <InputGroup style={{marginTop: '40px', paddingLeft: '40px', width: '90%'}}>
                                         <FontAwesomeIcon icon={faLock} style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="password" name="password" className="inputFieldsLog" placeholder="Password" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/>
+                                        <Form.Control type="password" name="password" className="inputFieldsLog" value={password} onChange={handlePass} placeholder="Password" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/>
                                     </InputGroup>
-                                
-                                    <Button variant="primary" type="submit"  style={{marginTop: '25px', backgroundColor: 'black', borderColor: 'black'}}>
-                                        login
+                                    {(error ==='The password is not correct') && (<Row><Col style={{color: 'red'}}>{error}</Col></Row>)}
+                                    {(error ==='User is not found with that email and password. Please try again!') && (<Row><Col style={{color: 'red'}}>{error}</Col></Row>)}
+                                    <Button variant="primary" type="submit" onClick={handleLogin} style={{marginTop: '25px', backgroundColor: 'black', borderColor: 'black'}}>
+                                        {processing ? (
+                                            <Spinner animation="border" role="status">
+                                                <span className="sr-only">Loading...</span>
+                                            </Spinner>) 
+                                            : 
+                                        'Login'}
                                     </Button>
                                     <Row style={{marginTop: '30px'}}>
                                         <Col xs={12} style={{textAlign: 'center', fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '24px', fontSize: '24px'}}>Don't have an account?</Col>
