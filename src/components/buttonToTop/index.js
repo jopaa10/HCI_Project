@@ -53,7 +53,7 @@ const Button = (props) => {
                 position: 'fixed',
                 bottom: '50px',
                 right: '50px',
-                zIndex: '1',
+                zIndex: '2',
                 cursor: cursor,
                 color: props.color
                 }}></FontAwesomeIcon> }
