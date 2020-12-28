@@ -176,7 +176,7 @@ const AboutTemplate = (props) => {
                 </Row>
                 <Row style={{paddingTop: '50px', justifyContent: 'center'}}>
                     <Col xs={6} sm={6} md={4} lg={4} style={{textAlign: 'center'}}>
-                        <h4>I'm {props.name}. Set Your profile image
+                        <h4>Hello {props.name}. Set up Your profile 
                             <label for="icon-button-file" >
                                 <PhotoCamera style={{cursor: 'pointer'}} />
                             </label> 
@@ -195,20 +195,20 @@ const AboutTemplate = (props) => {
                             <Row style={{margin: '10px', justifyContent: 'center'}}>
                                 
                                 <Col xs={8} sm={12} md={12} lg={6}>
-                                    {!quote && (<p style={{display: 'flex'}}> <FontAwesomeIcon icon={faQuoteRight} /> Add/Change Quote: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}> {displayQuote} </h4></p>) } 
-                                    {quote && (<p style={{display: 'flex'}}> <FontAwesomeIcon icon={faQuoteRight} /> Add/Change Quote: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}> {props.quote}</h4></p>)}  
+                                    {!quote && (<p> <FontAwesomeIcon icon={faQuoteRight} /> Add/Change Quote: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}> {displayQuote} </h4></p>) } 
+                                    {quote && (<p> <FontAwesomeIcon icon={faQuoteRight} /> Add/Change Quote: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}> {props.quote}</h4></p>)}  
                                     
-                                    {!birth && (<p style={{display: 'flex'}}> <FontAwesomeIcon icon={faCalendarAlt} /> Birth: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{displayBirth} </h4></p>) } 
-                                    {birth && (<p style={{display: 'flex'}}> <FontAwesomeIcon icon={faCalendarAlt} /> Birth: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{props.birth} </h4></p> )} 
+                                    {!birth && (<p> <FontAwesomeIcon icon={faCalendarAlt} /> Birth: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{displayBirth} </h4></p>) } 
+                                    {birth && (<p> <FontAwesomeIcon icon={faCalendarAlt} /> Birth: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{props.birth} </h4></p> )} 
                                         
-                                    {!address && (<p style={{display: 'flex'}}> <FontAwesomeIcon icon={faMapMarkedAlt} /> Address: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{displayAddress} </h4> </p>) } 
-                                    {address && (<p style={{display: 'flex'}}> <FontAwesomeIcon icon={faMapMarkedAlt} /> Address: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{props.address} </h4> </p> )}   
+                                    {!address && (<p> <FontAwesomeIcon icon={faMapMarkedAlt} /> Address: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{displayAddress} </h4> </p>) } 
+                                    {address && (<p> <FontAwesomeIcon icon={faMapMarkedAlt} /> Address: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{props.address} </h4> </p> )}   
                             
                                 </Col>
                                 <Col xs={8} sm={12} md={12} lg={6}>
                                     <h4> <FontAwesomeIcon icon={faEnvelope} /> Email: {props.email}</h4>
-                                    {!insta && ( <p style={{display: 'flex'}}><FontAwesomeIcon icon={faInstagram} /> Instagram: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{displayInsta} </h4> </p>) } 
-                                    {insta && ( <p style={{display: 'flex'}}><FontAwesomeIcon icon={faInstagram} /> Instagram: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}> {props.instagram} </h4> </p> )} 
+                                    {!insta && ( <p><FontAwesomeIcon icon={faInstagram} /> Instagram: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{displayInsta} </h4> </p>) } 
+                                    {insta && ( <p><FontAwesomeIcon icon={faInstagram} /> Instagram: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}> {props.instagram} </h4> </p> )} 
                                 </Col>
                                 
                             </Row>
