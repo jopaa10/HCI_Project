@@ -1,12 +1,10 @@
 import React from 'react'
 
 //bootstrap
-import {Col, Row} from 'react-bootstrap'
+import {Col} from 'react-bootstrap'
 
 //fontawesome
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faImage, faMagic} from '@fortawesome/free-solid-svg-icons'
-
 
 const Photoinfo = (props) => {
 
