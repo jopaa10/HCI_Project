@@ -11,12 +11,11 @@ import Template from '../components/about - userProfile/'
 
 //firebase
 import {auth, db} from '../components/firebase/'
-import {useAuthState} from 'react-firebase-hooks/auth'
 
 const About = () => {
 
     const [user, setUser] = useState([])
-    const [userIsLog, setUserLog] = useAuthState(auth)
+    const [userIsLog, setUserLog] = useState(null)
 
     const data = useStaticQuery(graphql`
     query{
@@ -40,13 +39,19 @@ const About = () => {
 
     useEffect(() => {
         auth.onAuthStateChanged((currentUser) => {
-        if (currentUser) {
-            getUserData(currentUser.uid)
+        
+            if (currentUser) {
+                getUserData(currentUser.uid)
+                setUserLog(true)
+            }
+            else{
+                setUserLog(false)
             }
         })
+
     }, [])
 
-    if (!userIsLog) {
+    if (userIsLog === false) {
         setTimeout(() => {
             navigate('/login/')
         }, 3000);
@@ -58,7 +63,7 @@ const About = () => {
         <>
             
             <main>
-                <Header name={user.name}/>
+                <Header />
                 <Banner
                     color={'white'} 
                     title={'"Photography is the story I fail to put into words"'}
