@@ -8,8 +8,7 @@ import Img from 'gatsby-image'
 //bootstrap
 import {Col, Row, Container, Carousel} from 'react-bootstrap'
 
-//fontawesome
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+//fontawesome icons
 import {faImage, faMagic} from '@fortawesome/free-solid-svg-icons'
 
 //carousel template
