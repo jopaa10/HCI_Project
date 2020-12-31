@@ -9,16 +9,29 @@ import Footer from '../components/footer/'
 import Gallery from '../components/photogallery/'
 
 //firebase
-import {auth, db} from '../components/firebase'
-import {useAuthState} from 'react-firebase-hooks/auth'
+import {auth} from '../components/firebase'
 
 
 const Photogallery = (props) => {
 
-    const [user, setUser] = useAuthState(auth)
+    const [user, setUser] = useState(null)
+
+    useEffect(() => {
+        auth.onAuthStateChanged((currentUser) => {
+             
+            if (currentUser) {
+                    setUser(true)
+                }
+
+            else{
+                setUser(false)
+            }
+         })
+ 
+    }, [])
 
 
-    if (!user) {
+    if (user === false) {
         setTimeout(() => {
             navigate('/')
         }, 3000);
@@ -30,7 +43,7 @@ const Photogallery = (props) => {
         <>
   
         <main>
-            <Header name={user.name}/>
+            <Header />
             <Gallery />
             <Footer />
         </main>
