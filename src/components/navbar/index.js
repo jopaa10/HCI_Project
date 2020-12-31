@@ -1,6 +1,6 @@
 //navbar components
 import React, {useState, useEffect, useRef} from 'react'
-import {Link, useStaticQuery, graphql, navigate} from 'gatsby'
+import {Link, useStaticQuery, graphql} from 'gatsby'
 
 //bootstrap
 import {Navbar, Nav, Container, Row, Col} from 'react-bootstrap'
@@ -12,11 +12,7 @@ import Img from 'gatsby-image'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faTimes, faBars, faUser} from '@fortawesome/free-solid-svg-icons'
 
-import {db, auth} from '../firebase'
-
-import { useAuthState } from 'react-firebase-hooks/auth'
-
-
+import {auth} from '../firebase'
 
 const navbarStyle = {
     backgroundColor: 'black',
@@ -143,7 +139,7 @@ const navbarStyle = {
         setTogglerOpen(togglerOpen === 'navbar-togglerClose' ? 'navbar-togglerOpen' : 'navbar-togglerClose')
     }
 
-    const [user] = useAuthState(auth)
+    const [user, setUser] = useState(null)
     
     //console.log(user)
 
@@ -155,13 +151,25 @@ const navbarStyle = {
         target.current.addEventListener('mouseenter', enter)
         target.current.addEventListener('mouseleave', leave)
 
+        
+        auth.onAuthStateChanged((currentUser) => {
+
+            if (currentUser) {
+                    setUser(true)
+                }
+
+            else{
+                setUser(false)
+            }
+        })
+     
 
     },[target, didMount])
 
     if (!didMount)
         return null
 
-    if(user)
+    if(user === true)
     {
         return(
             <Navbar fixed="top" expand="lg" className={navbarClassname} style={{backgroundColor: showNavbar}} ref={target}>
