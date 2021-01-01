@@ -12,7 +12,7 @@ const NotFoundPage = () => {
     query{
         bgImage: file(relativePath: {eq: "camera-404(1).png"}){
             childImageSharp{
-                fluid(maxHeight: 1000){
+                fluid(maxHeight: 1500){
                     ...GatsbyImageSharpFluid
                 }
             }
@@ -25,7 +25,8 @@ const NotFoundPage = () => {
         <BackgroundImage fluid={data.bgImage.childImageSharp.fluid} style={{marginTop: '8%'}}> 
             <section className="banner" style={{backgroundColor: 'transparent', height: '700px'}}>
                 <Container style={{paddingTop: '120px'}}>
-                    <Row style={{height: '350px'}}></Row>
+                    <SEO title="404: Not found" />
+                    <Row style={{height: '250px'}}></Row>
                     <Row style={{justifyContent: 'center'}}>
                         <Button type="primary" style={{backgroundColor: 'black'}}><Link to='/' style={{color: 'white'}}> Go back to Homepage </Link></Button>
                     </Row>
