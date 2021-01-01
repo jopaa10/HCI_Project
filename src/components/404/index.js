@@ -28,7 +28,7 @@ const NotFoundPage = () => {
                     <SEO title="404: Not found" />
                     <Row style={{height: '250px'}}></Row>
                     <Row style={{justifyContent: 'center'}}>
-                        <Button type="primary" style={{backgroundColor: 'black'}}><Link to='/' style={{color: 'white'}}> Go back to Homepage </Link></Button>
+                        <Button type="primary" style={{backgroundColor: 'black', borderColor: 'black'}}><Link to='/' style={{color: 'white'}}> Go back to Homepage </Link></Button>
                     </Row>
                 </Container>
             </section>
