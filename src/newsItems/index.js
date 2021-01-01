@@ -90,7 +90,7 @@ const NewsForm = () => {
                 <Row className="searchBarMobile" style={{paddingTop: '50px'}}> 
                   <Col md={12} xs={12} sm={12}>  
                     <input type="search" placeholder="Search" className="searchTerm" onChange={e => setSearch(e.target.value)}/>
-                    <Button type="submit" className="searchButton">
+                    <Button type="submit" className="searchButton" style={{cursor: 'default'}}>
                       <FontAwesomeIcon icon={faSearch}/>
                     </Button> 
                   </Col>
@@ -99,75 +99,92 @@ const NewsForm = () => {
                 
                 <Row style={{paddingTop: '20px'}}>
 
-                <Col md={12} xs={12} sm={12} lg={8} className="latestNewsMob">
+                  <Col md={12} xs={12} sm={12} lg={8} className="latestNewsMob">
                     {filteredLatestPosts.map(post => ( 
                         <Row style={{paddingTop: '50px', justifyContent: 'center'}}>
                             
                           <Col md={12} xs={12} sm={12}>
-                              <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} className="latestNews" alt=""/>
+                            <Link to={post.frontmatter.slug} style={{color: 'black'}}>
+                                <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} className="latestNews" alt=""/>
+                            </Link>
                           </Col>
                             
                           <Col md={12} xs={12} sm={12}>
-                            <Card.Body style={{textAlign: 'center'}}>
-                                <Card.Title>
-                                  <Link to={post.frontmatter.slug}><h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "1.5em", lineHeight: "1.5"}}>
-                                    {post.frontmatter.title}</h4>
-                                  </Link>
-                                </Card.Title>
-                                <Card.Text style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}>
-                                    {post.excerpt}
-                                </Card.Text>
-                            </Card.Body>
+                            <Link to={post.frontmatter.slug} style={{color: 'black'}}>
+                              <Card.Body style={{textAlign: 'center'}}>
+                                  <Card.Title>
+                                    <Link to={post.frontmatter.slug} style={{color: 'black'}}>
+                                      <h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "1.5em", lineHeight: "1.5"}}>
+                                        {post.frontmatter.title}
+                                      </h4>
+                                    </Link>
+                                  </Card.Title>
+                                  <Card.Text style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}>
+                                      {post.excerpt}
+                                  </Card.Text>
+                              </Card.Body>
+                            </Link>
                           </Col>
+
                         </Row> 
-                    ))}
+                      ))}
                     </Col>
 
                     <Col md={12} xs={12} sm={12} lg={4}>
 
-                    {filteredPosts.map(post => ( 
-                
+                      {filteredPosts.map(post => ( 
                         <Row style={{paddingTop: '50px'}} className="newsIcon">
-                        <Media>
-                            <Img
-                            style={{
-                                width: '155px',
-                                height: '155px'
-                            }}
-                            fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
-                            className="newsImg"
-                            />
-                            <Media.Body style={{padding: '0 20px 0 20px'}} className="newsBody">
-                              <Link to={post.frontmatter.slug}>
-                                  <h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5", marginBottom: '10px'}}>{post.frontmatter.title}</h4>
-                              </Link>
-                              <h5 style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5", marginBottom: '10px'}}>{post.frontmatter.date}</h5>
-                              <p style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}>{post.excerpt}</p>
-                            </Media.Body>
-                            </Media>
+
+                          <Media>
+                            <Link to={post.frontmatter.slug} style={{color: 'black'}}>
+                              <Img
+                              style={{
+                                  width: '155px',
+                                  height: '155px'
+                              }}
+                              fluid={post.frontmatter.featuredImage.childImageSharp.fluid}
+                              className="newsImg"
+                              />
+                            </Link>
+                            <Link to={post.frontmatter.slug} style={{color: 'black'}}>
+                              <Media.Body style={{padding: '0 20px 0 20px'}} className="newsBody">
+                                <h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5", marginBottom: '10px'}}>
+                                  {post.frontmatter.title}
+                                </h4>
+                                <h5 style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5", marginBottom: '10px'}}>{post.frontmatter.date}</h5>
+                                <p style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}>{post.excerpt}</p>
+                              </Media.Body>
+                            </Link>
+                          </Media>
+
                         </Row>     
                         ))}
-                        </Col>
+                      </Col>
                     
-                    <Col md={12} xs={12} sm={12} lg={8} className="latestNewsDekstop">
+                  <Col md={12} xs={12} sm={12} lg={8} className="latestNewsDekstop">
                     {filteredLatestPosts.map(post => ( 
                         <Row style={{paddingTop: '50px', justifyContent: 'center'}}>
                             
-                            <Col md={12} xs={12} sm={12}>
+                          <Col md={12} xs={12} sm={12}>
+                            <Link to={post.frontmatter.slug} style={{color: 'black'}}>
                                 <Img fluid={post.frontmatter.featuredImage.childImageSharp.fluid} className="latestNews" alt=""/>
-                            </Col>
-                            
-                            <Col md={12} xs={12} sm={12}>
+                            </Link>
+                          </Col>
+                          
+                          <Col md={12} xs={12} sm={12}>
+                            <Link to={post.frontmatter.slug} style={{color: 'black'}}>
                               <Card.Body style={{textAlign: 'center'}}>
                                   <Card.Title><Link to={post.frontmatter.slug}><h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "1.5em", lineHeight: "1.5"}}>{post.frontmatter.title}</h4></Link></Card.Title>
                                   <Card.Text style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}>
                                       {post.excerpt}
                                   </Card.Text>
                               </Card.Body>
-                            </Col>
+                            </Link>
+                          </Col>
+
                         </Row> 
                     ))}
-                    </Col> 
+                  </Col> 
                 
                 </Row>
             </Container>
