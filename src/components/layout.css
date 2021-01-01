@@ -1650,3 +1650,30 @@ a:hover{
     font-size: 40px!important;
   }
 }
+
+/*** about - userProfile ***/
+
+@media(max-width: 575px)
+{
+  .aboutEditInfo{
+    text-align: center;
+  }
+
+  .aboutInfo{
+    margin-left: 15%!important;
+  }
+}
+
+@media(max-width: 420px)
+{
+  .aboutInfo{
+    margin-left: 10%!important;
+  }
+}
+
+@media(max-width: 350px)
+{
+  .aboutInfo{
+    margin-left: 5%!important;
+  }
+}
