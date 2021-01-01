@@ -191,10 +191,10 @@ const AboutTemplate = (props) => {
                     <Col xs={12} sm={6} md={8} lg={7}>
                         <Row onClick={openModal} style={{cursor: 'pointer'}}>
                             
-                            <Col xs={12} sm={12} md={12} lg={12}><p><FontAwesomeIcon icon={faEdit} /> Edit information about You </p></Col>
-                            <Row style={{margin: '10px', justifyContent: 'center'}}>
+                            <Col xs={12} sm={12} md={12} lg={12}><p className="aboutEditInfo"><FontAwesomeIcon icon={faEdit} /> Edit information about You </p></Col>
+                            <Row style={{margin: '10px', justifyContent: 'center'}} className="aboutInfo">
                                 
-                                <Col xs={8} sm={12} md={12} lg={6}>
+                                <Col xs={8} sm={12} md={12} lg={6} >
                                     {!quote && (<p> <FontAwesomeIcon icon={faQuoteRight} /> Add/Change Quote: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}> {displayQuote} </h4></p>) } 
                                     {quote && (<p> <FontAwesomeIcon icon={faQuoteRight} /> Add/Change Quote: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}> {props.quote}</h4></p>)}  
                                     
