@@ -5,9 +5,12 @@ import {useStaticQuery, graphql} from 'gatsby'
 import Header from '../components/header'
 import Footer from '../components/footer'
 
+//page components
 import Banner from '../components/banner'
-
 import TipsTricks from '../components/tips - tricks/index'
+
+//head document
+import Head from '../components/head'
 
 const Tips = () => {
 
@@ -27,8 +30,12 @@ const Tips = () => {
     return(
         <>
 
+        <Head 
+            title = {"Tips and tricks"}
+            keywords = { ["camera", "photo", "images", "tips", "photography", "tricks", "shadow", "reflection"]}
+            description = { "Tips and trick for taking good photo"}
+        />
         
-
         <main>
             <Header/>
             <Banner
@@ -38,10 +45,8 @@ const Tips = () => {
                 bgImage={data.bgImage.childImageSharp.fluid}
             />
             <TipsTricks/>
-        </main>
-
-      
             <Footer />
+        </main>
 
         </>
     )

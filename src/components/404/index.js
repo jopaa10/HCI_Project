@@ -1,5 +1,4 @@
 import React from "react"
-import SEO from "../seo"
 
 import {Link, useStaticQuery, graphql} from 'gatsby'
 
@@ -25,7 +24,6 @@ const NotFoundPage = () => {
         <BackgroundImage fluid={data.bgImage.childImageSharp.fluid} style={{marginTop: '8%'}}> 
             <section className="banner" style={{backgroundColor: 'transparent', height: '700px'}}>
                 <Container style={{paddingTop: '120px'}}>
-                    <SEO title="404: Not found" />
                     <Row style={{height: '250px'}}></Row>
                     <Row style={{justifyContent: 'center'}}>
                         <Button type="primary" style={{backgroundColor: 'black'}}><Link to='/' style={{color: 'white'}}> Go back to Homepage </Link></Button>

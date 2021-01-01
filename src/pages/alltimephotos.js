@@ -7,6 +7,9 @@ import Footer from '../components/footer'
 import Banner from '../components/banner'
 import PhotoHistory from '../components/historyPhoto/index'
 
+//head document
+import Head from '../components/head'
+
 const AllTimePhotos = () => {
     
     const data = useStaticQuery(graphql`
@@ -23,19 +26,22 @@ const AllTimePhotos = () => {
 
     return(
         <>
+            <Head 
+                title = {"All time photos"}
+                keywords = { ["camera", "photo", "history", "first ever photo", "selfie", "black", "white", "old"]}
+                description = { "The most important images through history"}
+            />
             <main>
                 <Header />
                 <Banner
-                color={'black'} 
-                title={'"There is one thing the photograph must contain, the humanity of the moment"'}
-                author={'Robert Frank'}
-                bgImage={data.bgImage.childImageSharp.fluid}
+                    color={'black'} 
+                    title={'"There is one thing the photograph must contain, the humanity of the moment"'}
+                    author={'Robert Frank'}
+                    bgImage={data.bgImage.childImageSharp.fluid}
                 />
                 <PhotoHistory />
-            </main>
-
-      
                 <Footer />
+            </main>
             
         </>
     )

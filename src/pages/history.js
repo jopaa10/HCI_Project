@@ -9,6 +9,9 @@ import Banner from '../components/banner/'
 import CameraHistory from '../components/historyCamera/index'
 
 
+//head document
+import Head from '../components/head'
+
 const Timeline = () => {
 
     const data = useStaticQuery(graphql`
@@ -26,6 +29,12 @@ const Timeline = () => {
     return(
         <>
 
+        <Head 
+            title = {"History"}
+            keywords = { ["camera", "history", "obscura", "nikon", "canon", "timeline", "rolleiflex"]}
+            description = { "Cameras through history"}
+        />
+
         <main>
             <Header />
             <Banner
@@ -36,11 +45,9 @@ const Timeline = () => {
                 className={'quote'}
             />
             <CameraHistory />
-        </main>
-
             <Footer />
+        </main>
    
-
         </>
     )
 }

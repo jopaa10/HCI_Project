@@ -11,6 +11,8 @@ import Gallery from '../components/photogallery/'
 //firebase
 import {auth} from '../components/firebase'
 
+//head document
+import Head from '../components/head'
 
 const Photogallery = (props) => {
 
@@ -41,6 +43,12 @@ const Photogallery = (props) => {
 
     return(
         <>
+
+        <Head 
+            title = {"Photogallery"}
+            keywords = { ["camera", "photo", "images", "gallery", "photography", "firebase", "user", "create", "new"]}
+            description = { "Create Your own gallery"}
+        />
   
         <main>
             <Header />

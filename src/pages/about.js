@@ -12,6 +12,9 @@ import Template from '../components/about - userProfile/'
 //firebase
 import {auth, db} from '../components/firebase/'
 
+//head document
+import Head from '../components/head'
+
 const About = () => {
 
     const [user, setUser] = useState([])
@@ -61,6 +64,12 @@ const About = () => {
 
     return(
         <>
+
+            <Head 
+                title = {"Profile"}
+                keywords = { ["camera", "photo", "images", "about", "photography", "user", "profile"]}
+                description = { "User profile page"}
+            />
             
             <main>
                 <Header />

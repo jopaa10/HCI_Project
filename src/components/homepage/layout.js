@@ -20,6 +20,8 @@ import InfoForUsers from "../infoForUsers - homepage"
 import FaQ from '../faQ/index'
 import Footer from "../footer"
 
+import Head from '../head'
+
 const Layout = () => {
 
   const data = useStaticQuery(graphql`
@@ -36,6 +38,12 @@ const Layout = () => {
   
   return (
     <>
+
+      <Head 
+        title = {"Home"}
+        keywords = { ["camera", "photo", "images", "slider", "photography"]}
+        description = { "Create awesome photos"}
+      />
       
       <main>
           <Header />
@@ -50,8 +58,8 @@ const Layout = () => {
           <ImageSlider />
           <InfoForUsers />
           <FaQ />
-      </main>
           <Footer />
+      </main>
     </>
   )
 }
