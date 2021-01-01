@@ -29,7 +29,9 @@ const PopoverLeft = (props) => {
                     
                         <Col xs={8} sm={8} >
                             <Popover placement={props.placement} id="popover-basic" target={ref.current}>
-                                <Popover.Title className="cameraHistTitle" as="h3" style={{color: 'white', backgroundColor: 'rgba(0,0,0,0.85)', fontFamily: 'josefin sans'}}>{props.title}</Popover.Title>
+                                <Popover.Title className="cameraHistTitle" as="h3" style={{color: 'white', backgroundColor: 'rgba(0,0,0,0.85)', fontFamily: 'josefin sans'}}>
+                                    {props.title}
+                                </Popover.Title>
                                 <Popover.Content style={{color: 'white', fontFamily: 'josefin sans'}}>
                                 And here's some <strong>amazing</strong> content. It's very engaging.
                                 right?
