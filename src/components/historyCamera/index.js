@@ -151,7 +151,7 @@ const CameraTimeline = () => {
                             iconStyle={{ background: '#C4C4C4', color: '#fff' }}
                         >
                             
-                            <Row id="typesOfCamera" className="camObscura">
+                            <Row id="typesOfCamera" >
                                 <PopoverLeft
                                     placement='left'
                                     title={'Camera Obscura'}

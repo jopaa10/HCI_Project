@@ -1034,9 +1034,6 @@ a:hover{
   .vertical-timeline-element{
     width: fit-content;
   }
-  .camObscura{
-    justify-content: flex-end!important;
-  }
   .camAlign{
     justify-content: flex-start!important;
   }
