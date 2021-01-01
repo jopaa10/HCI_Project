@@ -170,13 +170,14 @@ const AboutTemplate = (props) => {
             <Container>
                 <Row>
                     <Col style={{textAlign: 'center'}}>
-                        <h2>About me</h2>
-                        <h4>Profesional Profile</h4>
+                        <h2 style={{fontFamily: "josefin sans", fontSize: "2.5em", lineHeight: "1.5", color: 'black'}}>About me</h2>
+                        <h4 style={{fontFamily: "josefin sans", fontSize: "1.5em", lineHeight: "1.5"}}>Profesional Profile</h4>
                     </Col>
                 </Row>
-                <Row style={{paddingTop: '50px', justifyContent: 'center'}}>
-                    <Col xs={6} sm={6} md={4} lg={4} style={{textAlign: 'center'}}>
-                        <h4>Hello {props.name}. Set up Your profile 
+                <Row style={{paddingTop: '30px', justifyContent: 'center'}}>
+                    <Col xs={10} sm={6} md={5} lg={4} style={{textAlign: 'center'}}>
+                        <h4 style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black'}}>
+                            Hello {props.name}. Set up Your profile 
                             <label for="icon-button-file" >
                                 <PhotoCamera style={{cursor: 'pointer'}} />
                             </label> 
@@ -188,27 +189,27 @@ const AboutTemplate = (props) => {
                         {image && (<Image style={{width: '70%', borderRadius: '10px'}} src={url || props.url} alt={props.name}/>)}
                         
                     </Col>  
-                    <Col xs={12} sm={6} md={8} lg={7}>
+                    <Col xs={12} sm={6} md={7} lg={7}>
                         <Row onClick={openModal} style={{cursor: 'pointer'}}>
                             
-                            <Col xs={12} sm={12} md={12} lg={12}><p className="aboutEditInfo"><FontAwesomeIcon icon={faEdit} /> Edit information about You </p></Col>
+                            <Col xs={12} sm={12} md={12} lg={12}><p className="aboutEditInfo" style={{fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5", color: 'black'}}><FontAwesomeIcon icon={faEdit} /> Edit information about You </p></Col>
                             <Row style={{margin: '10px', justifyContent: 'center'}} className="aboutInfo">
                                 
                                 <Col xs={8} sm={12} md={12} lg={6} >
-                                    {!quote && (<p> <FontAwesomeIcon icon={faQuoteRight} /> Add/Change Quote: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}> {displayQuote} </h4></p>) } 
-                                    {quote && (<p> <FontAwesomeIcon icon={faQuoteRight} /> Add/Change Quote: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}> {props.quote}</h4></p>)}  
+                                    {!quote && (<p style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black'}}> <FontAwesomeIcon icon={faQuoteRight} /> Add/Change Quote: <h4 style={{paddingLeft: '5px', paddingTop: '5px', fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}> {displayQuote} </h4></p>) } 
+                                    {quote && (<p style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black'}}> <FontAwesomeIcon icon={faQuoteRight} /> Add/Change Quote: <h4 style={{paddingLeft: '5px', paddingTop: '5px', fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}> {props.quote}</h4></p>)}  
                                     
-                                    {!birth && (<p> <FontAwesomeIcon icon={faCalendarAlt} /> Birth: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{displayBirth} </h4></p>) } 
-                                    {birth && (<p> <FontAwesomeIcon icon={faCalendarAlt} /> Birth: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{props.birth} </h4></p> )} 
+                                    {!birth && (<p style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black'}}> <FontAwesomeIcon icon={faCalendarAlt} /> Birth: <h4 style={{paddingLeft: '5px', paddingTop: '5px', fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}>{displayBirth} </h4></p>) } 
+                                    {birth && (<p style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black'}}> <FontAwesomeIcon icon={faCalendarAlt} /> Birth: <h4 style={{paddingLeft: '5px', paddingTop: '5px', fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}>{props.birth} </h4></p> )} 
                                         
-                                    {!address && (<p> <FontAwesomeIcon icon={faMapMarkedAlt} /> Address: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{displayAddress} </h4> </p>) } 
-                                    {address && (<p> <FontAwesomeIcon icon={faMapMarkedAlt} /> Address: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{props.address} </h4> </p> )}   
+                                    {!address && (<p style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black'}}> <FontAwesomeIcon icon={faMapMarkedAlt} /> Address: <h4 style={{paddingLeft: '5px', paddingTop: '5px', fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}>{displayAddress} </h4> </p>) } 
+                                    {address && (<p style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black'}}> <FontAwesomeIcon icon={faMapMarkedAlt} /> Address: <h4 style={{paddingLeft: '5px', paddingTop: '5px', fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}>{props.address} </h4> </p> )}   
                             
                                 </Col>
                                 <Col xs={8} sm={12} md={12} lg={6}>
-                                    <h4> <FontAwesomeIcon icon={faEnvelope} /> Email: {props.email}</h4>
-                                    {!insta && ( <p><FontAwesomeIcon icon={faInstagram} /> Instagram: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}>{displayInsta} </h4> </p>) } 
-                                    {insta && ( <p><FontAwesomeIcon icon={faInstagram} /> Instagram: <h4 style={{paddingLeft: '5px', paddingTop: '5px'}}> {props.instagram} </h4> </p> )} 
+                                    <p style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black'}}> <FontAwesomeIcon icon={faEnvelope} /> Email: <h4 style={{paddingLeft: '5px', paddingTop: '5px', fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}>{props.email}</h4></p>
+                                    {!insta && ( <p style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black'}}><FontAwesomeIcon icon={faInstagram} /> Instagram: <h4 style={{paddingLeft: '5px', paddingTop: '5px', fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}>{displayInsta} </h4> </p>) } 
+                                    {insta && ( <p style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black'}}><FontAwesomeIcon icon={faInstagram} /> Instagram: <h4 style={{paddingLeft: '5px', paddingTop: '5px', fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}> {props.instagram} </h4> </p> )} 
                                 </Col>
                                 
                             </Row>
