@@ -99,7 +99,7 @@ const Gallery = () => {
                     <Col lg={3} md={5} sm={8} xs={8} >
                         <label for="file" style={{cursor: 'pointer'}}>
                             <FontAwesomeIcon icon={faPlus} style={{display: 'flex', width: '35%', height: '100%', margin: '25px 0 0 70px'}}/>
-                            {'Upload Your work here!'}
+                            <p style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black', textAlign: 'center'}}>{'Upload Your work here!'}</p>
                         </label>
                         <input type="file" id="file" accept="image/*" onChange={readImages} style={{display: 'none'}}/>
                     </Col>
