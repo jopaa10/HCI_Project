@@ -107,7 +107,7 @@ const SignUp = () => {
                 setUser({ name: user.name, surname: user.surname })
                 setError(false)
                 setLogin(false)
-                navigate('/user/')
+                navigate('/')
                 setProccesing(false)
             })
         })
