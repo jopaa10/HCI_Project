@@ -22,16 +22,16 @@ import {faPlus} from '@fortawesome/free-solid-svg-icons'
 
 const Gallery = () => {
 
-    const [imageUrl, setImageUrl] = useState([])
+  const [imageUrl, setImageUrl] = useState([])
 
-    const [user, setUser] = useState([])
+  const [user, setUser] = useState([])
 
-    const getUserData = (uid) => {
-        db.ref("users/" + uid).once("value", (snap) => {
-        console.log(snap.val())
-        setUser(snap.val())
-        })
-    }
+  const getUserData = (uid) => {
+      db.ref("users/" + uid).once("value", (snap) => {
+      console.log(snap.val())
+      setUser(snap.val())
+      })
+  }
 
   const readImages = async (e) => {
     const file = e.target.files[0]
@@ -98,7 +98,7 @@ const Gallery = () => {
 
                     <Col lg={3} md={5} sm={8} xs={8} >
                         <label for="file" style={{cursor: 'pointer'}}>
-                            <FontAwesomeIcon icon={faPlus} style={{display: 'flex', width: '35%', height: '100%', margin: '25px 0 0 70px'}}/>
+                            <FontAwesomeIcon icon={faPlus} style={{display: 'flex', width: '35%', height: '100%', margin: '25px 0 0 80px'}}/>
                             <p style={{fontFamily: "josefin sans", fontSize: "1.1em", lineHeight: "1.5", color: 'black', textAlign: 'center'}}>{'Upload Your work here!'}</p>
                         </label>
                         <input type="file" id="file" accept="image/*" onChange={readImages} style={{display: 'none'}}/>
