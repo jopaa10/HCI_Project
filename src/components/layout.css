@@ -753,6 +753,11 @@ pre tt:after {
 
 /*** all time photos title ***/
 
+.quotePhoto{
+  position: relative;
+  bottom: 60px;
+}
+
 @media(max-width: 880px)
 {
   .allTimeImagesTitle{

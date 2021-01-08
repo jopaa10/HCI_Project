@@ -78,6 +78,7 @@ const About = () => {
                     title={'"Photography is the story I fail to put into words"'}
                     author={'Denise Sparks'}
                     bgImage={data.bgImage.childImageSharp.fluid}
+                    xs={'7'}
                 />
                 <Template uid={user.id} url={user.url} name={user.name} birth={user.birth} address={user.address} instagram={user.instagram} email={user.email} quote={user.quote}/>
                 <Footer /> 

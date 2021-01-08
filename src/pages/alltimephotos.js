@@ -39,7 +39,7 @@ const AllTimePhotos = () => {
                     author={'Robert Frank'}
                     bgImage={data.bgImage.childImageSharp.fluid}
                     className={'quotePhoto'}
-                    xs={'7'}
+                    xs={'10'}
                 />
                 <PhotoHistory />
                 <Footer />
