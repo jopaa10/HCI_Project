@@ -1,4 +1,4 @@
-import React, {useState, useRef} from 'react'
+import React, {useState} from 'react'
 
 //react bootstrap
 import {Container, Row, Col} from 'react-bootstrap' 
@@ -8,11 +8,6 @@ import Img from 'gatsby-image'
 
 //react reveal animation
 import Fade from 'react-reveal'
-
-//VisibilitySensor
-import useVisibilitySensor from "@rooks/use-visibility-sensor"
-
-import ButtonToTop from '../buttonToTop'
 
 const PhotoTemplate = (props) =>{
 
@@ -25,20 +20,11 @@ const PhotoTemplate = (props) =>{
         setText(changeText === 'Read more' ? 'Less' : 'Read more')
     }
 
-    const sectionNode = useRef(null)
-    
-    const { isVisible, visibilityRect } = useVisibilitySensor(sectionNode, {
-        intervalCheck: true,
-        scrollCheck: false,
-        resizeCheck: true,
-        partialVisibility: true
-    })
-
     return(
         <>
         
-            <section className="banner"  style={{backgroundColor: props.backgroundColor, color: props.color, paddingTop: '0', height: 'auto'}} ref={sectionNode}>  
-                {isVisible && <ButtonToTop color={'white'} zIndex={props.zIndex}/>}
+            <section className="banner"  style={{backgroundColor: props.backgroundColor, color: props.color, paddingTop: '0', height: 'auto'}}>  
+            
                 <Container>
                     <Fade left>
                         <Row style={{justifyContent: 'center'}}>
