@@ -43,6 +43,8 @@ const Tips = () => {
                 title={'"Life is like photography. You need the negatives to develop"'}
                 author={'Ziad K. Abdelnour'}
                 bgImage={data.bgImage.childImageSharp.fluid}
+                className={'quoteTips'}
+                xs={'10'}
             />
             <TipsTricks/>
             <Footer />

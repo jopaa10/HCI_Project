@@ -38,6 +38,8 @@ const AllTimePhotos = () => {
                     title={'"There is one thing the photograph must contain, the humanity of the moment"'}
                     author={'Robert Frank'}
                     bgImage={data.bgImage.childImageSharp.fluid}
+                    className={'quotePhoto'}
+                    xs={'7'}
                 />
                 <PhotoHistory />
                 <Footer />
