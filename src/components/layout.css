@@ -1503,6 +1503,36 @@ a:hover{
 
 /*** tips and tricks ***/
 
+.quoteTips{
+  position: relative;
+  bottom: 30px;
+  right: 60px;
+  margin-left: 30px;
+  text-shadow: 1px 1px 9px rgba(0,0,0,1);
+}
+
+@media(max-width: 770px)
+{
+  .quoteTips{
+    position: relative;
+    bottom: 50px;
+    margin-left: 30px;
+    text-shadow: 1px 1px 9px rgba(0,0,0,1);
+  }
+
+}
+
+@media(max-width: 350px)
+{
+  .quoteTips{
+    position: relative;
+    bottom: 60px;
+    margin-left: 30px;
+    text-shadow: 1px 1px 9px rgba(0,0,0,1);
+  }
+
+}
+
 .mobileViewPhoto{
 
   display: none;
