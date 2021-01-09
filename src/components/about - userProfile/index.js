@@ -42,6 +42,8 @@ const AboutTemplate = (props) => {
     const [insta, showInsta] = useState(true)
     const [quote, showQuote] = useState(true)
 
+    const [enabled, setEnabled] = useState(false)
+
     const handleSignOut = () => {
       auth.signOut()
       setLoginDisplay(true)
@@ -53,6 +55,10 @@ const AboutTemplate = (props) => {
 
     const closeModal = () => {
         isOpenModal(false)
+        setUserQuote('')
+        setUserAddress('')
+        setUserInsta('')
+        setDateOfBirth('')
     }
 
 
@@ -83,9 +89,16 @@ const AboutTemplate = (props) => {
         {
             alert('Please, fill all fields!')
             isOpenModal(true)
+            setEnabled(false)
         }
+
+        
         else{
             isOpenModal(false)
+            setUserQuote('')
+            setUserAddress('')
+            setUserInsta('')
+            setDateOfBirth('')
         }
     }
 
@@ -145,9 +158,7 @@ const AboutTemplate = (props) => {
         
     }
 
-    const [enabled, setEnabled] = useState(false)
-  // using useEffect we can detect if user uploaded any file,
-  // so enable submit button
+    
   useEffect(() => {
     
     if(props.url)
@@ -156,7 +167,16 @@ const AboutTemplate = (props) => {
         setImgTemp(false)
     }
 
-  }, [profileImg, props.url])
+    if((dateOfBirth && userQuote && userInsta && userAddress) === '')
+    {
+        setEnabled(false)
+    }
+    else
+    {
+        setEnabled(true)
+    }
+
+  }, [profileImg, props.url, dateOfBirth, userQuote, userInsta, userAddress])
 
 
     if(loginDisplay === true)
@@ -243,13 +263,19 @@ const AboutTemplate = (props) => {
                             </Row>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button variant="secondary" onClick={closeModal}>
-                            Close
+                            <Button variant="secondary" onClick={closeModal} className="closeButton">
+                                Close
                             </Button>
                            
-                            <Button variant="primary" onClick={onUpdate}>
-                            Save Changes
-                            </Button>
+                            {enabled ? 
+                                (<Button   onClick={onUpdate} className="saveButton">
+                                    Save Changes
+                                </Button>)
+                            :
+                                (<Button disabled  style={{cursor: 'no-drop', backgroundColor: 'green', borderColor: 'green'}}>
+                                    Save Changes
+                                </Button>)
+                            }
                         </Modal.Footer>
                     </Modal>
                 </Row>
