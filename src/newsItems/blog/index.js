@@ -78,7 +78,7 @@ export default function NewsLayout({
                             </Row>
                         </Row>
                         <Row>
-                            <p style={{lineHeight: '2', fontFamily: "josefin sans", fontSize: "1.25em"}}>
+                            <p style={{lineHeight: '2', fontFamily: "josefin sans", fontSize: "1.25em", marginLeft: '15px'}}>
                                 <Link to='/news/' style={{color: 'black'}} className="returnBackBtn"><FontAwesomeIcon icon={faArrowLeft} />Go back to News</Link>
                             </p>
                         </Row>
