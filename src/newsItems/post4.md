@@ -1,5 +1,5 @@
 ---
-slug: "/blog/fourth-post"
+slug: "/news/blog/"
 title: My fourth blog post
 date: "2019-05-04"
 author: "Josipa"
