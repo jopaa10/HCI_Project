@@ -64,7 +64,7 @@ export default function NewsLayout({
                                 <Col xs={12} sm={12} md={12}>
                                     <h4 style={{fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}>{frontmatter.date}</h4>
                                 </Col>
-                                <Col xs={12} sm={12} md={12} style={{textAlign: 'justify'}}>
+                                <Col xs={12} sm={12} md={12} style={{textAlign: 'left'}}>
                                     <p xs={12} sm={12} md={12}
                                     className="blog-post-content"
                                     style={{lineHeight: '2', fontFamily: "josefin sans", fontSize: "1.25em"}}
@@ -75,7 +75,7 @@ export default function NewsLayout({
                         </Row>
                         <Row>
                             <p style={{lineHeight: '2', fontFamily: "josefin sans", fontSize: "1.25em"}}>
-                                <Link to='/news/' style={{color: 'black'}} className="returnBackBtn"><FontAwesomeIcon icon={faArrowLeft} />Return back</Link>
+                                <Link to='/news/' style={{color: 'black'}} className="returnBackBtn"><FontAwesomeIcon icon={faArrowLeft} />Go back to News</Link>
                             </p>
                         </Row>
                     </Container>
