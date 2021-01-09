@@ -6,17 +6,23 @@
  */
 
 import React from "react"
-import {graphql} from 'gatsby'
+import {graphql, Link} from 'gatsby'
 
 import Header from "../../components/header"
+import Footer from '../../components/footer'
 
 //pages
 import {Row, Col, Container} from 'react-bootstrap'
-import Footer from '../../components/footer'
 
+//gatsby image
 import Img from 'gatsby-image'
 
+//page components
 import Title from '../../components/title'
+
+//fontawesome
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 
 export default function NewsLayout({
     data, // this prop will be injected by the GraphQL query below.
@@ -66,6 +72,11 @@ export default function NewsLayout({
                                     />
                                 </Col>
                             </Row>
+                        </Row>
+                        <Row>
+                            <p style={{lineHeight: '2', fontFamily: "josefin sans", fontSize: "1.25em"}}>
+                                <Link to='/news/' style={{color: 'black'}} className="returnBackBtn"><FontAwesomeIcon icon={faArrowLeft} />Return back</Link>
+                            </p>
                         </Row>
                     </Container>
                 </section>

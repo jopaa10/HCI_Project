@@ -1437,6 +1437,11 @@ a:hover{
 
 /*** news ***/
 
+.returnBackBtn:hover{
+  color: #262626!important;
+  text-decoration: underline!important;
+}
+
 .latestNewsMob{
   display: none;
 }
