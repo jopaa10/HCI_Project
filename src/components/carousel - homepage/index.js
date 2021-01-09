@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 
 //gatsby image
@@ -16,6 +16,8 @@ import Template from './carouselTemplate'
 
 //title
 import Title from '../title/index'
+
+import {db, auth} from '../firebase'
 
 const Photoinfo = () => {
 
@@ -70,6 +72,28 @@ const Photoinfo = () => {
             }
         }
     `)
+
+    const [user, setUser] = useState(null)
+
+    const getUserData = (uid) => {
+        db.ref("users/" + uid).once("value", (snap) => {
+        //console.log(snap.val())
+        setUser(snap.val())
+        })
+    }
+
+    useEffect(() => {
+       auth.onAuthStateChanged((currentUser) => {
+            if (currentUser) {
+                    getUserData(currentUser.uid)
+                }
+            else
+            {
+                setUser(null)
+            }
+        })
+
+    }, [])
 
     return(
 

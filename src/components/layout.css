@@ -604,6 +604,16 @@ pre tt:after {
   color: grey!important;
 }
 
+/*** header fix if user is login or not ***/  
+
+.userNav-link:active{
+  color: grey!important;
+}
+
+.userNav-link:hover{
+  color: grey!important;
+}
+
 /*** react bootstrap carousel indicators ***/
 
 .carousel-indicators{
