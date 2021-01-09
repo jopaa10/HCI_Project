@@ -60,7 +60,8 @@ const ImageSlider = (props) => {
         flex: 1,
         justifyContent: "center",
         alignItems: "middle",
-        paddingTop: '150px'
+        paddingTop: '150px',
+        zIndex: '0'
       }
 
     let CARD_STYLE =  {
@@ -73,7 +74,8 @@ const ImageSlider = (props) => {
         background: '#52C0F5',
         color: '#FFF',
         fontSize: '12px',
-        textTransform: 'uppercase'
+        textTransform: 'uppercase',
+        zIndex: '0'
     }
 
     return(

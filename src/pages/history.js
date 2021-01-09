@@ -43,6 +43,7 @@ const Timeline = () => {
                 author={'Sally Mann'}
                 bgImage={data.bgImage.childImageSharp.fluid}
                 className={'quote'}
+                xs={'7'}
             />
             <CameraHistory />
             <Footer />

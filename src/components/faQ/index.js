@@ -41,7 +41,7 @@ const FaQ = () => {
                        
                             <Row>
                                 <Col xs={12} sm={8} style={{paddingTop: '20px', textAlign: 'center'}}>
-                                    <h3 style={{fontFamily: "josefin sans", fontSize: "2em", lineHeight: "1.5"}}>FAQ</h3>
+                                    <h3 style={{fontFamily: "josefin sans", fontSize: "2em", lineHeight: "1.5", color: 'white', textShadow: 'text-shadow: rgba(0, 0, 0, 0.84) 1px 1px 19px'}}>FAQ</h3>
                                 </Col> 
                             </Row>
                         

@@ -52,6 +52,8 @@ const Layout = () => {
                 title={'"Photography is the story I fail to put into words"'}
                 author={'Denise Sparks'}
                 bgImage={data.bgImage.childImageSharp.fluid}
+                className={'quotePhoto'}
+                xs={'7'}
           />
           <PhotoInfo />
           <CreateAwesomePhotos />
