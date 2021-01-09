@@ -135,16 +135,16 @@ const LoginForm = () => {
                                     </Row>
                                     <InputGroup style={{marginTop: '40px', paddingLeft: '40px', width: '90%'}}> 
                                         <FontAwesomeIcon icon={faUserAlt} style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="email" name="email" className="inputFieldsLog" value={email} onChange={handleEmail} placeholder="Enter email" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/> 
+                                        <Form.Control type="email" name="email" className="inputFieldsLog" value={email} onChange={handleEmail} placeholder="Enter email" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor.email}}/> 
                                     </InputGroup>
                                     {(error === 'The email is not correct') && (<Row><Col style={{color: 'red'}}>{error}</Col></Row>)}
                                     <InputGroup style={{marginTop: '40px', paddingLeft: '40px', width: '90%'}}>
                                         <FontAwesomeIcon icon={faLock} style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="password" name="password" className="inputFieldsLog" value={password} onChange={handlePass} placeholder="Password" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/>
+                                        <Form.Control type="password" name="password" className="inputFieldsLog" value={password} onChange={handlePass} placeholder="Password" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor.password}}/>
                                     </InputGroup>
                                     {(error ==='The password is not correct') && (<Row><Col style={{color: 'red'}}>{error}</Col></Row>)}
                                     {(error ==='User is not found with that email and password. Please try again!') && (<Row><Col style={{color: 'red'}}>{error}</Col></Row>)}
-                                    <Button variant="primary" type="submit" onClick={handleLogin} style={{marginTop: '25px', backgroundColor: 'black', borderColor: 'black'}}>
+                                    <Button variant="primary" className="submitButton" type="submit" onClick={handleLogin} style={{marginTop: '25px', backgroundColor: 'black', borderColor: 'black'}}>
                                         {processing ? (
                                             <Spinner animation="border" role="status">
                                                 <span className="sr-only">Loading...</span>
