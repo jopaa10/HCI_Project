@@ -3,12 +3,15 @@ import React from 'react'
 //components
 import NavbarMenu from '../navbar/index'
 
-const Header = () => {
+const Header = (props) => {
 
   return (
     <>
   <header>
-    <NavbarMenu />
+    <NavbarMenu 
+      display={props.display}
+      displayNews={props.displayNews}
+    />
 
     </header>
     </>

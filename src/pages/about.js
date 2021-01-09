@@ -32,6 +32,7 @@ const About = () => {
         }
     `)
 
+    const [displayBlog] = useState('none')
 
     const getUserData = (uid) => {
         db.ref("users/" + uid).once("value", (snap) => {
@@ -72,12 +73,15 @@ const About = () => {
             />
             
             <main>
-                <Header />
+                <Header 
+                    display={displayBlog}
+                />
                 <Banner
                     color={'white'} 
                     title={'"Photography is the story I fail to put into words"'}
                     author={'Denise Sparks'}
                     bgImage={data.bgImage.childImageSharp.fluid}
+                    className={'quotePhoto'}
                     xs={'7'}
                 />
                 <Template uid={user.id} url={user.url} name={user.name} birth={user.birth} address={user.address} instagram={user.instagram} email={user.email} quote={user.quote}/>

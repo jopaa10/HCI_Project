@@ -1054,6 +1054,11 @@ a:hover{
   }
 }
 
+.quote{
+  position: relative;
+  bottom: 60px;
+}
+
 @media(max-width: 950px){
 
     .quote{

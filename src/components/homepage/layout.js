@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import React, {useState} from "react"
 import {useStaticQuery, graphql} from 'gatsby'
 
 import Header from "../header/index"
@@ -35,6 +35,8 @@ const Layout = () => {
             } 
         }
     `)
+
+  const [displayBlog] = useState('none')
   
   return (
     <>
@@ -46,7 +48,9 @@ const Layout = () => {
       />
       
       <main>
-          <Header />
+          <Header 
+            display={displayBlog}
+          />
           <Banner
                 color={'white'} 
                 title={'"Photography is the story I fail to put into words"'}

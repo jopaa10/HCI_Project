@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 //import header, footer
 import Header from '../components/header'
@@ -12,6 +12,7 @@ import Head from '../components/head'
 
 const Login = () => {
 
+    const [displayBlog] = useState('none')
 
     return(
         <> 
@@ -23,7 +24,9 @@ const Login = () => {
         />
           
         <main>
-            <Header/>
+            <Header
+                display={displayBlog}
+            />
             <LoginLayout />
             <Footer />
         </main>

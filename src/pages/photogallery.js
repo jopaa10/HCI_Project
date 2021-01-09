@@ -32,6 +32,7 @@ const Photogallery = (props) => {
  
     }, [])
 
+    const [displayBlog] = useState('none')
 
     if (user === false) {
         setTimeout(() => {
@@ -51,7 +52,9 @@ const Photogallery = (props) => {
         />
   
         <main>
-            <Header />
+            <Header 
+                display={displayBlog}
+            />
             <Gallery />
             <Footer />
         </main>

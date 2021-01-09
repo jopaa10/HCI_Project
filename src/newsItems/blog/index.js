@@ -5,7 +5,7 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
+import React, {useState} from "react"
 import {graphql, Link} from 'gatsby'
 
 import Header from "../../components/header"
@@ -31,11 +31,15 @@ export default function NewsLayout({
 
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark
+
+    const [displayNews] = useState('none')
   
     return (
         <>
      
-          <Header/>
+          <Header
+            displayNews={displayNews}
+          />
             <main>
 
             <section className='banner' style={{backgroundColor: 'black', paddingBottom: '0'}}>
