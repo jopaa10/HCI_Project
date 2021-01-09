@@ -1695,3 +1695,7 @@ a:hover{
 .saveButton:hover{
   background-color: darkgreen!important;
 }
+
+.btnLogOut:hover{
+  background-color: darkred!important;
+}
