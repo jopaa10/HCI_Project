@@ -64,28 +64,44 @@ const SignUp = () => {
     }
 
     const [processing, setProccesing] = useState(false)
-
-    const [borderColor, setBorderColor] = useState("none")
-    const [borderColorSurname, setBorderColorSurname] = useState("none")
-    const [borderColorEmail, setBorderColorEmail] = useState("none")
-    const [borderColorNick, setBorderColorNick] = useState("none")
-    const [borderColorPass, setBorderColorPass] = useState("none")
-
     const [error, setError] = useState(false)
-
-    const [displayError, setDisplayError] = useState({
-        name: 'Name is not correct or written',
-        email: 'The email address is not valid/is not written',
-        password: 'The password must be 6 characters long or more.'
+    const [borderColor, setBorderColor] = useState({
+        name: '',
+        surname: '',
+        nick: '',
+        email: '',
+        pass: ''
     })
 
     const handleReg = (e) => {
+
     e.preventDefault()
 
+    setProccesing(true)
 
+    if(user.name === '')
+    {
+        setError('Name is not correct or written')
+        setBorderColor({name: 'red'})
+        setProccesing(false)
+    }
 
-        setProccesing(true)
+    else if(user.surname === '')
+    {
+        setError('Surname is not correct or written')
+        setBorderColor({name: '', surname: 'red'})
+        setProccesing(false)
+    }
 
+    else if(user.nickname === '')
+    {
+        setError('Nickname is not correct or written')
+        setBorderColor({name: '', surname: '', nick: 'red'})
+        setProccesing(false)
+    }
+
+    else
+    {
         auth
         .createUserWithEmailAndPassword(user.email, user.password)
         .then((result) => {
@@ -136,10 +152,9 @@ const SignUp = () => {
             }
 
             
-             setProccesing(false)
-            
-
-        })
+                setProccesing(false)
+            })
+        }
     }
 
     if(showLogin === true)
@@ -164,30 +179,30 @@ const SignUp = () => {
                                     </Row>
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}> 
                                         <FontAwesomeIcon icon={faUserAlt} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="name"  name="name" className={"inputFields"} value={user.name} onChange={handleChangeName}  placeholder="Enter Your name" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor}}></Form.Control>
+                                        <Form.Control type="name"  name="name" className={"inputFields"} value={user.name} onChange={handleChangeName}  placeholder="Enter Your name" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor.name}}></Form.Control>
                                     </InputGroup>
                                     {(error ==='Name is not correct or written') && (<Row style={{color: 'red'}}><Col>{error}</Col></Row>)}
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}> 
                                         <FontAwesomeIcon icon={faUserAlt} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="surname" name="surname" className="inputFields" value={user.surname} onChange={handleChangeSurname}  placeholder="Enter Your surname" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/> 
+                                        <Form.Control type="surname" name="surname" className="inputFields" value={user.surname} onChange={handleChangeSurname}  placeholder="Enter Your surname" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor.surname}}/> 
                                     </InputGroup>
-                                   
+                                    {(error ==='Surname is not correct or written') && (<Row style={{color: 'red'}}><Col>{error}</Col></Row>)}
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}> 
                                         <FontAwesomeIcon icon={faUserAlt} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="nickname" name="nickname" className="inputFields" value={user.nickname} onChange={handleChangeNickname} placeholder="Enter Your nickname" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0'}}/> 
+                                        <Form.Control type="nickname" name="nickname" className="inputFields" value={user.nickname} onChange={handleChangeNickname} placeholder="Enter Your nickname" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor.nick}}/> 
                                     </InputGroup>
-                                    
+                                    {(error ==='Nickname is not correct or written') && (<Row style={{color: 'red'}}><Col>{error}</Col></Row>)}
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}> 
                                         <FontAwesomeIcon icon={faEnvelope} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="email" name="email" className="inputFields" value={user.email} onChange={handleChangeEmail} placeholder="Enter email" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColorEmail}}/> 
+                                        <Form.Control type="email" name="email" className="inputFields" value={user.email} onChange={handleChangeEmail} placeholder="Enter email" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor.email}}/> 
                                     </InputGroup>
-                                    {(error ==='The email is not correct') && (<Row style={{color: 'red'}}><Col>{displayError.email}</Col></Row>)}
+                                    {(error ==='The email is not correct') && (<Row style={{color: 'red'}}><Col>{error}</Col></Row>)}
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}>
                                         <FontAwesomeIcon icon={faLock} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
-                                        <Form.Control type="password" name="password" className="inputFields" value={user.password} onChange={handleChangePass}  placeholder="Password" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColorPass}}/>
+                                        <Form.Control type="password" name="password" className="inputFields" value={user.password} onChange={handleChangePass}  placeholder="Password" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor.pass}}/>
                                     </InputGroup>
                                     {(error === 'The password must be at least 6 characters') && (<Row style={{color: 'red'}}><Col>{error}</Col></Row>)}
-                                    <Button variant="primary" type="submit" onClick={handleReg} style={{marginTop: '25px', backgroundColor: 'black', borderColor: 'black'}}>
+                                    <Button variant="primary" className="submitButton" type="submit" onClick={handleReg} style={{marginTop: '25px', backgroundColor: 'black', borderColor: 'black'}}>
                                         {processing ? 'Checking credentials...' : 'Sign Up'}
                                     </Button>
                                     <Row style={{marginTop: '30px'}}>

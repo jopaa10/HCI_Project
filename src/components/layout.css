@@ -1109,6 +1109,10 @@ a:hover{
   }
 }
 
+.submitButton:hover{
+  background-color: #262626!important;
+}
+
 @media(max-width: 445px)
 {
   .mobLogin{
