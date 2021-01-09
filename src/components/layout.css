@@ -1743,3 +1743,21 @@ a:hover{
     margin-left: 5%!important;
   }
 }
+
+.closeButton{
+  background-color: red!important;
+  border-color: red!important;
+}
+
+.closeButton:hover{
+  background-color: darkred!important;
+}
+
+.saveButton{
+  background-color: green!important;
+  border-color: green!important;
+}
+
+.saveButton:hover{
+  background-color: darkgreen!important;
+}
