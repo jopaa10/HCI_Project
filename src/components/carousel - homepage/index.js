@@ -17,9 +17,6 @@ import Template from './carouselTemplate'
 //title
 import Title from '../title/index'
 
-//animation
-import { Fade } from "react-awesome-reveal"
-
 const Photoinfo = () => {
 
     const data = useStaticQuery(graphql`
@@ -77,12 +74,20 @@ const Photoinfo = () => {
     return(
 
         <Container className="banner" style={{backgroundColor: 'white', paddingBottom: '150px'}}>
-            
-       
-                <Title
-                    title={`Welcome to "Photography" page`}
-                />
-            
+        
+            {!user ?
+                (
+                    <Title
+                        title={`Welcome to "Photography" page`}
+                    />
+                )
+                :
+                (
+                    <Title
+                        title={`${user.name}, Welcome to "Photography" page`}
+                    />
+                )
+            }
                 <Row>
                 
                     <Col xs={12} sm={6}>

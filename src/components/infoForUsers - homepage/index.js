@@ -8,8 +8,6 @@ import {Container, Row, Col} from 'react-bootstrap'
 //gatsby image
 import Img from "gatsby-image"
 
-//animation
-import { Fade } from "react-awesome-reveal"
 
 const InfoForUsers = () => {
 
