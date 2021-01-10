@@ -1517,6 +1517,12 @@ a:hover{
     }
 }
 
+/*** faq - homepage ***/
+
+.faqTitle{
+  font-size: 2em!important;
+}
+
 /*** tips and tricks ***/
 
 .quoteTips{
