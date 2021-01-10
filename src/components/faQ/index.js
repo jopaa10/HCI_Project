@@ -17,7 +17,7 @@ const FaQ = () => {
         query{
             bgImage: file(relativePath: {eq: "glassesWallpaper.jpg"}){
                 childImageSharp{
-                    fluid(maxWidth: 3000, maxHeight: 1707, quality: 100){
+                    fluid(maxWidth: 2560, maxHeight: 1900, quality: 100){
                         ...GatsbyImageSharpFluid
                         }
                     }
@@ -39,7 +39,7 @@ const FaQ = () => {
                        
                             <Row>
                                 <Col xs={12} sm={8} style={{paddingTop: '20px', textAlign: 'center'}}>
-                                    <h3 style={{fontFamily: "josefin sans", fontSize: "2em", lineHeight: "1.5", color: 'white', textShadow: '1px 1px 19px rgba(0, 0, 0, 0.84)'}}>FAQ</h3>
+                                    <h3 className="faqTitle" style={{fontFamily: "josefin sans", lineHeight: "1.5", color: 'white', textShadow: '1px 1px 19px rgba(0, 0, 0, 0.84)'}}>FAQ</h3>
                                 </Col> 
                             </Row>
                         
