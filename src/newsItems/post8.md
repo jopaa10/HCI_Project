@@ -1,5 +1,5 @@
 ---
-slug: "/news/blog/"
+slug: "/news/We get our first glimpse of the new Sony Airpeak drone at CES 2021"
 title: We get our first glimpse of the new Sony Airpeak drone at CES 2021
 date: "2021-01-12"
 author: "Josipa"

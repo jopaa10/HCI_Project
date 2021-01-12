@@ -1,5 +1,5 @@
 ---
-slug: "/news/blog/"
+slug: "/news/Kingston Digital launches new modular card readers and Workflow Station Dock"
 title: Kingston Digital launches new modular card readers and Workflow Station Dock
 date: "2021-01-12"
 author: "Josipa"

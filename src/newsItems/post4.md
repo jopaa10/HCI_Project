@@ -1,5 +1,5 @@
 ---
-slug: "/news/blog/"
+slug: "/news/NiSi launches first ever lens! NiSi 4/15 is a 15mm f/4 for mirrorless cameras"
 title: NiSi launches first ever lens! NiSi 4/15 is a 15mm f/4 for mirrorless cameras
 date: "2019-01-08"
 author: "Josipa"

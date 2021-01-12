@@ -1,5 +1,5 @@
 ---
-slug: "/news/blog/"
+slug: "/news/Xiaomi Mi 11 showcases new Night Video feature co-developed with BlinkAI"
 title: Xiaomi Mi 11 showcases new Night Video feature co-developed with BlinkAI
 date: "2021-01-11"
 author: "Josipa"

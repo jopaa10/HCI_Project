@@ -1,6 +1,6 @@
 ---
-slug: "/news/blog/"
-title: Venus Optics launches four new Laowa f/0.95 Argus lenses
+title: "Venus Optics launches four new Laowa f/0.95 Argus lenses"
+slug: "/news/Venus Optics launches four new Laowa f/0.95 Argus lenses"
 date: "2021-01-10"
 author: "Josipa"
 featuredImage: "../images/venusOptics.jpg"

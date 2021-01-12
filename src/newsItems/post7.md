@@ -1,5 +1,5 @@
 ---
-slug: "/news/blog/"
+slug: "/news/How bokeh transformed photography (and traditional art too)"
 title: How bokeh transformed photography (and traditional art too)
 date: "2021-01-04"
 author: "Josipa"

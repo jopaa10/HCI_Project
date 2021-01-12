@@ -1,5 +1,5 @@
 ---
-slug: "/news/blog/"
+slug: "/news/The OIympus OM-D E-M10 Mark III was the top selling camera in Japan last year"
 title: The OIympus OM-D E-M10 Mark III was the top selling camera in Japan last year
 date: "2021-01-08"
 author: "Josipa"
