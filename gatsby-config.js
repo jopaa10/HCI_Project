@@ -1,6 +1,6 @@
 // Initialize dotenv
 require('dotenv').config({
-  path: `.env.${process.env.NODE_ENV}`, // or '.env'
+  path: `.env.${process.env.NODE_ENV || 'development'}`
 });
 
 // And then you can use the config in gatsby-config.js
@@ -67,13 +67,13 @@ module.exports = {
       resolve: "gatsby-plugin-firebase",
       options: {
         credentials: {
-          apiKey: "AIzaSyDsi-1Htc4ewdgbGG8YTojOuLAksGdPb10",
-          authDomain: "photogallery-c272e.firebaseapp.com",
-          databaseURL: "https://photogallery-c272e.firebaseio.com",
-          projectId: "photogallery-c272e",
-          storageBucket: "photogallery-c272e.appspot.com",
-          messagingSenderId: "1012383819368",
-          appId: "1:1012383819368:web:64514f1b2da7dc1d923ddd",
+          apiKey: process.env.GATSBY_FIREBASE_API_KEY,
+          authDomain: process.env.GATSBY_FIREBASE_AUTH_DOMAIN,
+          databaseURL: process.env.GATSBY_FIREBASE_DATABASE_URL,
+          projectId: process.env.GATSBY_FIREBASE_PROJECT_ID,
+          storageBucket: process.env.GATSBY_FIREBASE_STORAGE_BUCKET,
+          messagingSenderId: process.env.GATSBY_FIREBASE_MESSAGING_SENDER_ID,
+          appId: process.env.GATSBY_FIREBASE_APP_ID,
           measurementId: "G-DZJSC865KQ"
         }
       }
