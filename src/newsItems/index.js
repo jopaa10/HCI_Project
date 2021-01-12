@@ -14,7 +14,7 @@ const NewsForm = () => {
 
     const data = useStaticQuery(graphql`
     {
-        blog: allMarkdownRemark (filter: {frontmatter: {template: {}}}, limit: 6){
+        blog: allMarkdownRemark (filter: {frontmatter: {template: {}}}, limit: 6, , sort: { order: DESC, fields: [frontmatter___date] }){
           posts: nodes {
             frontmatter {
               slug
@@ -33,7 +33,7 @@ const NewsForm = () => {
           }
         }
 
-        latestNews: allMarkdownRemark (filter: {frontmatter: {template: {}}}, limit: 2, skip: 6){
+        latestNews: allMarkdownRemark (filter: {frontmatter: {template: {}}}, limit: 2, skip: 6, , sort: { order: DESC, fields: [frontmatter___date] }){
             latestPost: nodes {
               frontmatter {
                 slug
