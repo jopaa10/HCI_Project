@@ -11,6 +11,7 @@ const Header = (props) => {
     <NavbarMenu 
       display={props.display}
       displayNews={props.displayNews}
+      to={props.to}
     />
 
     </header>

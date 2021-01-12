@@ -199,7 +199,7 @@ const navbarStyle = {
                         <Nav>
                             <Nav.Link className={showColorNavbar} > <Link to='/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>Home</Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} style={{display: props.displayNews}}> <Link to='/news/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>News</Link></Nav.Link>
-                            <Nav.Link className={showColorNavbar} style={{display: props.display}}> <Link to='/news/blog/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>News</Link></Nav.Link>
+                            <Nav.Link className={showColorNavbar} style={{display: props.display}}> <Link to={props.to} className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>News</Link></Nav.Link>
                             <Nav.Link className={showColorNavbar} > <Link to='/tips/' className="nav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>Tips</Link></Nav.Link>
                             {user ? <Nav.Link className={showColorNavbar} > <Link to='/photogallery/' className="userNav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}>Photogallery </Link></Nav.Link> :
                                         <Nav.Link className={showColorNavbar} > <Link to='/history/' className="userNav-link" activeStyle={{color: 'grey'}} style={{color: linkColor}}> History </Link></Nav.Link>
