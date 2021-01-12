@@ -1,5 +1,5 @@
 ---
-slug: "/news/blog/"
+slug: "/news/Fujifilm GFX 100S to have 3-way tilt screen"
 title: Fujifilm GFX 100S to have 3-way tilt screen
 date: "2021-01-11"
 author: "Josipa"

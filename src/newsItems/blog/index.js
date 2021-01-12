@@ -45,14 +45,14 @@ export default function NewsLayout({
 
             <section className='banner' style={{backgroundColor: 'black', paddingBottom: '0'}}>
                 <Container>
-                    <Row>
+                    <Row style={{justifyContent: 'center'}}>
                         <Col xs={12} sm={12} md={12} style={{paddingTop: '100px'}}>
                             <Title 
                                 title={frontmatter.title} 
                                 color={'white'}
                             />
                         </Col>
-                        <Col xs={12} sm={12} md={12} style={{paddingTop: '50px'}}>
+                        <Col xs={12} sm={12} md={12} style={{paddingTop: '50px', maxWidth: '80%'}}>
                             <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} alt="newsPhoto" />
                         </Col>
                     </Row>
@@ -65,7 +65,7 @@ export default function NewsLayout({
                 <section className="banner" style={{backgroundColor: 'white', paddingTop: '0'}}>
                     <Container>
                         <Row className="blog-post-container" style={{justifyContent: 'center'}}>
-                            <Row className="blog-post" style={{maxWidth: '70%'}}>
+                            <Row className="blog-post" style={{maxWidth: '80%'}}>
                                 <Col xs={12} sm={12} md={12}>
                                     <h4 style={{fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}>{frontmatter.date}</h4>
                                 </Col>
