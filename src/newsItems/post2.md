@@ -1,13 +1,11 @@
 ---
 slug: "/news/blog/"
-title: My second blog post
-date: "2020-11-30"
+title: Xiaomi Mi 11 showcases new Night Video feature co-developed with BlinkAI
+date: "2021-01-11"
 author: "Josipa"
-featuredImage: "../images/japan.jpg"
+featuredImage: "../images/xiaomiMi11.jpg"
 template: newsItemsTemplate
 ---
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+The recently announced Xiaomi Mi 11 has some impressive features built in, but one of the most intriguing is its new Night Video mode. Built in collaboration with machine learning company BlinkAI, the Night Video mode is designed to help users achieve well-exposed videos in super low-lit conditions. 
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+BlinkAI is a Boston-based company that uses machine learning to improve camera sensor technology. AI features in camera phones have been developing fast over the last few years and this new night mode for video is a huge leap forward. 
