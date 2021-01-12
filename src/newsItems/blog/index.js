@@ -39,6 +39,7 @@ export default function NewsLayout({
      
           <Header
             displayNews={displayNews}
+            to={frontmatter.slug}
           />
             <main>
 
