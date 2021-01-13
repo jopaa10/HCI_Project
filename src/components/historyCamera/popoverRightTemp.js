@@ -31,7 +31,7 @@ const PopoverDisplay = (props) => {
 
             {displayDetails &&
                 <Col xs={8} sm={8}>
-                    <Popover placement={props.placement} id="popover-basic" target={target.current} className="popoverWidthR">
+                    <Popover placement={props.placement} id="popover-basic" target={target.current} className="popoverWidthR" style={{width: '250px'}}>
                         <Popover.Title as="h3" className="cameraHistTitle" style={{color: 'white', backgroundColor: 'rgba(0,0,0,0.85)', fontFamily: 'josefin sans'}}>{props.title}</Popover.Title>
                         <Popover.Content style={{color: 'white', fontFamily: 'josefin sans'}}>
                             {props.content}

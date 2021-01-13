@@ -52,7 +52,7 @@ const PopoverLeft = (props) => {
         </OverlayTrigger>
 
         <OverlayTrigger overlay={<Tooltip id="tooltip-disabled" ref={ref} className="popoverMobile">Click for more!</Tooltip>}>  
-            <Col sm={12} md={12} xs={10} onClick={showMore} ref={ref.current} className="popoverMobile" style={{display: 'flex', justifyContent: 'flex-start', marginRight: '5em'}}>
+            <Col sm={12} md={12} xs={10} onClick={showMore} ref={ref} className="popoverMobile" style={{display: 'flex', justifyContent: 'flex-start', marginRight: '5em'}}>
             
                 <Img 
                     style={{width: props.width, cursor: changeCursor}} 

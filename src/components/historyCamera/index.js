@@ -145,6 +145,7 @@ const CameraTimeline = () => {
                 />
                 <Row className="banner" style={{backgroundColor: 'white', paddingTop: '0px'}}>
                     <VerticalTimeline animate={false}>
+
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"
                             date="4th century"
@@ -192,9 +193,11 @@ const CameraTimeline = () => {
                                     title={'First Film Camera'}
                                     image={data.FirstFilmCam.childImageSharp.fluid}
                                     width={'150px'}
+                                    content={'In 1859, Sutton developed the earliest panoramic camera with a wide-angle lens. The lens consisted of a glass sphere filled with water, which projected an image onto a curved plate. The camera was capable of capturing an image in a 120 degree arc'}
                                 />
                             </Row> 
                         </VerticalTimelineElement>
+
                         <VerticalTimelineElement
                             className="vertical-timeline-element--work"
                             date="1888"
@@ -211,6 +214,7 @@ const CameraTimeline = () => {
                                 />
                             </Row>
                         </VerticalTimelineElement>
+
                         <VerticalTimelineElement
                             className="vertical-timeline-element--education"
                             date="1900"
@@ -227,6 +231,7 @@ const CameraTimeline = () => {
                                 />
                             </Row>
                         </VerticalTimelineElement>
+
                         <VerticalTimelineElement
                             className="vertical-timeline-element--education"
                             date="1910"
@@ -239,6 +244,7 @@ const CameraTimeline = () => {
                                     title={'First 35mm Film Camera'}
                                     image={data.LeicaCam.childImageSharp.fluid}
                                     width={'150px'}
+                                    content={'Oskar Barnack, a development engineer for Leitz, first created his compact 35mm.'}
                                 />
                             </Row>
                         </VerticalTimelineElement>
@@ -254,6 +260,7 @@ const CameraTimeline = () => {
                                     title={'First Single-Lens Reflex Camera (SLR)'}
                                     image={data.RolleiflexCam.childImageSharp.fluid}
                                     width={'150px'}
+                                    content={'The first practical reflex camera was the Franke & Heidecke Rolleiflex medium format TLR of 1928.'}
                                 />
                             </Row>
                         </VerticalTimelineElement>
@@ -266,12 +273,14 @@ const CameraTimeline = () => {
                             <Row id="typesOfCamera">
                                 <PopoverRight
                                     placement='right'
-                                    title={'Single-lens reflex cameras (SLR)'}
+                                    title={'Gama Duflex - Single-lens reflex cameras (SLR)'}
                                     image={data.GamaCam.childImageSharp.fluid}
                                     width={'150px'}
+                                    content={'Very rare and important Hungarian 35mm SLR with viewfinder, first reflex camera to have a metal steel sheet focal plane shutter and eye level view finder, using a special Porro Type image erector.'}
                                 />
                                 </Row>
                         </VerticalTimelineElement>
+
                         <VerticalTimelineElement
                             className="vertical-timeline-element--education"
                             date="1948"
@@ -279,14 +288,16 @@ const CameraTimeline = () => {
                         
                         >
                            <Row id="typesOfCamera">
-                            <PopoverLeft
-                                placement='left'
-                                title={'First polaroid Camera'}
-                                image={data.PolaroidCam.childImageSharp.fluid}
-                                width={'150px'}
-                            />
+                                <PopoverLeft
+                                    placement='left'
+                                    title={'First polaroid Camera'}
+                                    image={data.PolaroidCam.childImageSharp.fluid}
+                                    width={'150px'}
+                                    content={'First appeared on the market in 1948. The simple nature and ability to print and view photos within minutes made them popular with families'}
+                                />
                             </Row>
                         </VerticalTimelineElement>
+
                         <VerticalTimelineElement
                             className="vertical-timeline-element--education"
                             date="1975"
@@ -294,12 +305,13 @@ const CameraTimeline = () => {
                         
                         >
                            <Row id="typesOfCamera">
-                            <PopoverRight
-                                placement='right'
-                                title={'First Digital Camera System'}
-                                image={data.KodakDigitalCam.childImageSharp.fluid}
-                                width={'150px'}
-                            />
+                                <PopoverRight
+                                    placement='right'
+                                    title={'First Digital Camera System'}
+                                    image={data.KodakDigitalCam.childImageSharp.fluid}
+                                    width={'150px'}
+                                    content={'In 1975, Kodak engineer Steve Sasson created the first-ever digital camera. The camera was about the size of a breadbox and it took 23 seconds to capture a single image'}
+                                />
                             </Row>
                         </VerticalTimelineElement>
 
@@ -310,12 +322,13 @@ const CameraTimeline = () => {
                         
                         >
                            <Row id="typesOfCamera">
-                            <PopoverLeft
-                                placement='left'
-                                title={'DSLRs and Smartphones Take Over'}
-                                image={data.GameChanger.childImageSharp.fluid}
-                                width={'150px'}
-                            />
+                                <PopoverLeft
+                                    placement='left'
+                                    title={'DSLRs and Smartphones Take Over'}
+                                    image={data.GameChanger.childImageSharp.fluid}
+                                    width={'150px'}
+                                    content={'A camera phone is a mobile phone which is able to capture photographs and often record video using one or more built-in digital cameras. The first cellular mobile camera phone was the Sharp SH04 (Nov 2000).'}
+                                />
                             </Row>
                         </VerticalTimelineElement>
 
@@ -326,12 +339,13 @@ const CameraTimeline = () => {
                         
                         >
                            <Row id="typesOfCamera">
-                            <PopoverRight
-                                placement='right'
-                                title={'Mirrorless Cameras'}
-                                image={data.EpsonCam.childImageSharp.fluid}
-                                width={'150px'}
-                            />
+                                <PopoverRight
+                                    placement='right'
+                                    title={'Mirrorless Cameras'}
+                                    image={data.EpsonCam.childImageSharp.fluid}
+                                    width={'150px'}
+                                    content={'The first digital rangefinder camera commercially marketed was the Epson R-D1 .They were some of the first digital lens-interchangeable cameras without a reflex mirror.'}
+                                />
                             </Row>
                         </VerticalTimelineElement>
 
@@ -342,12 +356,13 @@ const CameraTimeline = () => {
                         
                         >
                            <Row id="typesOfCamera">
-                            <PopoverLeft
-                                placement='left'
-                                title={'The first full-frame, consumer-priced DSLR'}
-                                image={data.CanonCam.childImageSharp.fluid}
-                                width={'150px'}
-                            />
+                                <PopoverLeft
+                                    placement='left'
+                                    title={'The first full-frame, consumer-priced DSLR'}
+                                    image={data.CanonCam.childImageSharp.fluid}
+                                    width={'150px'}
+                                    content={'The EOS 5D is a 12.8 megapixel digital single-lens reflex (DSLR) camera body produced by Canon. The camera accepts EF lens mount lenses.'}
+                                />
                             </Row>
                         </VerticalTimelineElement>
                         
