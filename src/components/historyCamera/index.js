@@ -157,6 +157,7 @@ const CameraTimeline = () => {
                                     title={'Camera Obscura'}
                                     image={data.file.childImageSharp.fluid}
                                     width={'150px'}
+                                    content={'Long before traditional cameras, people employed camera obscuras. Images projected using this natural phenomenon were larger than normal but inverted.'}
                                 />
                             </Row>
                         </VerticalTimelineElement>
@@ -173,6 +174,7 @@ const CameraTimeline = () => {
                                     placement='right'
                                     image={data.leicaCam.childImageSharp.fluid}
                                     width={'150px'}
+                                    content={'Created by Louis Daguerre. To create the image on the plate, the early daguerreotypes had to be exposed to light for up to 15 minutes'}
                                 />
                             </Row>
                         </VerticalTimelineElement>
@@ -205,6 +207,7 @@ const CameraTimeline = () => {
                                     title={'The “Kodak” by George Eastman'}
                                     image={data.KodakCam.childImageSharp.fluid}
                                     width={'150px'}
+                                    content={'George Eastman began selling his Kodak cameras. The film inside could hold up to 100 photos'}
                                 />
                             </Row>
                         </VerticalTimelineElement>
@@ -220,6 +223,7 @@ const CameraTimeline = () => {
                                     title={'First Mass-Market Camera (The Brownie)'}
                                     image={data.KodakBrownieCam.childImageSharp.fluid}
                                     width={'150px'}
+                                    content={'George Eastman introduced the Brownie camera, introducing the snapshot to the public.'}
                                 />
                             </Row>
                         </VerticalTimelineElement>
