@@ -50,10 +50,8 @@ const PhotoTemplate = (props) =>{
                                     <h3 className="allTimeImagesTitle" style={{color: props.color, fontFamily: "josefin sans", fontSize: "2em", lineHeight: "1.5"}}>{props.title}</h3>
                                 </Row>
                                 <Row style={{textAlign: 'center'}}>
-                                    <p style={{textAlign: 'justify', margin: '10px 60px 20px 60px', fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}>
-                                        The history of photography began in remote antiquity
-                                        with the discovery of two critical principles: camera obscura image projection and the observation 
-                                        that some substances are visibly altered by exposure to light. 
+                                    <p style={{textAlign: 'left', margin: '10px 60px 20px 60px', fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}>
+                                        {props.desc}
                                         { isOpen && props.description}
                                     </p>
                                 </Row>
