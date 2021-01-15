@@ -29,7 +29,7 @@ const ShowText = (props) => {
     return(
      <>
         <Container fluid="md" onClick={handleShowText} style={{cursor: 'pointer', marginBottom: '20px', width: '300px', backgroundColor: 'white', padding: '10px 20px 0px', border: '1px solid rgba(0, 0, 0, 0.09)', borderRadius: '5px'}}>  
-             <h5 style={{fontFamily: 'Josefin Sans', lineHeight: '1.5', paddingTop: '10px'}}><FontAwesomeIcon icon={changeIcon} onClick={handleShowText} cursor='pointer'/>  {props.title}</h5>
+             <h5 style={{fontFamily: 'Josefin Sans', lineHeight: '1.5', paddingTop: '10px', marginBottom: '15px'}}><FontAwesomeIcon icon={changeIcon} onClick={handleShowText} cursor='pointer'/>  {props.title}</h5>
                 {showText && 
                     <Row> 
                         <Col>
