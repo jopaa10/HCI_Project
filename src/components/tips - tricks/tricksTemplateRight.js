@@ -30,7 +30,7 @@ const TemplateRight = (props) => {
                     </Row>
                     <Row style={{justifyContent: 'center'}}>
                         <Col xs={12} sm={12} md={10} lg={10} style={{paddingTop: '50px'}}>
-                            <p style={{textAlign: 'justify', padding: '0 20px'}}>{props.description}</p>
+                            <p style={{textAlign: 'left', padding: '0 20px'}}>{props.description}</p>
                         </Col>
                     </Row>
                 </Col>
