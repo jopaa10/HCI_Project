@@ -1156,6 +1156,17 @@ a:hover{
 
 /*** login form ***/
 
+.brElement{
+  display: none;
+}
+
+@media(max-width: 545px)
+{
+  .brElement{
+    display: block;
+  }
+}
+
 @media(max-width: 545px)
 {
   .mobLogin{

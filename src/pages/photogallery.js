@@ -14,9 +14,17 @@ import {auth} from '../components/firebase'
 //head document
 import Head from '../components/head'
 
-const Photogallery = (props) => {
+//react bootstrap
+import { Container, Row, Col } from 'react-bootstrap'
+
+//fontawesome 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faLock} from '@fortawesome/free-solid-svg-icons'
+
+const Photogallery = () => {
 
     const [user, setUser] = useState(null)
+    const [counter, setCounter] = useState(5)
 
     useEffect(() => {
         auth.onAuthStateChanged((currentUser) => {
@@ -29,16 +37,40 @@ const Photogallery = (props) => {
                 setUser(false)
             }
          })
+
+        const timeout = setTimeout(() => {
+            setCounter(counter - 1);
+          }, 1000)
+
+        return () => {
+
+            clearTimeout(timeout)
+        }
  
-    }, [])
+    },)
 
     const [displayBlog] = useState('none')
 
     if (user === false) {
         setTimeout(() => {
             navigate('/')
-        }, 3000);
-        return <p>You are not logged in!</p>
+        }, 4000)
+
+        return (
+            <Container>
+                <Row style={{justifyContent: 'center', paddingTop: '400px'}}>
+                    <FontAwesomeIcon icon={faLock} style={{width: '100px', height: '100px'}}/>
+                </Row>
+                <Row style={{justifyContent: 'center', paddingTop: '20px'}}>
+                    <Col xs={12} style={{textAlign: 'center'}}>
+                        <p>
+                            You are not logged in! <br className="brElement"/>
+                            <strong> Redirected in {counter} </strong>
+                        </p>
+                    </Col>
+                </Row>
+            </Container>
+        )
     }
 
 

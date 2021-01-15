@@ -15,6 +15,13 @@ import {auth, db} from '../components/firebase/'
 //head document
 import Head from '../components/head'
 
+//react bootstrap
+import { Container, Row, Col } from 'react-bootstrap'
+
+//fontawesome 
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faLock} from '@fortawesome/free-solid-svg-icons'
+
 const About = () => {
 
     const [user, setUser] = useState([])
@@ -33,6 +40,8 @@ const About = () => {
     `)
 
     const [displayBlog] = useState('none')
+    
+    const [counter, setCounter] = useState(5)
 
     const getUserData = (uid) => {
         db.ref("users/" + uid).once("value", (snap) => {
@@ -53,13 +62,37 @@ const About = () => {
             }
         })
 
-    }, [])
+        const timeout = setTimeout(() => {
+            setCounter(counter - 1);
+          }, 1000)
+
+        return () => {
+
+            clearTimeout(timeout)
+        }
+
+    },)
 
     if (userIsLog === false) {
         setTimeout(() => {
             navigate('/login/')
-        }, 3000);
-        return <p>You are not logged in!</p>
+        }, 4000)
+
+        return (
+            <Container>
+                <Row style={{justifyContent: 'center', paddingTop: '400px'}}>
+                    <FontAwesomeIcon icon={faLock} style={{width: '100px', height: '100px'}}/>
+                </Row>
+                <Row style={{justifyContent: 'center', paddingTop: '20px'}}>
+                    <Col xs={12} style={{textAlign: 'center'}}>
+                        <p>
+                            You are not logged in! <br className="brElement"/>
+                            <strong> Redirected in {counter} </strong>
+                        </p>
+                    </Col>
+                </Row>
+            </Container>
+        )  
     }
  
 
