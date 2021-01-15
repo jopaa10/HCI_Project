@@ -10,6 +10,9 @@ import ShowText from './templateQuestions'
 //gatsby image
 import BackgroundImage from 'gatsby-background-image'
 
+//animation
+import { Fade } from "react-awesome-reveal"
+
 const FaQ = () => {
 
     const data = useStaticQuery(graphql`
