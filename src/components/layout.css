@@ -1641,6 +1641,17 @@ a:hover{
 
 /*** news ***/
 
+.templateNewsTitle{
+  font-size: 2em!important;
+}
+
+@media(max-width: 550px)
+{
+  .templateNewsTitle{
+    font-size: 1.5em!important;
+  }
+}
+
 .returnBackBtn:hover{
   color: #262626!important;
   text-decoration: underline!important;
@@ -1756,6 +1767,8 @@ a:hover{
 @media(max-width: 385px){
   .newsImg{
     right: 30px;
+    width: 130px!important;
+    height: 120px!important;
   }
   .newsBody{
     padding: 0px 20px 0px 0px!important;
@@ -1765,10 +1778,25 @@ a:hover{
 @media(max-width: 335px){
   .newsImg{
     right: 35px;
+    width: 130px!important;
+    height: 120px!important;
   }
   .newsBody{
     position: relative;
     right: 20px;
+  }
+}
+
+@media(max-width: 325px){
+  .newsImg{
+    right: 35px;
+    width: 110px!important;
+    height: 100px!important;
+  }
+  .newsBody{
+    position: relative;
+    right: 20px;
+    font-size: 0.75em;
   }
 }
 
