@@ -45,6 +45,7 @@ export default function NewsLayout({
                             <Title 
                                 title={frontmatter.title} 
                                 color={'white'}
+                                className="templateNewsTitle"
                             />
                         </Col>
                         <Col xs={12} sm={12} md={12} style={{paddingTop: '50px', maxWidth: '80%'}}>
@@ -67,7 +68,7 @@ export default function NewsLayout({
                                 <Col xs={12} sm={12} md={12} style={{textAlign: 'left'}}>
                                     <p xs={12} sm={12} md={12}
                                     className="blog-post-content"
-                                    style={{lineHeight: '2', fontFamily: "josefin sans", fontSize: "1.25em"}}
+                                    style={{lineHeight: '1.5', fontFamily: "josefin sans", fontSize: "1.25em"}}
                                     dangerouslySetInnerHTML={{ __html: html }}
                                     />
                                 </Col>
