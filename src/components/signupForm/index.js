@@ -151,6 +151,10 @@ const SignUp = () => {
                 setError('User is not found with that email and password. Please try again!')
             }
 
+            else if(err.code === 'auth/email-already-in-use')
+            {
+                setError('The email is already in use. Please with another email!')
+            }
             
                 setProccesing(false)
             })
@@ -197,6 +201,7 @@ const SignUp = () => {
                                         <Form.Control type="email" name="email" className="inputFields" value={user.email} onChange={handleChangeEmail} placeholder="Enter email" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor.email}}/> 
                                     </InputGroup>
                                     {(error ==='The email is not correct') && (<Row style={{color: 'red'}}><Col>{error}</Col></Row>)}
+                                    {(error ==='The email is already in use. Please with another email!') && (<Row style={{color: 'red'}}><Col>{error}</Col></Row>)}
                                     <InputGroup className="inputGroup" style={{marginTop: '25px', paddingLeft: '40px', width: '90%'}}>
                                         <FontAwesomeIcon icon={faLock} className="fontawesomeIcon" style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
                                         <Form.Control type="password" name="password" className="inputFields" value={user.password} onChange={handleChangePass}  placeholder="Password" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor.pass}}/>
