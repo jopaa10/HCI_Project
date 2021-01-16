@@ -871,6 +871,17 @@ button:focus{
   color: black;
 }
 
+@media(max-width: 420px)
+{
+  .navbar{
+    padding: 20px 0;
+  }
+
+  .navbarOnScroll{
+    padding: 15px 0!important;
+  }
+}
+
 a#color{	
   color: grey!important;
   }
