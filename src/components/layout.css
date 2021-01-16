@@ -1600,6 +1600,10 @@ a:hover{
   .newsTitle{
     font-size: 45px!important;
   }
+
+  .newsSection{
+    padding-top: 150px!important;
+  }
 }
 
 @media(max-width: 330px){
