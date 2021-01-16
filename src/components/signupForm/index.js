@@ -73,7 +73,7 @@ const SignUp = () => {
         pass: ''
     })
 
-    const handleReg = (e) => {
+    const handleReg = async(e) => {
 
     e.preventDefault()
 
@@ -102,9 +102,9 @@ const SignUp = () => {
 
     else
     {
-        auth
+        await auth
         .createUserWithEmailAndPassword(user.email, user.password)
-        .then((result) => {
+        .then(async (result) => {
             result.user.updateProfile({
             displayName: user.nickname
             })
@@ -120,10 +120,10 @@ const SignUp = () => {
             })
 
             .finally(() => {
+                navigate('/')
                 setUser({ name: user.name, surname: user.surname })
                 setError(false)
                 setLogin(false)
-                navigate('/')
                 setProccesing(false)
                 setBorderColor({
                     name: 'none',
