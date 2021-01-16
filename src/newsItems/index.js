@@ -89,7 +89,7 @@ const NewsForm = () => {
 
                 <Row className="searchBarMobile" style={{paddingTop: '30px'}}> 
                   <Col md={12} xs={12} sm={12}>  
-                    <input type="search" placeholder="Search" className="searchTerm" onChange={e => setSearch(e.target.value)}/>
+                    <input type="search" placeholder="Search by title, description" className="searchTerm" onChange={e => setSearch(e.target.value)}/>
                     <Button type="submit" className="searchButton" style={{cursor: 'default'}}>
                       <FontAwesomeIcon icon={faSearch}/>
                     </Button> 
