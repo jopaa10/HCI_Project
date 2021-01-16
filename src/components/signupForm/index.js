@@ -154,6 +154,7 @@ const SignUp = () => {
             else if(err.code === 'auth/email-already-in-use')
             {
                 setError('The email is already in use. Please with another email!')
+                setBorderColor({email: 'red'})
             }
             
                 setProccesing(false)
