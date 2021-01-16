@@ -125,6 +125,13 @@ const SignUp = () => {
                 setLogin(false)
                 navigate('/')
                 setProccesing(false)
+                setBorderColor({
+                    name: 'none',
+                    surname: 'none',
+                    nick: 'none',
+                    email: 'none',
+                    pass: 'none'
+                })
             })
         })
 
@@ -134,21 +141,24 @@ const SignUp = () => {
             if((err && user.name) === '' )
             {
                 setError('Name is not correct or written')
-                setBorderColor('red')
+                setBorderColor({name: 'red'})
             }
 
             else if(err.code === 'auth/invalid-email')
             {
                 setError('The email is not correct')
+                setBorderColor({email: 'red'})
             }
 
             else if(err.code === 'auth/weak-password')
             {
                 setError('The password must be at least 6 characters')
+                setBorderColor({pass: 'red'})
             }
             else if(err.code === 'auth/user-not-found')
             {
                 setError('User is not found with that email and password. Please try again!')
+                setBorderColor({email: 'red', pass: 'red'})
             }
 
             
