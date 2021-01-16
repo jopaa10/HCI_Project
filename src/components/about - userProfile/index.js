@@ -181,7 +181,7 @@ const AboutTemplate = (props) => {
 
     if(loginDisplay === true)
       {
-         navigate('/login/')
+         navigate('/')
       }
 
     return (
@@ -245,7 +245,7 @@ const AboutTemplate = (props) => {
                                 <Form style={{width: '70%'}}>
                                     <Form.Group controlId="exampleForm.ControlInput1">
                                         <Form.Label>Date of Birth</Form.Label>
-                                        <Form.Control type="date" name="date" value={dateOfBirth} onChange={e => setDateOfBirth(e.target.value)} />
+                                        <Form.Control type="date" name="date" placeholder="Enter date of birth" value={dateOfBirth} onChange={e => setDateOfBirth(e.target.value)} />
                                     </Form.Group>
                                     <Form.Group controlId="exampleForm.ControlSelect1">
                                         <Form.Label>Address</Form.Label>

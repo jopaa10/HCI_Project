@@ -1832,3 +1832,12 @@ a:hover{
 .btnLogOut:hover{
   background-color: darkred!important;
 }
+
+/*** protected route style ***/
+
+@media(max-width: 420px)
+{
+  .routePadding{
+    padding-top: 200px!important;
+  }
+}

@@ -12,7 +12,8 @@ import LoginLayout from '../components/loginForm'
 import Head from '../components/head'
 
 //firebase
-import {auth, db} from '../components/firebase/'
+import {auth} from '../components/firebase/'
+import { useAuth } from "gatsby-theme-firebase"
 
 //react bootstrap
 import { Container, Row, Col } from 'react-bootstrap'
@@ -24,40 +25,47 @@ import {faUnlock} from '@fortawesome/free-solid-svg-icons'
 const Login = () => {
 
     const [displayBlog] = useState('none')
-    const [user, setUser] = useState()
+    const [user, setUser] = useState(null)
 
     const [counter, setCounter] = useState(5)
 
+    const { isLoggedIn } = useAuth()
+
     useEffect(() => {
+
         auth.onAuthStateChanged((currentUser) => {
-        
+             
             if (currentUser) {
-                setUser(true)
-            }
+                    setUser(true)
+                }
+
             else{
                 setUser(false)
-            }
-        })
 
+            }
+         })
+        
         const timeout = setTimeout(() => {
-            setCounter(counter - 1);
+            setCounter(counter - 1)
           }, 1000)
 
-        return () => {
+          return () => {
 
             clearTimeout(timeout)
         }
 
     },)
 
-    if (user === true) {
+    console.log(user)
+
+    if ( isLoggedIn === true) {
         setTimeout(() => {
             navigate('/')
         }, 4000)
 
         return (
             <Container>
-                <Row style={{justifyContent: 'center', paddingTop: '400px'}}>
+                <Row className="routePadding" style={{justifyContent: 'center', paddingTop: '300px'}}>
                     <FontAwesomeIcon icon={faUnlock} style={{width: '100px', height: '100px'}}/>
                 </Row>
                 <Row style={{justifyContent: 'center', paddingTop: '20px'}}>
@@ -80,7 +88,7 @@ const Login = () => {
             keywords = { ["camera", "photo", "images", "login", "photography", "sign up", "form"]}
             description = { "Create account"}
         />
-          
+            
         <main>
             <Header
                 display={displayBlog}
