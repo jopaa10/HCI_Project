@@ -104,7 +104,7 @@ export default function NewsLayout({
         featuredImage {
             childImageSharp {
                 fluid {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
               }
             }
           }
