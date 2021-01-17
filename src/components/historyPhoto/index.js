@@ -19,7 +19,7 @@ const PhotoHistory = () =>{
                 bgImage: file(relativePath: {eq: "firstPhotoEver.jpg"}){
                     childImageSharp{
                         fluid(quality: 100){
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp_noBase64
                             }
                         }
                     }
@@ -27,7 +27,7 @@ const PhotoHistory = () =>{
                 bgImage1: file(relativePath: {eq: "secondImage.jpg"}){
                     childImageSharp{
                         fluid(quality: 100){
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp_noBase64
                             }
                         }
                     }
@@ -35,7 +35,7 @@ const PhotoHistory = () =>{
                 bgImage2: file(relativePath: {eq: "menPhoto.jpg"}){
                     childImageSharp{
                         fluid(quality: 100){
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp_noBase64
                             }
                         }
                     }
@@ -43,7 +43,7 @@ const PhotoHistory = () =>{
                 bgImage3: file(relativePath: {eq: "carPhoto.jpg"}){
                     childImageSharp{
                         fluid(quality: 100){
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp_noBase64
                             }
                         }
                     }
@@ -51,7 +51,7 @@ const PhotoHistory = () =>{
                 bgImage4: file(relativePath: {eq: "gandhiPhoto.jpg"}){
                     childImageSharp{
                         fluid(quality: 100){
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp_noBase64
                             }
                         }
                     }
@@ -59,7 +59,7 @@ const PhotoHistory = () =>{
                 bgImage5: file(relativePath: {eq: "daliPhoto.jpg"}){
                     childImageSharp{
                         fluid(quality: 100){
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp_noBase64
                             }
                         }
                     }
@@ -67,7 +67,7 @@ const PhotoHistory = () =>{
                 bgImage8: file(relativePath: {eq: "pillowFight.jpg"}){
                     childImageSharp{
                         fluid(quality: 100){
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp_noBase64
                             }
                         }
                     }
@@ -75,7 +75,7 @@ const PhotoHistory = () =>{
                 bgImage10: file(relativePath: {eq: "firstPhotoOfMoon.jpg"}){
                     childImageSharp{
                         fluid(quality: 100){
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp_noBase64
                             }
                         }
                     }
@@ -83,7 +83,7 @@ const PhotoHistory = () =>{
                 bgImage11: file(relativePath: {eq: "jordanPhoto.jpg"}){
                     childImageSharp{
                         fluid(quality: 100){
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp_noBase64
                             }
                         }
                     }
@@ -92,7 +92,7 @@ const PhotoHistory = () =>{
                 bgImage14: file(relativePath: {eq: "firstSelfie.jpg"}){
                     childImageSharp{
                         fluid(quality: 100){
-                            ...GatsbyImageSharpFluid
+                            ...GatsbyImageSharpFluid_withWebp_noBase64
                             }
                         }
                     }
