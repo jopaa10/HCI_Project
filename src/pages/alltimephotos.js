@@ -16,7 +16,7 @@ const AllTimePhotos = () => {
         query{
             bgImage: file(relativePath: {eq: "menPhoto.jpg"}){
                 childImageSharp{
-                    fluid(maxWidth: 2000, maxHeight: 900, quality: 100){
+                    fluid(maxWidth: 2000, maxHeight: 1000, quality: 100){
                         ...GatsbyImageSharpFluid
                         }
                     }
