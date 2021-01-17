@@ -91,16 +91,20 @@ const Photoinfo = () => {
 
                             <Template 
                                 icon={faImage}
-                                description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`}
+                                description={`Exposure.
+                                            Color.
+                                            Story. 
+                                            Composition. 
+                                            Balance.`}
                             />
                         </Row>
-
+                        <Row style={{padding: '20px 0'}}/>
                         <Row>
                             <Template 
                                 icon={faMagic}
-                                description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`}
+                                description={`Photoshop is the professional photographer’s best friend. 
+                                            Practically any image can benefit from some touch-ups, 
+                                            whether it’s cropping, brightness adjustments, color corrections, or other tweaks.`}
                             />
                         </Row>
                     </Col>                    
