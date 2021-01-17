@@ -24,7 +24,7 @@ const NewsForm = () => {
               featuredImage {
                 childImageSharp {
                   fluid {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }
@@ -43,7 +43,7 @@ const NewsForm = () => {
                 featuredImage {
                   childImageSharp {
                     fluid(maxWidth: 655, maxHeight: 500){
-                      ...GatsbyImageSharpFluid
+                      ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                   }
                 }
