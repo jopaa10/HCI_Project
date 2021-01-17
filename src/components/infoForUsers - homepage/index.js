@@ -19,7 +19,7 @@ const InfoForUsers = () => {
            imageGallery: file(relativePath: {eq: "imageGallery.png"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -27,7 +27,7 @@ const InfoForUsers = () => {
             starRating: file(relativePath: {eq: "profileImg1.png"}){
                 childImageSharp{
                     fluid(maxWidth: 330, maxHeight: 380, quality: 100){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }

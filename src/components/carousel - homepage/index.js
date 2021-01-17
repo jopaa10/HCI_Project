@@ -28,7 +28,7 @@ const Photoinfo = () => {
         file(relativePath: { eq: "cameraBg1.png" }) {
             childImageSharp {
                 fluid{
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -36,7 +36,7 @@ const Photoinfo = () => {
             cameraImg: file(relativePath: { eq: "camera.png" }) {
                 childImageSharp {
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -44,7 +44,7 @@ const Photoinfo = () => {
            image1: file(relativePath: {eq: "image1Slider.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -52,7 +52,7 @@ const Photoinfo = () => {
             image2: file(relativePath: {eq: "image.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -60,7 +60,7 @@ const Photoinfo = () => {
             image3: file(relativePath: {eq: "image3Slider.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -68,7 +68,7 @@ const Photoinfo = () => {
             bgImg: file(relativePath: {eq: "camera-wall.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }

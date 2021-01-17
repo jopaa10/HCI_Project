@@ -20,7 +20,7 @@ const ImageSlider = (props) => {
             slideImage1: file(relativePath: {eq: "tibet.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -28,7 +28,7 @@ const ImageSlider = (props) => {
             slideImage2: file(relativePath: {eq: "japan.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -36,7 +36,7 @@ const ImageSlider = (props) => {
             slideImage3: file(relativePath: {eq: "japan2.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -44,7 +44,7 @@ const ImageSlider = (props) => {
             slideImage4: file(relativePath: {eq: "japan.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
