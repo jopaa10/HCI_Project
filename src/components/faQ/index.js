@@ -20,7 +20,7 @@ const FaQ = () => {
             bgImage: file(relativePath: {eq: "glassesWallpaper.jpg"}){
                 childImageSharp{
                     fluid(maxWidth: 2560, maxHeight: 1707, quality: 100){
-                        ...GatsbyImageSharpFluid_withWebp_noBase64
+                        ...GatsbyImageSharpFluid
                         }
                     }
                 }
