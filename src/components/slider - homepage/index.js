@@ -33,7 +33,7 @@ const ImageSlider = (props) => {
                 }
             }
 
-            slideImage3: file(relativePath: {eq: "japan2.jpg"}){
+            slideImage3: file(relativePath: {eq: "italy.jpg"}){
                 childImageSharp{
                     fluid{
                         ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -41,7 +41,23 @@ const ImageSlider = (props) => {
                 }
             }
 
-            slideImage4: file(relativePath: {eq: "japan.jpg"}){
+            slideImage4: file(relativePath: {eq: "cuba.jpg"}){
+                childImageSharp{
+                    fluid{
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
+                    }
+                }
+            }
+
+            slideImage5: file(relativePath: {eq: "italy2.jpg"}){
+                childImageSharp{
+                    fluid{
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
+                    }
+                }
+            }
+
+            slideImage6: file(relativePath: {eq: "brazil.jpg"}){
                 childImageSharp{
                     fluid{
                         ...GatsbyImageSharpFluid_withWebp_noBase64
@@ -102,10 +118,16 @@ const ImageSlider = (props) => {
                                     <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage2.childImageSharp.fluid} alt="" />
                                 </Row> 
                                 <Row >
-                                    <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage4.childImageSharp.fluid} alt="" />
+                                    <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage3.childImageSharp.fluid} alt="" />
                                 </Row> 
                                 <Row >
                                     <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage4.childImageSharp.fluid} alt="" />
+                                </Row>
+                                <Row >
+                                    <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage5.childImageSharp.fluid} alt="" />
+                                </Row>
+                                <Row >
+                                    <Img className="card_style" style={ CARD_STYLE } fluid={data.slideImage6.childImageSharp.fluid} alt="" />
                                 </Row> 
                             </ReactCardCarousel>
                         </Row>
