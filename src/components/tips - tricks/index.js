@@ -21,7 +21,7 @@ const TipsTricks = () => {
             ruleOfThird: file(relativePath: {eq: "rule-of-thirds.jpg"}){
                 childImageSharp{
                     fluid(quality: 100){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -29,7 +29,7 @@ const TipsTricks = () => {
             captureReflection: file(relativePath: {eq: "capture-reflections.jpg"}){
                 childImageSharp{
                     fluid(quality: 100){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -37,7 +37,7 @@ const TipsTricks = () => {
             differentPerspectives: file(relativePath: {eq: "flowerPhoto.png"}){
                 childImageSharp{
                     fluid(quality: 100){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
