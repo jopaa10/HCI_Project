@@ -17,12 +17,12 @@ const TemplateLeft = (props) => {
                 
                 <Row>
                     <Col xs={12} sm={12} md={12} style={{textAlign: 'center', paddingTop: '100px'}}>
-                        <h3 className="titleTips">{props.title}</h3>
+                        <h3 className="titleTips" style={{fontFamily:'josefin sans'}}>{props.title}</h3>
                     </Col>
                 </Row>
                 <Row style={{justifyContent: 'center'}}>
-                    <Col xs={12} sm={12} md={10} lg={10} style={{paddingTop: '50px'}}>
-                        <p style={{textAlign: 'left', padding: '0 20px'}}>{props.description}</p>
+                    <Col xs={12} sm={12} md={10} lg={10} style={{paddingTop: '15px'}}>
+                        <p style={{textAlign: 'left', padding: '0 20px', fontFamily: 'josefin sans'}}>{props.description}</p>
                     </Col>
                 </Row>
             </Col>
