@@ -10,8 +10,6 @@ import ShowText from './templateQuestions'
 //gatsby image
 import BackgroundImage from 'gatsby-background-image'
 
-//animation
-import { Fade } from "react-awesome-reveal"
 
 const FaQ = () => {
 
@@ -19,7 +17,7 @@ const FaQ = () => {
         query{
             bgImage: file(relativePath: {eq: "glassesWallpaper.jpg"}){
                 childImageSharp{
-                    fluid(maxWidth: 2560, maxHeight: 1707, quality: 100){
+                    fluid(maxWidth: 2560, maxHeight: 1900, quality: 100){
                         ...GatsbyImageSharpFluid
                         }
                     }
@@ -41,7 +39,7 @@ const FaQ = () => {
                        
                             <Row>
                                 <Col xs={12} sm={8} style={{paddingTop: '20px', textAlign: 'center'}}>
-                                    <h3 style={{fontFamily: "josefin sans", fontSize: "2em", lineHeight: "1.5"}}>FAQ</h3>
+                                    <h3 className="faqTitle" style={{fontFamily: "josefin sans", lineHeight: "1.5", color: 'white', textShadow: '1px 1px 19px rgba(0, 0, 0, 0.84)'}}>FAQ</h3>
                                 </Col> 
                             </Row>
                         
@@ -50,18 +48,18 @@ const FaQ = () => {
                                     <Row>
                                     
                                         <ShowText 
-                                            title={'Što je fotografija?'}
-                                            content={'Lorem ipsum lorem lorem'}
+                                            title={'What is an aperture and how is it measured?'}
+                                            content={'Aperture is simply the size of the “hole” in the lens that lets light through. The bigger the hole, the more light you are letting in. Aperture is also called the “f-stop”, and is represented by a number.'}
                                         />
                                     
                                         <ShowText 
-                                            title={'Što je fotografija?'}
-                                            content={'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled'}
+                                            title={'What is ISO?'}
+                                            content={'The ISO on each film roll lets us know how sensitive light is to the film, which is also known as film speed.'}
                                         />
                                     
                                         <ShowText 
-                                            title={'Što je fotografija?'}
-                                            content={'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry'}
+                                            title={'How does the exposure triangle work?'}
+                                            content={'Shutter speed, aperture, and ISO are part of the Exposure Triangle. The exposure triangle is a common way of associating these three variables that determine the exposure of a photograph'}
                                         />
                                     </Row>
                                 </Col>

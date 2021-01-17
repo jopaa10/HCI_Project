@@ -14,7 +14,7 @@ const NewsForm = () => {
 
     const data = useStaticQuery(graphql`
     {
-        blog: allMarkdownRemark (filter: {frontmatter: {template: {}}}, limit: 6){
+        blog: allMarkdownRemark (filter: {frontmatter: {template: {}}}, limit: 6, , sort: { order: DESC, fields: [frontmatter___date] }){
           posts: nodes {
             frontmatter {
               slug
@@ -33,7 +33,7 @@ const NewsForm = () => {
           }
         }
 
-        latestNews: allMarkdownRemark (filter: {frontmatter: {template: {}}}, limit: 2, skip: 6){
+        latestNews: allMarkdownRemark (filter: {frontmatter: {template: {}}}, limit: 2, skip: 6, , sort: { order: DESC, fields: [frontmatter___date] }){
             latestPost: nodes {
               frontmatter {
                 slug
@@ -114,12 +114,12 @@ const NewsForm = () => {
                               <Card.Body style={{textAlign: 'center'}}>
                                   <Card.Title>
                                     <Link to={post.frontmatter.slug} style={{color: 'black'}}>
-                                      <h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "1.5em", lineHeight: "1.5"}}>
+                                      <h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "0.9em", lineHeight: "1.5"}}>
                                         {post.frontmatter.title}
                                       </h4>
                                     </Link>
                                   </Card.Title>
-                                  <Card.Text style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}>
+                                  <Card.Text style={{fontFamily: "josefin sans", fontSize: "0.9em", lineHeight: "1.5"}}>
                                       {post.excerpt}
                                   </Card.Text>
                               </Card.Body>
@@ -148,7 +148,7 @@ const NewsForm = () => {
                             </Link>
                             <Link to={post.frontmatter.slug} style={{color: 'black'}}>
                               <Media.Body style={{padding: '0 20px 0 20px'}} className="newsBody">
-                                <h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5", marginBottom: '10px'}}>
+                                <h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "0.9em", lineHeight: "1.5", marginBottom: '10px'}}>
                                   {post.frontmatter.title}
                                 </h4>
                                 <h5 style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5", marginBottom: '10px'}}>{post.frontmatter.date}</h5>
@@ -174,7 +174,7 @@ const NewsForm = () => {
                           <Col md={12} xs={12} sm={12}>
                             <Link to={post.frontmatter.slug} style={{color: 'black'}}>
                               <Card.Body style={{textAlign: 'center'}}>
-                                  <Card.Title><Link to={post.frontmatter.slug}><h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "1.5em", lineHeight: "1.5"}}>{post.frontmatter.title}</h4></Link></Card.Title>
+                                  <Card.Title><Link to={post.frontmatter.slug}><h4 style={{color: 'black', fontFamily: "josefin sans", fontSize: "1.25em", lineHeight: "1.5"}}>{post.frontmatter.title}</h4></Link></Card.Title>
                                   <Card.Text style={{fontFamily: "josefin sans", fontSize: "1em", lineHeight: "1.5"}}>
                                       {post.excerpt}
                                   </Card.Text>

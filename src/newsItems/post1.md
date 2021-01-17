@@ -1,11 +1,11 @@
 ---
-slug: "/blog/first-post"
-title: My first blog post
-date: "2019-05-04"
+title: "Venus Optics launches four new Laowa f/0.95 Argus lenses"
+slug: "/news/Venus Optics launches four new Laowa f/0.95 Argus lenses"
+date: "2021-01-10"
 author: "Josipa"
-featuredImage: "../images/tibet.jpg"
+featuredImage: "../images/venusOptics.jpg"
 ---
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Venus Optics has officially announced a super-fast Laowa f/0/95 Argus range, designed for a variety of mounts including Micro Four Thirds, Sony E and Fujifilm X mount. This brand new range seems to be designed to give users access to super-fast glass – and presumably at the affordable prices that Laowa is known for (although no pricing information is available as of yet). 
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+These brand new pieces of glass include the Laowa 25mm f/0.95 for Micro Four Thirds mount, the Laowa 33mm f/0.95 for Fujifilm X mount and the Laowa 35mm f/0/9.5 and Laowa 45mm f/0.95 for Sony E mount. 

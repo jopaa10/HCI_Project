@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 
 //import header, footer
@@ -26,6 +26,7 @@ const Tips = () => {
         }
     `)
 
+    const [displayBlog] = useState('none')
 
     return(
         <>
@@ -37,12 +38,16 @@ const Tips = () => {
         />
         
         <main>
-            <Header/>
+            <Header
+                display={displayBlog}
+            />
             <Banner
                 color={'white'} 
                 title={'"Life is like photography. You need the negatives to develop"'}
                 author={'Ziad K. Abdelnour'}
                 bgImage={data.bgImage.childImageSharp.fluid}
+                className={'quoteTips'}
+                xs={'10'}
             />
             <TipsTricks/>
             <Footer />

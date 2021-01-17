@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 
 import Header from '../components/header'
@@ -24,6 +24,8 @@ const AllTimePhotos = () => {
             }
         `)
 
+    const [displayBlog] = useState('none')
+
     return(
         <>
             <Head 
@@ -32,12 +34,16 @@ const AllTimePhotos = () => {
                 description = { "The most important images through history"}
             />
             <main>
-                <Header />
+                <Header 
+                    display={displayBlog}
+                />
                 <Banner
                     color={'black'} 
                     title={'"There is one thing the photograph must contain, the humanity of the moment"'}
                     author={'Robert Frank'}
                     bgImage={data.bgImage.childImageSharp.fluid}
+                    className={'quotePhoto'}
+                    xs={'10'}
                 />
                 <PhotoHistory />
                 <Footer />

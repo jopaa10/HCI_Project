@@ -12,8 +12,6 @@ import BackgroundImage from 'gatsby-background-image'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faCamera, faEye, faHourglassHalf} from '@fortawesome/free-solid-svg-icons'
 
-//animation
-import { Fade } from "react-awesome-reveal"
 
 const CreateAwesomePhotos = () =>{
 

@@ -1,15 +1,11 @@
 ---
-slug: "/blog/seventh-post"
-title: My 7 blog post
-date: "2019-05-04"
+slug: "/news/How bokeh transformed photography (and traditional art too)"
+title: How bokeh transformed photography (and traditional art too)
+date: "2021-01-04"
 author: "Josipa"
-featuredImage: "../images/japan2.jpg"
+featuredImage: "../images/bokeh.jpg"
 template: newsItemsTemplate
 ---
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+If you've ever taken a photo with a wide aperture, then you know the mesmerizing power of bokeh. Enchanting photographers from all genres of photography, bokeh has not only transformed the photographic industry – it's also had an impact on the traditional art world as well.  
 
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-
-Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+Bokeh is essentially the aesthetics and character of the out-of-focus areas in an image. You can create a shallow depth-of-field with any camera – as long as you have a lens that's capable of producing a wide aperture. 

@@ -604,6 +604,16 @@ pre tt:after {
   color: grey!important;
 }
 
+/*** header fix if user is login or not ***/  
+
+.userNav-link:active{
+  color: grey!important;
+}
+
+.userNav-link:hover{
+  color: grey!important;
+}
+
 /*** react bootstrap carousel indicators ***/
 
 .carousel-indicators{
@@ -752,6 +762,11 @@ pre tt:after {
 }*/
 
 /*** all time photos title ***/
+
+.quotePhoto{
+  position: relative;
+  bottom: 60px;
+}
 
 @media(max-width: 880px)
 {
@@ -1030,13 +1045,34 @@ a:hover{
   box-shadow: none!important;
 }
 
-@media(max-width: 1170px){
+.popoverDesktop{
+  display: flex!important;
+}
+
+.popoverMobile{
+  display: none!important;
+}
+
+@media(max-width: 1169px){
   .vertical-timeline-element{
     width: fit-content;
   }
   .camAlign{
     justify-content: flex-start!important;
   }
+
+  .popoverDesktop{
+    display: none!important;
+  }
+
+  .popoverMobile{
+    display: flex!important;
+  }
+}
+
+.quote{
+  position: relative;
+  bottom: 60px;
 }
 
 @media(max-width: 950px){
@@ -1067,6 +1103,29 @@ a:hover{
   }
 }
 
+@media(max-width: 430px){
+  .popoverWidthR{
+    width: 220px!important;
+  }
+}
+
+@media(max-width: 390px){
+  .popoverWidthR{
+    width: 180px!important;
+  }
+}
+
+@media(max-width: 320px){
+  .popoverWidthR{
+    width: 170px!important;
+  }
+}
+
+@media(max-width: 310px){
+  .popoverWidthR{
+    width: 150px!important;
+  }
+}
 
 /*** popover page cameraTimeline ***/
 
@@ -1085,6 +1144,7 @@ a:hover{
   border-right-color: black!important;
 }
 
+
 /*** diff types of camera change width ***/
 
 @media(max-width: 350px)
@@ -1096,12 +1156,27 @@ a:hover{
 
 /*** login form ***/
 
+.brElement{
+  display: none;
+}
+
+@media(max-width: 545px)
+{
+  .brElement{
+    display: block;
+  }
+}
+
 @media(max-width: 545px)
 {
   .mobLogin{
     width: 350px!important;
     height: 520px!important;
   }
+}
+
+.submitButton:hover{
+  background-color: #262626!important;
 }
 
 @media(max-width: 445px)
@@ -1493,7 +1568,43 @@ a:hover{
     }
 }
 
+/*** faq - homepage ***/
+
+.faqTitle{
+  font-size: 2em!important;
+}
+
 /*** tips and tricks ***/
+
+.quoteTips{
+  position: relative;
+  bottom: 30px;
+  right: 60px;
+  margin-left: 30px;
+  text-shadow: 1px 1px 9px rgba(0,0,0,1);
+}
+
+@media(max-width: 770px)
+{
+  .quoteTips{
+    position: relative;
+    bottom: 50px;
+    margin-left: 30px;
+    text-shadow: 1px 1px 9px rgba(0,0,0,1);
+  }
+
+}
+
+@media(max-width: 350px)
+{
+  .quoteTips{
+    position: relative;
+    bottom: 60px;
+    margin-left: 30px;
+    text-shadow: 1px 1px 9px rgba(0,0,0,1);
+  }
+
+}
 
 .mobileViewPhoto{
 
@@ -1529,6 +1640,22 @@ a:hover{
 }
 
 /*** news ***/
+
+.templateNewsTitle{
+  font-size: 2em!important;
+}
+
+@media(max-width: 550px)
+{
+  .templateNewsTitle{
+    font-size: 1.5em!important;
+  }
+}
+
+.returnBackBtn:hover{
+  color: #262626!important;
+  text-decoration: underline!important;
+}
 
 .latestNewsMob{
   display: none;
@@ -1640,6 +1767,8 @@ a:hover{
 @media(max-width: 385px){
   .newsImg{
     right: 30px;
+    width: 130px!important;
+    height: 120px!important;
   }
   .newsBody{
     padding: 0px 20px 0px 0px!important;
@@ -1649,10 +1778,25 @@ a:hover{
 @media(max-width: 335px){
   .newsImg{
     right: 35px;
+    width: 130px!important;
+    height: 120px!important;
   }
   .newsBody{
     position: relative;
     right: 20px;
+  }
+}
+
+@media(max-width: 325px){
+  .newsImg{
+    right: 35px;
+    width: 110px!important;
+    height: 100px!important;
+  }
+  .newsBody{
+    position: relative;
+    right: 20px;
+    font-size: 0.75em;
   }
 }
 
@@ -1693,4 +1837,26 @@ a:hover{
   .aboutInfo{
     margin-left: 5%!important;
   }
+}
+
+.closeButton{
+  background-color: red!important;
+  border-color: red!important;
+}
+
+.closeButton:hover{
+  background-color: darkred!important;
+}
+
+.saveButton{
+  background-color: green!important;
+  border-color: green!important;
+}
+
+.saveButton:hover{
+  background-color: darkgreen!important;
+}
+
+.btnLogOut:hover{
+  background-color: darkred!important;
 }

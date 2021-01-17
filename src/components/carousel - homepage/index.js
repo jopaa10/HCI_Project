@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import {graphql, useStaticQuery} from 'gatsby'
 
 //gatsby image
@@ -17,8 +17,7 @@ import Template from './carouselTemplate'
 //title
 import Title from '../title/index'
 
-//animation
-import { Fade } from "react-awesome-reveal"
+import {db, auth} from '../firebase'
 
 const Photoinfo = () => {
 
@@ -74,15 +73,45 @@ const Photoinfo = () => {
         }
     `)
 
+    const [user, setUser] = useState(null)
+
+    const getUserData = (uid) => {
+        db.ref("users/" + uid).once("value", (snap) => {
+        //console.log(snap.val())
+        setUser(snap.val())
+        })
+    }
+
+    useEffect(() => {
+       auth.onAuthStateChanged((currentUser) => {
+            if (currentUser) {
+                    getUserData(currentUser.uid)
+                }
+            else
+            {
+                setUser(null)
+            }
+        })
+
+    }, [])
+
     return(
 
         <Container className="banner" style={{backgroundColor: 'white', paddingBottom: '150px'}}>
-            
-       
-                <Title
-                    title={`Welcome to "Photography" page`}
-                />
-            
+        
+            {!user ?
+                (
+                    <Title
+                        title={`Welcome to "Photography" page`}
+                    />
+                )
+                :
+                (
+                    <Title
+                        title={`${user.name}, Welcome to "Photography" page`}
+                    />
+                )
+            }
                 <Row>
                 
                     <Col xs={12} sm={6}>

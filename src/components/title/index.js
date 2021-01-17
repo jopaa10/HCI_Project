@@ -8,7 +8,7 @@ const Title = (props) => {
         
         <Row>
             <Col style={{textAlign: 'center'}}>
-                <h3 style={{fontFamily: "josefin sans", fontSize: "3.5em", lineHeight: "1.5", color: props.color}}>{props.title}</h3>
+                <h3 className={props.className} style={{fontFamily: "josefin sans", fontSize: "3.5em", lineHeight: "1.5", color: props.color}}>{props.title}</h3>
             </Col>
         </Row>
             

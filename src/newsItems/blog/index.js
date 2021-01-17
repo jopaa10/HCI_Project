@@ -5,18 +5,24 @@
  * See: https://www.gatsbyjs.com/docs/use-static-query/
  */
 
-import React from "react"
-import {graphql} from 'gatsby'
+import React, {useState} from "react"
+import {graphql, Link} from 'gatsby'
 
 import Header from "../../components/header"
+import Footer from '../../components/footer'
 
 //pages
 import {Row, Col, Container} from 'react-bootstrap'
-import Footer from '../../components/footer'
 
+//gatsby image
 import Img from 'gatsby-image'
 
+//page components
 import Title from '../../components/title'
+
+//fontawesome
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faArrowLeft} from '@fortawesome/free-solid-svg-icons'
 
 export default function NewsLayout({
     data, // this prop will be injected by the GraphQL query below.
@@ -25,23 +31,29 @@ export default function NewsLayout({
 
     const { markdownRemark } = data // data.markdownRemark holds your post data
     const { frontmatter, html } = markdownRemark
+
+    const [displayNews] = useState('none')
   
     return (
         <>
      
-          <Header/>
+          <Header
+            displayNews={displayNews}
+            to={frontmatter.slug}
+          />
             <main>
 
             <section className='banner' style={{backgroundColor: 'black', paddingBottom: '0'}}>
                 <Container>
-                    <Row>
+                    <Row style={{justifyContent: 'center'}}>
                         <Col xs={12} sm={12} md={12} style={{paddingTop: '100px'}}>
                             <Title 
                                 title={frontmatter.title} 
                                 color={'white'}
+                                className="templateNewsTitle"
                             />
                         </Col>
-                        <Col xs={12} sm={12} md={12} style={{paddingTop: '50px'}}>
+                        <Col xs={12} sm={12} md={12} style={{paddingTop: '50px', maxWidth: '80%'}}>
                             <Img fluid={frontmatter.featuredImage.childImageSharp.fluid} alt="newsPhoto" />
                         </Col>
                     </Row>
@@ -54,18 +66,23 @@ export default function NewsLayout({
                 <section className="banner" style={{backgroundColor: 'white', paddingTop: '0'}}>
                     <Container>
                         <Row className="blog-post-container" style={{justifyContent: 'center'}}>
-                            <Row className="blog-post" style={{maxWidth: '70%'}}>
+                            <Row className="blog-post" style={{maxWidth: '80%'}}>
                                 <Col xs={12} sm={12} md={12}>
                                     <h4 style={{fontFamily: "josefin sans", fontSize: "1.2em", lineHeight: "1.5"}}>{frontmatter.date}</h4>
                                 </Col>
-                                <Col xs={12} sm={12} md={12} style={{textAlign: 'justify'}}>
+                                <Col xs={12} sm={12} md={12} style={{textAlign: 'left'}}>
                                     <p xs={12} sm={12} md={12}
                                     className="blog-post-content"
-                                    style={{lineHeight: '2', fontFamily: "josefin sans", fontSize: "1.25em"}}
+                                    style={{lineHeight: '1.5', fontFamily: "josefin sans", fontSize: "1.25em"}}
                                     dangerouslySetInnerHTML={{ __html: html }}
                                     />
                                 </Col>
                             </Row>
+                        </Row>
+                        <Row>
+                            <p style={{lineHeight: '2', fontFamily: "josefin sans", fontSize: "1.25em", marginLeft: '15px'}}>
+                                <Link to='/news/' style={{color: 'black'}} className="returnBackBtn"><FontAwesomeIcon icon={faArrowLeft} />Go back to News</Link>
+                            </p>
                         </Row>
                     </Container>
                 </section>

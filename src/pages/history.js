@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {useStaticQuery, graphql} from 'gatsby'
 
 //import header, footer
@@ -26,6 +26,8 @@ const Timeline = () => {
             }
         `)
 
+    const [displayBlog] = useState('none')
+
     return(
         <>
 
@@ -36,13 +38,16 @@ const Timeline = () => {
         />
 
         <main>
-            <Header />
+            <Header 
+                display={displayBlog}
+            />
             <Banner
                 color={'black'}
                 title={`"Photographs open doors into the past, but they also allow a look into the future."`}
                 author={'Sally Mann'}
                 bgImage={data.bgImage.childImageSharp.fluid}
                 className={'quote'}
+                xs={'8'}
             />
             <CameraHistory />
             <Footer />
