@@ -134,7 +134,7 @@ const LoginForm = () => {
                                         <Col xs={12} style={{textAlign: 'center', fontFamily: 'Josefin Sans', fontWeight: '700', lineHeight: '55px', fontSize: '55px'}}>Log In</Col>
                                     </Row>
                                     <InputGroup style={{marginTop: '40px', paddingLeft: '40px', width: '90%'}}> 
-                                        <FontAwesomeIcon icon={faEnvelope} style={{marginTop: '15px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
+                                        <FontAwesomeIcon icon={faEnvelope} style={{marginTop: '17px', position: 'absolute', left: '50px', zIndex: '1'}}/> 
                                         <Form.Control type="email" name="email" className="inputFieldsLog" value={email} onChange={handleEmail} placeholder="Enter email" style={{paddingLeft: '40px', borderRadius: '5px', zIndex: '0', borderColor: borderColor.email}}/> 
                                     </InputGroup>
                                     {(error === 'The email is not correct') && (<Row><Col style={{color: 'red'}}>{error}</Col></Row>)}
