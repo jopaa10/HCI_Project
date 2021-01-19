@@ -58,7 +58,7 @@ const Photogallery = () => {
 
         return (
             <Container>
-                <Row style={{justifyContent: 'center', paddingTop: '400px'}}>
+                <Row className="routePadding" style={{justifyContent: 'center', paddingTop: '300px'}}>
                     <FontAwesomeIcon icon={faLock} style={{width: '100px', height: '100px'}}/>
                 </Row>
                 <Row style={{justifyContent: 'center', paddingTop: '20px'}}>

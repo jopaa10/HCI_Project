@@ -26,7 +26,7 @@ const Photoinfo = () => {
         file(relativePath: { eq: "cameraBg1.png" }) {
             childImageSharp {
                 fluid{
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -34,7 +34,7 @@ const Photoinfo = () => {
             cameraImg: file(relativePath: { eq: "camera.png" }) {
                 childImageSharp {
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -42,7 +42,7 @@ const Photoinfo = () => {
            image1: file(relativePath: {eq: "image1Slider.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -50,7 +50,7 @@ const Photoinfo = () => {
             image2: file(relativePath: {eq: "image.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -58,7 +58,7 @@ const Photoinfo = () => {
             image3: file(relativePath: {eq: "image3Slider.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -66,7 +66,7 @@ const Photoinfo = () => {
             bgImg: file(relativePath: {eq: "camera-wall.jpg"}){
                 childImageSharp{
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -119,16 +119,20 @@ const Photoinfo = () => {
 
                             <Template 
                                 icon={faImage}
-                                description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`}
+                                description={`Exposure.
+                                            Color.
+                                            Story. 
+                                            Composition. 
+                                            Balance.`}
                             />
                         </Row>
-
+                        <Row style={{padding: '20px 0'}}/>
                         <Row>
                             <Template 
                                 icon={faMagic}
-                                description={`Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s`}
+                                description={`Photoshop is the professional photographer’s best friend. 
+                                            Practically any image can benefit from some touch-ups, 
+                                            whether it’s cropping, brightness adjustments, color corrections, or other tweaks.`}
                             />
                         </Row>
                     </Col>                    

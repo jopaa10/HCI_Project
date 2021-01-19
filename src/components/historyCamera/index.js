@@ -25,7 +25,7 @@ const CameraTimeline = () => {
             file(relativePath: { eq: "cameraObscura.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -33,7 +33,7 @@ const CameraTimeline = () => {
             leicaCam: file(relativePath: { eq: "daguerreotypeCamera.jpg" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -41,7 +41,7 @@ const CameraTimeline = () => {
             FirstFilmCam: file(relativePath: { eq: "FirstCameraSutton.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -49,7 +49,7 @@ const CameraTimeline = () => {
             KodakCam: file(relativePath: { eq: "kodakFirstCamera.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -57,7 +57,7 @@ const CameraTimeline = () => {
             KodakBrownieCam: file(relativePath: { eq: "BrownieCam.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -65,7 +65,7 @@ const CameraTimeline = () => {
             LeicaCam: file(relativePath: { eq: "leicaBarnack.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -73,7 +73,7 @@ const CameraTimeline = () => {
             RolleiflexCam: file(relativePath: { eq: "rolleiflex2.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 175){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -81,7 +81,7 @@ const CameraTimeline = () => {
             GamaCam: file(relativePath: { eq: "gama.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -89,7 +89,7 @@ const CameraTimeline = () => {
             PolaroidCam: file(relativePath: { eq: "polaroid.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -97,7 +97,7 @@ const CameraTimeline = () => {
             KodakDigitalCam: file(relativePath: { eq: "kodak.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -105,7 +105,7 @@ const CameraTimeline = () => {
             CanonCam: file(relativePath: { eq: "canon.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -113,7 +113,7 @@ const CameraTimeline = () => {
             EpsonCam: file(relativePath: { eq: "EpsonCam.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -121,7 +121,7 @@ const CameraTimeline = () => {
             GameChanger: file(relativePath: { eq: "Cameraphones.png" }) {
                 childImageSharp {
                     fluid(maxWidth: 400){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }
@@ -129,7 +129,7 @@ const CameraTimeline = () => {
             bgImage: file(relativePath: { eq: "retroCamWallpaper.jpg" }) {
                 childImageSharp {
                     fluid{
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                         }
                     }
                 }

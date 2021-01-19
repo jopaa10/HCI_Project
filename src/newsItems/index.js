@@ -24,7 +24,7 @@ const NewsForm = () => {
               featuredImage {
                 childImageSharp {
                   fluid {
-                    ...GatsbyImageSharpFluid
+                    ...GatsbyImageSharpFluid_withWebp_noBase64
                   }
                 }
               }
@@ -43,7 +43,7 @@ const NewsForm = () => {
                 featuredImage {
                   childImageSharp {
                     fluid(maxWidth: 655, maxHeight: 500){
-                      ...GatsbyImageSharpFluid
+                      ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                   }
                 }
@@ -81,15 +81,15 @@ const NewsForm = () => {
     return(
         <>
        
-       <section className="banner" style={{backgroundColor: 'transparent', paddingTop: '200px', height: 'auto'}}>
+       <section className="banner newsSection" style={{backgroundColor: 'transparent', paddingTop: '200px', height: 'auto'}}>
             <Container>
                 <Row style={{paddingTop: '30px'}}>
                     <Col xs={12} sm={12} style={{textAlign: 'center'}}><h4 className="newsTitle" style={{fontFamily: 'Josefin Sans', fontWeight: '700', fontSize: '55px', lineHeight: '48px'}}>Latest News</h4></Col>
                 </Row>
 
-                <Row className="searchBarMobile" style={{paddingTop: '50px'}}> 
+                <Row className="searchBarMobile" style={{paddingTop: '30px'}}> 
                   <Col md={12} xs={12} sm={12}>  
-                    <input type="search" placeholder="Search" className="searchTerm" onChange={e => setSearch(e.target.value)}/>
+                    <input type="search" placeholder="Search by title, description" className="searchTerm" onChange={e => setSearch(e.target.value)}/>
                     <Button type="submit" className="searchButton" style={{cursor: 'default'}}>
                       <FontAwesomeIcon icon={faSearch}/>
                     </Button> 

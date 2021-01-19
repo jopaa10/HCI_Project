@@ -21,7 +21,7 @@ const CreateAwesomePhotos = () =>{
             bgImage: file(relativePath: {eq: "wallpaperKids.jpg"}){
                 childImageSharp{
                     fluid(maxWidth: 2000, maxHeight: 3000, quality: 100){
-                        ...GatsbyImageSharpFluid
+                        ...GatsbyImageSharpFluid_withWebp_noBase64
                     }
                 }
             }
@@ -49,8 +49,7 @@ const CreateAwesomePhotos = () =>{
                                     <FontAwesomeIcon style={{width: '45px', height: '45px'}} icon={faCamera}/>
                                     <Card.Title style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>Camera</Card.Title>
                                     <Card.Text style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
+                                        The first piece of equipment you need to start a photography is a good camera. There are plenty of options out there to consider.
                                     </Card.Text>
                                 
                                 </Card.Body>
@@ -62,8 +61,7 @@ const CreateAwesomePhotos = () =>{
                                     <FontAwesomeIcon style={{width: '45px', height: '45px'}} icon={faEye}/>
                                     <Card.Title style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>Eye for details</Card.Title>
                                     <Card.Text style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>
-                                    Some quick example text to build on the card title and make up the bulk of
-                                    the card's content.
+                                        Its an incredibly important asset to have. An eye for photography is an instinct that tells you the most effective use of your surroundings.
                                     </Card.Text>
                                     
                                 </Card.Body>
@@ -75,8 +73,7 @@ const CreateAwesomePhotos = () =>{
                                         <FontAwesomeIcon style={{width: '45px', height: '45px'}} icon={faHourglassHalf}/>
                                         <Card.Title style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>Time for practice</Card.Title>
                                         <Card.Text style={{fontFamily: 'Josefin Sans', fontWeight: '400', lineHeight: '1.5'}}>
-                                        Some quick example text to build on the card title and make up the bulk of
-                                        the card's content.
+                                            If you ask a photographer how to take great photos, you are going to hear, “Practice,practice, practice!”
                                         </Card.Text>
                                         
                                     </Card.Body>
